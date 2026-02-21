@@ -91,6 +91,22 @@ if (isset($_POST['import_config']) && isset($_FILES['config_file']) && $_FILES['
     }
 }
 
+// Handle Clear Cache
+if (isset($_POST['clear_cache'])) {
+    clear_cache();
+    $success = "ล้างแคชเรียบร้อยแล้ว";
+}
+
+// Handle Cache Duration Update
+if (isset($_POST['cache_duration'])) {
+    $cache_duration = max(3600, (int)$_POST['cache_duration']);
+    if (!isset($config['cacheDuration'])) $config['cacheDuration'] = 86400;
+    $config['cacheDuration'] = $cache_duration;
+    save_config($config);
+    $success = "ตั้งเวลาแคชเป็น " . ($cache_duration / 3600) . " ชั่วโมง เรียบร้อยแล้ว";
+    $config = get_config();
+}
+
 // Handle Export Config
 if (isset($_GET['export'])) {
     header('Content-Type: application/json');
@@ -479,6 +495,38 @@ $themes = [
             </div>
         </div>
 
+        <!-- Cache Management -->
+        <div class="card">
+            <h2 class="section-title">
+                <i class="fas fa-bolt" style="color: <?php echo $theme_color; ?>"></i> การจัดการแคช (Cache)
+            </h2>
+            <p class="text-sm text-gray-400 mb-6">ควบคุมความเร็วและการจัดเก็บข้อมูลชั่วคราวของเว็บไซต์</p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <label class="input-label">ตั้งเวลาแคช (ชั่วโมง)</label>
+                    <div class="flex gap-2">
+                        <input type="number" id="cache_duration_input" value="<?php echo isset($config['cacheDuration']) ? ($config['cacheDuration'] / 3600) : 24; ?>" 
+                               min="1" max="720" class="input-field" placeholder="24">
+                        <button type="button" onclick="updateCacheDuration()" class="px-6 py-3 rounded-xl font-semibold transition-all text-white hover:opacity-90" 
+                                style="background-color: <?php echo $theme_color; ?>;">
+                            <i class="fas fa-check"></i> ตั้ง
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2">ปัจจุบัน: <?php echo isset($config['cacheDuration']) ? ($config['cacheDuration'] / 3600) : 24; ?> ชั่วโมง</p>
+                </div>
+                <div>
+                    <label class="input-label">ล้างแคช</label>
+                    <form method="POST" class="flex gap-2">
+                        <button type="submit" name="clear_cache" class="flex-1 py-3 px-4 rounded-xl font-semibold transition-all text-white hover:opacity-90" 
+                                style="background-color: <?php echo $theme_color; ?>;">
+                            <i class="fas fa-trash-alt"></i> ล้างแคชทั้งหมด
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-400 mt-2">ล้างข้อมูลชั่วคราวเพื่อให้เว็บไซต์โหลดข้อมูลใหม่</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Fixed Save Button -->
         <div class="fixed bottom-8 left-0 right-0 flex justify-center pointer-events-none z-50">
             <button form="configForm" type="submit" name="save_config" 
@@ -549,6 +597,20 @@ $themes = [
         document.getElementById('uploadModal').addEventListener('click', function(e) {
             if (e.target === this) closeUploadModal();
         });
+
+        // Update cache duration
+        function updateCacheDuration() {
+            const hours = document.getElementById('cache_duration_input').value;
+            if (!hours || hours < 1 || hours > 720) {
+                alert('กรุณาใส่ค่าระหว่าง 1 ถึง 720 ชั่วโมง');
+                return;
+            }
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.innerHTML = '<input type="hidden" name="cache_duration" value="' + (hours * 3600) + '">';
+            document.body.appendChild(form);
+            form.submit();
+        }
 
         // Cloak preview
         function updateCloakPreview() {

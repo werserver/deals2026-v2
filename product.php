@@ -188,19 +188,33 @@ $flash_seconds = rand(0, 59);
         <div class="grid md:grid-cols-2 gap-8 mb-8">
             <!-- Images Gallery -->
             <div class="flex flex-col gap-4">
-                <!-- Main Image -->
+                <!-- Main Image with Slider Controls -->
                 <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm relative fade-in" style="aspect-ratio: 1;">
                     <?php if ($discount_pct > 0): ?>
                         <div class="absolute top-4 left-4 z-10 bg-red-500 text-white text-sm font-black px-3 py-1 rounded-full shadow-lg">-<?php echo $discount_pct; ?>%</div>
                     <?php endif; ?>
-                    <?php if (!empty($images[0])): ?>
-                        <img id="mainImage" src="<?php echo htmlspecialchars($images[0]); ?>"
-                             alt="<?php echo htmlspecialchars($product_name); ?>"
-                             class="w-full h-full object-contain p-6 smooth-transition"
-                             onerror="this.src='https://via.placeholder.com/500x500?text=No+Image'">
-                    <?php else: ?>
-                        <div class="w-full h-full flex items-center justify-center bg-gray-50">
-                            <i class="fas fa-image text-6xl text-gray-200"></i>
+                    <a id="mainImageLink" href="<?php echo htmlspecialchars($cloaked_url); ?>" class="block w-full h-full" target="_blank" rel="noopener">
+                        <?php if (!empty($images[0])): ?>
+                            <img id="mainImage" src="<?php echo htmlspecialchars($images[0]); ?>"
+                                 alt="<?php echo htmlspecialchars($product_name); ?>"
+                                 class="w-full h-full object-contain p-6 smooth-transition cursor-pointer hover:scale-105"
+                                 onerror="this.src='https://via.placeholder.com/500x500?text=No+Image'">
+                        <?php else: ?>
+                            <div class="w-full h-full flex items-center justify-center bg-gray-50">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        <?php endif; ?>
+                    </a>
+                    <!-- Slider Controls -->
+                    <?php if (count($images) > 1): ?>
+                        <button type="button" onclick="prevImage()" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-lg">
+                            <i class="fas fa-chevron-left text-lg"></i>
+                        </button>
+                        <button type="button" onclick="nextImage()" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-gray-800 w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-lg">
+                            <i class="fas fa-chevron-right text-lg"></i>
+                        </button>
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 bg-black/50 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                            <span id="imageCounter">1</span> / <?php echo count($images); ?>
                         </div>
                     <?php endif; ?>
                 </div>
@@ -209,13 +223,13 @@ $flash_seconds = rand(0, 59);
                 <?php if (count($images) > 1): ?>
                     <div class="grid grid-cols-5 gap-2">
                         <?php foreach ($images as $idx => $img): ?>
-                            <div class="relative overflow-hidden rounded-2xl border-2 transition-all cursor-pointer hover:shadow-md" 
-                                 onclick="setMainImage('<?php echo htmlspecialchars($img); ?>', this)"
+                            <a href="<?php echo htmlspecialchars($cloaked_url); ?>" target="_blank" rel="noopener" class="relative overflow-hidden rounded-2xl border-2 transition-all cursor-pointer hover:shadow-md" 
+                                 onclick="setMainImage('<?php echo htmlspecialchars($img); ?>', this); return false;"
                                  style="aspect-ratio: 1; border-color: <?php echo $idx === 0 ? $theme_color : '#e5e7eb'; ?>">
                                 <img src="<?php echo htmlspecialchars($img); ?>" alt="thumb <?php echo $idx+1; ?>"
                                      class="w-full h-full object-cover smooth-transition hover:scale-110"
                                      onerror="this.parentElement.style.display='none'">
-                            </div>
+                            </a>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -515,15 +529,47 @@ $flash_seconds = rand(0, 59);
     <?php include 'includes/footer.php'; ?>
 
     <script>
+        let currentImageIndex = 0;
+        const images = <?php echo json_encode($images); ?>;
+        const cloakedUrl = '<?php echo htmlspecialchars($cloaked_url); ?>';
+        const themeColor = '<?php echo $theme_color; ?>';
+        
         function setMainImage(src, el) {
             document.getElementById('mainImage').src = src;
-            // Update border color for all thumbnails
-            const themeColor = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
+            document.getElementById('mainImageLink').href = cloakedUrl;
+            const idx = images.indexOf(src);
+            if (idx !== -1) currentImageIndex = idx;
+            updateImageCounter();
             document.querySelectorAll('[onclick*="setMainImage"]').forEach(thumb => {
                 thumb.style.borderColor = '#e5e7eb';
             });
-            // Highlight selected thumbnail
             el.style.borderColor = themeColor || '#ff6b00';
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateMainImage();
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateMainImage();
+        }
+        
+        function updateMainImage() {
+            const src = images[currentImageIndex];
+            document.getElementById('mainImage').src = src;
+            document.getElementById('mainImageLink').href = cloakedUrl;
+            updateImageCounter();
+            const thumbnails = document.querySelectorAll('[onclick*="setMainImage"]');
+            thumbnails.forEach((thumb, idx) => {
+                thumb.style.borderColor = idx === currentImageIndex ? themeColor : '#e5e7eb';
+            });
+        }
+        
+        function updateImageCounter() {
+            const counter = document.getElementById('imageCounter');
+            if (counter) counter.textContent = currentImageIndex + 1;
         }
         function toggleVariation(btn) { btn.classList.toggle('active'); }
         function copyLink() {
