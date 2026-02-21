@@ -1,43 +1,47 @@
-    <footer class="bg-white border-t mt-auto">
-        <div class="container mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-gray-900"><?php echo htmlspecialchars($config['siteName'] ?? 'ThaiDeals'); ?></h3>
-                    <p class="text-sm text-gray-500 leading-relaxed">
-                        รวมสินค้าดีลพิเศษ ลดราคา โปรโมชั่นสุดคุ้ม จากร้านค้าชั้นนำ 
-                        อัปเดตทุกวันเพื่อให้คุณไม่พลาดทุกดีลเด็ด
+<?php
+$config = get_config();
+?>
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.php" class="flex items-center gap-3 mb-6">
+                        <div class="h-10 w-10 rounded-xl flex items-center justify-center text-white shadow-lg" style="background-color: <?php echo $config['themeColor']; ?>;">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <span class="text-xl font-black text-gray-900 tracking-tight"><?php echo htmlspecialchars($config['siteName']); ?></span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        แหล่งรวมดีลสินค้าโปรโมชั่นที่ดีที่สุดจากทุกแพลตฟอร์ม ช้อปคุ้มกว่าใครด้วยระบบเปรียบเทียบราคาและรีวิวที่เชื่อถือได้
                     </p>
                 </div>
-                <div class="space-y-4">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-900">เมนูหลัก</h3>
-                    <nav class="flex flex-col gap-3">
-                        <a href="index.php" class="text-sm text-gray-500 hover:text-primary transition-colors flex items-center gap-2">
-                            <i class="fas fa-home w-4"></i> หน้าแรก
-                        </a>
-                        <a href="about.php" class="text-sm text-gray-500 hover:text-primary transition-colors flex items-center gap-2">
-                            <i class="fas fa-info-circle w-4"></i> เกี่ยวกับเรา
-                        </a>
-                        <a href="contact.php" class="text-sm text-gray-500 hover:text-primary transition-colors flex items-center gap-2">
-                            <i class="fas fa-envelope w-4"></i> ติดต่อเรา
-                        </a>
-                    </nav>
+                <div>
+                    <h4 class="text-sm font-black text-gray-900 uppercase tracking-widest mb-6">หมวดหมู่ยอดนิยม</h4>
+                    <ul class="space-y-4">
+                        <?php if (!empty($config['categories'])): ?>
+                            <?php foreach (array_slice($config['categories'], 0, 4) as $cat): ?>
+                                <li><a href="index.php?cat=<?php echo urlencode($cat['name'] ?? $cat); ?>" class="text-sm font-bold text-gray-400 hover:text-primary transition-colors"><?php echo htmlspecialchars($cat['name'] ?? $cat); ?></a></li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </ul>
                 </div>
-                <div class="space-y-4">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-gray-900">หมวดหมู่ยอดนิยม</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <?php foreach (array_slice($config['categories'] ?? [], 0, 8) as $cat): ?>
-                            <a href="category.php?name=<?php echo urlencode($cat); ?>" 
-                               class="text-xs bg-gray-100 hover:bg-primary hover:text-white px-3 py-1.5 rounded-full transition-colors">
-                                <?php echo htmlspecialchars($cat); ?>
-                            </a>
-                        <?php endforeach; ?>
+                <div>
+                    <h4 class="text-sm font-black text-gray-900 uppercase tracking-widest mb-6">ติดต่อเรา</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="h-10 w-10 rounded-xl bg-gray-50 text-gray-400 hover:bg-blue-500 hover:text-white transition-all flex items-center justify-center"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-xl bg-gray-50 text-gray-400 hover:bg-green-500 hover:text-white transition-all flex items-center justify-center"><i class="fab fa-line"></i></a>
+                        <a href="#" class="h-10 w-10 rounded-xl bg-gray-50 text-gray-400 hover:bg-pink-500 hover:text-white transition-all flex items-center justify-center"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t mt-12 pt-8 text-center">
-                <p class="text-xs text-gray-400">
-                    © 2026 <?php echo htmlspecialchars($config['siteName'] ?? 'ThaiDeals'); ?> — สินค้าดีลพิเศษ โปรโมชั่นสุดคุ้ม. All rights reserved.
+            <div class="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs font-bold text-gray-300">
+                    &copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config['siteName']); ?>. All rights reserved.
                 </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-xs font-bold text-gray-300 hover:text-gray-500">ข้อกำหนดการใช้งาน</a>
+                    <a href="#" class="text-xs font-bold text-gray-300 hover:text-gray-500">นโยบายความเป็นส่วนตัว</a>
+                </div>
             </div>
         </div>
     </footer>
