@@ -2,25 +2,27 @@
 session_start();
 
 // Configuration
-define('DATA_DIR', __DIR__ . '/../data/');
-define('CACHE_DIR', __DIR__ . '/../cache/');
-define('CONFIG_FILE', DATA_DIR . 'config.json');
+define("DATA_DIR", __DIR__ . "/../data");
+define("CACHE_DIR", __DIR__ . "/../cache");
+define("CONFIG_FILE", DATA_DIR . "/config.json");
+define("MAIN_CSV", DATA_DIR . "/main.csv");
 
 // Ensure directories exist
 if (!is_dir(DATA_DIR)) mkdir(DATA_DIR, 0755, true);
 if (!is_dir(CACHE_DIR)) mkdir(CACHE_DIR, 0755, true);
 
 /**
- * Get default site configuration
+ * Get site configuration
  */
-function get_default_config() {
-    return [
+function get_config() {
+    $default_config = [
         'siteName' => 'ThaiDeals',
-        'siteFavicon' => '/favicon.ico',
-        'themeColor' => '#4f46e5',
+        'favicon' => '/favicon.ico',
+        'themeColor' => '#4f46e5', // Default Indigo
         'themeName' => 'indigo',
         'categories' => [],
         'keywords' => [],
+        'categoryCsvFileNames' => [],
         'cloakingBaseUrl' => 'https://goeco.mobi/?token=QlpXZyCqMylKUjZiYchwB',
         'cloakingToken' => 'QlpXZyCqMylKUjZiYchwB',
         'flashSaleEnabled' => true,
@@ -28,13 +30,7 @@ function get_default_config() {
         'prefixWordsEnabled' => true,
         'prefixWords' => ['ถูกที่สุด', 'ลดราคา', 'ส่วนลดพิเศษ', 'ขายดี', 'แนะนำ', 'คุ้มสุดๆ', 'ราคาดี', 'โปรโมชั่น', 'สุดคุ้ม', 'ห้ามพลาด', 'ราคาถูก', 'ดีลเด็ด', 'ลดแรง', 'ยอดนิยม', 'ราคาพิเศษ']
     ];
-}
 
-/**
- * Get site configuration
- */
-function get_config() {
-    $default_config = get_default_config();
     if (!file_exists(CONFIG_FILE)) {
         file_put_contents(CONFIG_FILE, json_encode($default_config, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         return $default_config;
@@ -71,16 +67,16 @@ function get_all_products($keyword = '', $category_name = '') {
     if ($category_name) {
         foreach ($config['categories'] as $cat) {
             if ($cat['name'] === $category_name && !empty($cat['csvFile'])) {
-                $path = DATA_DIR . $cat['csvFile'];
+                $path = DATA_DIR . '/' . $cat['csvFile'];
                 if (file_exists($path)) $csv_files_to_read[] = $path;
             }
         }
     } else {
-        $main_csv_path = DATA_DIR . 'main.csv';
+        $main_csv_path = DATA_DIR . '/main.csv';
         if (file_exists($main_csv_path)) $csv_files_to_read[] = $main_csv_path;
         foreach ($config['categories'] as $cat) {
             if (!empty($cat['csvFile'])) {
-                $path = DATA_DIR . $cat['csvFile'];
+                $path = DATA_DIR . '/' . $cat['csvFile'];
                 if (file_exists($path) && !in_array($path, $csv_files_to_read)) $csv_files_to_read[] = $path;
             }
         }
@@ -141,31 +137,84 @@ function format_price($price) {
  * Generate Random Reviews
  */
 function get_random_reviews($count = 5) {
-    $names = ['วิชัย ค.', 'สมหญิง ข.', 'สมชาย ก.', 'ประเสริฐ พ.', 'มาลี ส.'];
-    $comments = ['สินค้าคุณภาพดีมากครับ', 'ได้รับสินค้าแล้วค่ะ แพ็คมาอย่างดี', 'คุณภาพพอใช้ได้ครับ', 'สินค้าดีมากค่ะ คุ้มค่า', 'ส่งไวมากครับ สินค้าคุณภาพดี'];
+    $names = ['วิชัย ค.', 'สมหญิง ข.', 'สมชาย ก.', 'ประเสริฐ พ.', 'มาลี ส.', 'กิตติพงษ์ จ.', 'นงลักษณ์ ม.', 'ธนพล ด.', 'ศิริพร ล.', 'อภิชาติ ต.'];
+    $comments = [
+        'สินค้าคุณภาพดีมากครับ คุ้มค่ากับราคาที่จ่ายไป การจัดส่งก็รวดเร็วทันใจ แนะนำเลยครับ',
+        'ได้รับสินค้าแล้วค่ะ แพ็คมาอย่างดี สินค้าตรงปกมาก สีสวยถูกใจ ใช้งานได้ดีไม่มีปัญหาอะไรเลยค่ะ',
+        'คุณภาพพอใช้ได้ครับ ตามราคาที่จ่ายไป การจัดส่งช้าไปนิดหน่อยแต่โดยรวมโอเคครับ',
+        'สินค้าดีมากค่ะ คุ้มค่า คุ้มราคา ส่งไวมาก แนะนำร้านนี้เลยค่ะ ไม่ผิดหวังแน่นอน',
+        'ได้รับสินค้ารวดเร็ว บรรจุภัณฑ์ก็ดี สินค้าใช้งานได้ดีมากค่ะ ชอบมากเลย',
+        'สินค้าตรงตามที่สั่งครับ ใช้งานได้ดี ไม่มีปัญหาอะไร แนะนำครับ',
+        'ส่งไวมากครับ สินค้าคุณภาพดี ราคาไม่แพง คุ้มค่าสุดๆ',
+        'แพ็คสินค้ามาดีมากครับ สินค้าไม่เสียหายเลย ใช้งานได้ดีมากครับ',
+        'สินค้าสวยมากค่ะ ตรงปกทุกอย่าง ใช้งานง่าย สะดวกมากค่ะ',
+        'คุ้มค่าคุ้มราคามากครับ สินค้าดี มีคุณภาพ แนะนำเลยครับ'
+    ];
+    $dates = ['2025-07-03', '2024-06-25', '2025-05-21', '2024-04-16', '2025-03-11', '2025-02-10', '2025-01-15', '2024-12-20', '2024-11-05', '2024-10-12'];
+
     $reviews = [];
     for ($i = 0; $i < $count; $i++) {
-        $reviews[] = ['name' => $names[array_rand($names)], 'rating' => rand(4, 5), 'comment' => $comments[array_rand($comments)], 'date' => date('Y-m-d', time() - rand(0, 365) * 86400)];
+        $reviews[] = [
+            'name' => $names[array_rand($names)],
+            'rating' => rand(3, 5),
+            'comment' => $comments[array_rand($comments)],
+            'date' => $dates[array_rand($dates)]
+        ];
     }
     return $reviews;
 }
 
-/**
- * Generate Random Price Comparison
- */
+// Generate Random Price Comparison
 function get_price_comparison($base_price) {
-    $shops = [['name' => 'ShopA Official', 'badge' => 'ร้านแนะนำ'], ['name' => 'BestPrice Store'], ['name' => 'MegaDeal Shop'], ['name' => 'ValuePlus Mall'], ['name' => 'SuperSave Outlet']];
-    $comparison = [];
+    $shops = [
+        ['name' => 'ShopA Official', 'badge' => 'ร้านแนะนำ', 'mall' => true],
+        ['name' => 'BestPrice Store', 'badge' => '', 'mall' => false],
+        ['name' => 'MegaDeal Shop', 'badge' => 'ขายดี', 'mall' => false],
+        ['name' => 'ValuePlus Mall', 'badge' => '', 'mall' => true],
+        ['name' => 'SuperSave Outlet', 'badge' => 'ส่งไว', 'mall' => false]
+    ];
+    
     $base_val = (float)preg_replace('/[^0-9.]/', '', $base_price);
+    $comparison = [];
+    
     foreach ($shops as $shop) {
-        $comparison[] = ['shop_name' => $shop['name'], 'badge' => $shop['badge'] ?? '', 'rating' => number_format(4 + (rand(0, 10) / 10), 1), 'price' => $base_val + rand(-50, 50)];
+        $diff = rand(-10, 10);
+        $comparison[] = [
+            'shop_name' => $shop['name'],
+            'badge' => $shop['badge'],
+            'mall' => $shop['mall'],
+            'rating' => number_format(4 + (rand(0, 10) / 10), 1),
+            'price' => $base_val + $diff
+        ];
     }
+    
     usort($comparison, fn($a, $b) => $a['price'] <=> $b['price']);
     return $comparison;
 }
 
 /**
- * Authentication
+ * Generate Random Purchase Notification Data
+ */
+function get_random_purchase_notification() {
+    $names = ['คุณพิมพ์', 'คุณสมศักดิ์', 'คุณอรุณี', 'คุณชัยวัฒน์', 'คุณสุภาภรณ์', 'คุณณัฐพล', 'คุณกนกวรรณ'];
+    $provinces = ['กรุงเทพฯ', 'ขอนแก่น', 'เชียงใหม่', 'ภูเก็ต', 'ชลบุรี', 'นครราชสีมา', 'สงขลา', 'อุบลราชธานี'];
+    $time_ago = ['1 นาทีที่แล้ว', '2 นาทีที่แล้ว', '5 นาทีที่แล้ว', '10 นาทีที่แล้ว', '15 นาทีที่แล้ว', '30 นาทีที่แล้ว', '1 ชั่วโมงที่แล้ว'];
+
+    $all_products = get_all_products();
+    $random_product = $all_products[array_rand($all_products)];
+
+    return [
+        'customer_name' => $names[array_rand($names)],
+        'province' => $provinces[array_rand($provinces)],
+        'product_name' => $random_product['product_name_display'],
+        'product_image' => $random_product['product_image'],
+        'product_url' => $random_product['cloaked_url'],
+        'time_ago' => $time_ago[array_rand($time_ago)]
+    ];
+}
+
+/**
+ * Authentication check
  */
 function is_logged_in() {
     return isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
@@ -188,7 +237,7 @@ function logout() {
  * Clear cache
  */
 function clear_cache() {
-    $files = glob(CACHE_DIR . '*');
+    $files = glob(CACHE_DIR . '/*');
     foreach ($files as $file) {
         if (is_file($file)) unlink($file);
     }

@@ -45,5 +45,61 @@ $config = get_config();
             </div>
         </div>
     </footer>
+
+    <!-- Random Purchase Notification Badge -->
+    <div id="purchaseNotification" class="fixed bottom-8 right-8 z-40 max-w-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <?php $notification = get_random_purchase_notification(); ?>
+        <div class="bg-white rounded-[1.5rem] shadow-2xl shadow-gray-200 border border-gray-100 overflow-hidden hover:shadow-3xl transition-all duration-300">
+            <div class="p-6">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0">
+                        <img src="<?php echo htmlspecialchars($notification['product_image']); ?>" alt="<?php echo htmlspecialchars($notification['product_name']); ?>" class="w-16 h-16 rounded-xl object-contain bg-gray-50">
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">ซื้อสินค้าแล้ว</p>
+                        <p class="text-sm font-black text-gray-900 mb-2"><?php echo htmlspecialchars($notification['customer_name']); ?> จาก<?php echo htmlspecialchars($notification['province']); ?></p>
+                        <p class="text-xs font-bold text-gray-500 line-clamp-2 mb-3"><?php echo htmlspecialchars($notification['product_name']); ?></p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-gray-300"><?php echo htmlspecialchars($notification['time_ago']); ?></span>
+                            <button onclick="closeNotification()" class="text-gray-300 hover:text-gray-500 transition-colors">
+                                <i class="fas fa-times text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function closeNotification() {
+            const notification = document.getElementById('purchaseNotification');
+            notification.style.animation = 'fadeOut 0.3s ease-out forwards';
+            setTimeout(() => notification.remove(), 300);
+        }
+        
+        // Auto-hide notification after 8 seconds
+        setTimeout(() => {
+            const notification = document.getElementById('purchaseNotification');
+            if (notification) closeNotification();
+        }, 8000);
+        
+        // Refresh notification every 15 seconds
+        setInterval(() => {
+            const notification = document.getElementById('purchaseNotification');
+            if (!notification) {
+                location.reload();
+            }
+        }, 15000);
+    </script>
+
+    <style>
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+    </style>
 </body>
 </html>
