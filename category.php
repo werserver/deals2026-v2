@@ -1,15 +1,11 @@
 <?php
-include_once 'includes/functions.php';
+require_once 'includes/functions.php';
 $config = get_config();
-$category_name = $_GET['name'] ?? '';
+$theme_color = $config['themeColor'] ?? '#ff6b00';
+$category_name = trim($_GET['name'] ?? '');
+if (empty($category_name)) { header('Location: index.php'); exit; }
 $products = get_all_products('', $category_name);
-
-if (!$category_name) {
-    header("Location: index.php");
-    exit;
-}
-
-include_once 'includes/header.php';
+$categories = $config['categories'] ?? [];
 ?>
 
 <main class="container mx-auto px-4 py-8">
@@ -44,7 +40,7 @@ include_once 'includes/header.php';
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 <?php foreach ($products as $index => $p): ?>
                     <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all overflow-hidden flex flex-col">
-                        <a href="product.php?id=<?php echo $index; ?>&cat=<?php echo urlencode($category_name); ?>" class="relative aspect-square overflow-hidden bg-gray-50">
+                        <a href="product.php?id=<?php echo urlencode($p['product_slug']); ?>" class="relative aspect-square overflow-hidden bg-gray-50">
                             <img src="<?php echo htmlspecialchars($p['product_image']); ?>" 
                                  alt="<?php echo htmlspecialchars($p['product_name']); ?>"
                                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -56,8 +52,8 @@ include_once 'includes/header.php';
                             <?php endif; ?>
                         </a>
                         <div class="p-5 flex flex-col flex-grow">
-                            <a href="product.php?id=<?php echo $index; ?>&cat=<?php echo urlencode($category_name); ?>" class="text-sm font-bold text-gray-800 line-clamp-2 mb-3 group-hover:text-primary transition-colors">
-                                <?php echo htmlspecialchars($p['product_name']); ?>
+                            <a href="product.php?id=<?php echo urlencode($p['product_slug']); ?>" class="text-sm font-bold text-gray-800 line-clamp-2 mb-3 group-hover:text-primary transition-colors">
+                                <?php echo htmlspecialchars($p['product_name_display'] ?? $p['product_name']); ?>
                             </a>
                             <div class="mt-auto">
                                 <div class="flex items-baseline gap-2 mb-3">
@@ -70,8 +66,9 @@ include_once 'includes/header.php';
                                         </span>
                                     <?php endif; ?>
                                 </div>
-                                <a href="<?php echo htmlspecialchars($p['tracking_link']); ?>" target="_blank" 
-                                   class="block w-full py-3 rounded-xl bg-gray-900 text-white text-center text-xs font-bold hover:bg-black transition-all shadow-lg shadow-gray-100">
+                                <a href="<?php echo htmlspecialchars($p['cloaked_url'] ?? $p['tracking_link']); ?>" target="_blank" 
+                                   class="block w-full py-3 rounded-xl text-white text-center text-xs font-bold hover:opacity-90 transition-all shadow-lg"
+                                   style="background-color: <?php echo $theme_color; ?>">
                                     สั่งซื้อสินค้า
                                 </a>
                             </div>

@@ -1,206 +1,514 @@
 <?php
-include_once 'includes/functions.php';
+require_once 'includes/functions.php';
 $config = get_config();
-$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-$keyword = $_GET['q'] ?? '';
-$category = $_GET['cat'] ?? '';
+$theme_color = $config['themeColor'] ?? '#ff6b00';
 
-$products = get_all_products($keyword, $category);
-$product = $products[$id] ?? null;
+// Get product by slug (id-name format) or by id
+$slug = $_GET['id'] ?? '';
+$product = null;
+$all_products = get_all_products();
+
+if (!empty($slug)) {
+    foreach ($all_products as $p) {
+        if ($p['product_id'] == $slug || $p['product_slug'] == $slug || strpos($slug, (string)$p['product_id']) === 0) {
+            $product = $p;
+            break;
+        }
+    }
+}
+
+if (!$product && !empty($all_products)) {
+    $product = $all_products[0];
+}
 
 if (!$product) {
-    header("Location: index.php");
+    header('HTTP/1.0 404 Not Found');
+    include 'includes/header.php';
+    echo '<div class="container mx-auto px-4 py-24 text-center"><h1 class="text-2xl font-bold text-gray-400">ไม่พบสินค้า</h1><a href="index.php" class="mt-4 inline-block font-semibold" style="color:' . $theme_color . '">กลับหน้าแรก</a></div>';
+    include 'includes/footer.php';
     exit;
 }
 
-// Get related products (5 items)
-$related_products = array_slice(array_filter($products, function($p, $idx) use ($id) {
-    return $idx !== $id;
-}, ARRAY_FILTER_USE_BOTH), 0, 5);
+$product_id   = $product['product_id'];
+$product_name = $product['product_name'];
+$display_name = $product['product_name_display'] ?? $product_name;
+$price        = (float)preg_replace('/[^0-9.]/', '', $product['product_price']);
+$original     = (float)preg_replace('/[^0-9.]/', '', $product['product_discounted']);
+$discount_pct = (int)$product['product_discounted_percentage'];
+$image        = $product['product_image'];
+$cloaked_url  = $product['cloaked_url'] ?? $product['tracking_link'];
+$category     = $product['category_name'];
+$shop_name    = $product['shop_name'] ?: 'TrailQuest';
+$rating       = (float)($product['rating'] ?: 4.0);
+$rating_count = (int)($product['rating_count'] ?: rand(50, 500));
+$sold_count   = $product['sold_count'] ?: rand(1000, 99999);
 
-include_once 'includes/header.php';
+if ($original <= 0 || $original <= $price) {
+    $original = round($price * (1 + rand(20, 80) / 100));
+}
+if ($discount_pct <= 0) {
+    $discount_pct = round((($original - $price) / $original) * 100);
+}
+
+$images = [];
+if (!empty($product['images'])) {
+    $images = array_filter(array_map('trim', explode(',', $product['images'])));
+}
+if (empty($images) && !empty($image)) {
+    $images = [$image];
+}
+
+$colors = [];
+$sizes  = [];
+if (!empty($product['colors'])) {
+    $colors = array_filter(array_map('trim', explode(',', $product['colors'])));
+}
+if (!empty($product['sizes'])) {
+    $sizes = array_filter(array_map('trim', explode(',', $product['sizes'])));
+}
+if (empty($colors) && empty($sizes)) {
+    $sample_sizes  = ['S', 'M', 'L', 'XL', 'XXL'];
+    $sample_colors = ['สีดำ', 'สีขาว', 'สีแดง', 'สีน้ำเงิน', 'สีเขียว', 'สีเทา'];
+    $sizes  = array_slice($sample_sizes, 0, rand(3, 5));
+    $colors = array_slice($sample_colors, 0, rand(3, 4));
+}
+
+$reviews          = get_random_reviews(rand(5, 8));
+$price_comparison = get_price_comparison($price, $cloaked_url);
+
+$related = array_filter($all_products, fn($p) => $p['product_id'] !== $product_id);
+$related = array_slice(array_values($related), 0, 5);
+
+$flash_hours   = rand(2, 23);
+$flash_minutes = rand(0, 59);
+$flash_seconds = rand(0, 59);
 ?>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($display_name); ?> | <?php echo htmlspecialchars($config['siteName']); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars(mb_substr($product_name, 0, 160)); ?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo htmlspecialchars($config['siteFavicon'] ?? '/favicon.ico'); ?>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { font-family: 'Prompt', sans-serif !important; }
+        :root { --primary: <?php echo $theme_color; ?>; }
+        .text-primary { color: var(--primary) !important; }
+        .bg-primary { background-color: var(--primary) !important; }
+        .btn-primary { background-color: var(--primary); color: white; transition: all 0.2s; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); transition: all 0.2s; }
+        .btn-outline:hover { background-color: var(--primary); color: white; }
+        .announcement-bar { background: linear-gradient(90deg, var(--primary), color-mix(in srgb, var(--primary) 80%, black)); }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .product-card { transition: all 0.3s ease; }
+        .thumb-img { cursor: pointer; border: 2px solid transparent; border-radius: 0.75rem; transition: all 0.2s; }
+        .thumb-img.active, .thumb-img:hover { border-color: var(--primary); }
+        .variation-btn { padding: 0.5rem 1rem; border-radius: 999px; border: 1.5px solid #e5e7eb; font-size: 0.8125rem; font-weight: 600; cursor: pointer; transition: all 0.2s; background: white; }
+        .variation-btn:hover, .variation-btn.active { border-color: var(--primary); color: var(--primary); background-color: color-mix(in srgb, var(--primary) 8%, white); }
+        .star-filled { color: #f59e0b; }
+        .star-empty { color: #d1d5db; }
+        .flash-sale-bar { background: linear-gradient(135deg, #ef4444, #dc2626); }
+        .cheapest-badge { background-color: #10b981; color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 999px; }
+        @keyframes fadeOut { to { opacity: 0; transform: translateY(10px); } }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .slide-in { animation: slideIn 0.4s ease-out; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
 
-<main class="container mx-auto px-4 py-12">
-    <!-- Breadcrumb -->
-    <nav class="flex items-center gap-2 text-sm font-bold text-gray-400 mb-8 overflow-x-auto whitespace-nowrap pb-2">
-        <a href="index.php" class="hover:text-primary transition-colors">หน้าแรก</a>
-        <i class="fas fa-chevron-right text-[10px]"></i>
-        <?php if ($product['category_name']): ?>
-            <a href="category.php?name=<?php echo urlencode($product['category_name']); ?>" class="hover:text-primary transition-colors"><?php echo htmlspecialchars($product['category_name']); ?></a>
-            <i class="fas fa-chevron-right text-[10px]"></i>
-        <?php endif; ?>
-        <span class="text-gray-900 truncate"><?php echo htmlspecialchars($product['product_name']); ?></span>
-    </nav>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar text-white text-center py-2 px-4 text-xs font-semibold">
+        <i class="fas fa-tag mr-2"></i>ดีลพิเศษวันนี้! สินค้าลดราคาสูงสุด 50% — รีบสั่งซื้อก่อนหมดเขต!
+    </div>
 
-    <div class="grid lg:grid-cols-2 gap-12 mb-20">
-        <!-- Product Image -->
-        <div class="relative group">
-            <div class="aspect-square rounded-[3rem] overflow-hidden bg-white border border-gray-100 shadow-2xl shadow-gray-100">
-                <img src="<?php echo htmlspecialchars($product['product_image']); ?>" 
-                     alt="<?php echo htmlspecialchars($product['product_name']); ?>"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                     onerror="this.src='https://via.placeholder.com/800x800?text=No+Image'">
-            </div>
-            <?php if (!empty($product['product_discounted_percentage'])): ?>
-                <div class="absolute top-8 left-8 bg-red-600 text-white text-sm font-black px-5 py-2 rounded-full shadow-xl">
-                    ลด <?php echo htmlspecialchars($product['product_discounted_percentage']); ?>%
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.php" class="flex items-center gap-2 group">
+                <div class="h-9 w-9 rounded-xl flex items-center justify-center text-white shadow-md transition-transform group-hover:scale-110" style="background-color: <?php echo $theme_color; ?>;">
+                    <i class="fas fa-shopping-bag text-sm"></i>
                 </div>
-            <?php endif; ?>
+                <span class="text-lg font-black text-gray-900 tracking-tight"><?php echo htmlspecialchars($config['siteName']); ?></span>
+            </a>
+            <a href="index.php" class="text-sm font-semibold text-gray-500 hover:text-gray-700 flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-gray-100 transition-all">
+                <i class="fas fa-arrow-left text-xs"></i> กลับหน้าแรก
+            </a>
         </div>
+    </header>
 
-        <!-- Product Info -->
-        <div class="flex flex-col">
-            <?php if ($config['flashSaleEnabled']): ?>
-                <!-- Flash Sale Banner -->
-                <div class="bg-gradient-to-r from-red-600 to-orange-500 text-white p-4 rounded-2xl mb-6 flex items-center justify-between shadow-lg shadow-red-100">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xl">⚡</span>
-                        <span class="font-black uppercase tracking-wider">Flash Sale — เวลาจำกัด!</span>
-                    </div>
-                    <div class="flex items-center gap-2 font-mono font-bold">
-                        <span class="bg-white/20 px-2 py-1 rounded">02</span>:
-                        <span class="bg-white/20 px-2 py-1 rounded">45</span>:
-                        <span class="bg-white/20 px-2 py-1 rounded">12</span>
-                    </div>
-                </div>
+    <main class="container mx-auto px-4 py-6 max-w-5xl flex-1">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-xs text-gray-400 mb-5 flex-wrap">
+            <a href="index.php" class="hover:text-gray-600 transition-colors">หน้าแรก</a>
+            <i class="fas fa-chevron-right text-[10px]"></i>
+            <?php if ($category): ?>
+                <a href="index.php?cat=<?php echo urlencode($category); ?>" class="hover:text-gray-600 transition-colors"><?php echo htmlspecialchars($category); ?></a>
+                <i class="fas fa-chevron-right text-[10px]"></i>
             <?php endif; ?>
+            <span class="text-gray-500 font-medium"><?php echo htmlspecialchars(mb_substr($product_name, 0, 60, 'UTF-8')); ?>...</span>
+        </nav>
 
-            <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">
-                <?php echo htmlspecialchars($product['product_name_display']); ?>
-            </h1>
-
-            <div class="flex items-baseline gap-4 mb-8">
-                <span class="text-5xl font-black text-primary" style="color: <?php echo $config['themeColor']; ?>">
-                    <?php echo format_price($product['product_price']); ?>
-                </span>
-                <?php if (!empty($product['product_discounted'])): ?>
-                    <span class="text-xl text-gray-400 line-through">
-                        <?php echo format_price($product['product_discounted']); ?>
-                    </span>
+        <!-- Product Detail Grid -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <!-- Images -->
+            <div>
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-3 aspect-square relative">
+                    <?php if ($discount_pct > 0): ?>
+                        <div class="absolute top-4 left-4 z-10 bg-red-500 text-white text-sm font-black px-3 py-1 rounded-full shadow-lg">-<?php echo $discount_pct; ?>%</div>
+                    <?php endif; ?>
+                    <?php if (!empty($images[0])): ?>
+                        <img id="mainImage" src="<?php echo htmlspecialchars($images[0]); ?>"
+                             alt="<?php echo htmlspecialchars($product_name); ?>"
+                             class="w-full h-full object-contain p-4"
+                             onerror="this.src='https://via.placeholder.com/500x500?text=No+Image'">
+                    <?php else: ?>
+                        <div class="w-full h-full flex items-center justify-center bg-gray-50">
+                            <i class="fas fa-image text-6xl text-gray-200"></i>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <?php if (count($images) > 1): ?>
+                    <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
+                        <?php foreach ($images as $idx => $img): ?>
+                            <img src="<?php echo htmlspecialchars($img); ?>" alt="thumb <?php echo $idx+1; ?>"
+                                 class="thumb-img w-16 h-16 object-cover flex-shrink-0 <?php echo $idx === 0 ? 'active' : ''; ?>"
+                                 onclick="setMainImage('<?php echo htmlspecialchars($img); ?>', this)"
+                                 onerror="this.style.display='none'">
+                        <?php endforeach; ?>
+                    </div>
                 <?php endif; ?>
             </div>
 
-            <!-- Product Options -->
-            <div class="mb-8">
-                <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">ตัวเลือกสินค้า</h3>
-                <div class="flex flex-wrap gap-3">
-                    <button class="px-6 py-3 rounded-xl border-2 border-primary bg-primary/5 text-primary font-bold" style="border-color: <?php echo $config['themeColor']; ?>; color: <?php echo $config['themeColor']; ?>; background-color: <?php echo $config['themeColor']; ?>10;">รุ่นมาตรฐาน</button>
-                    <button class="px-6 py-3 rounded-xl border-2 border-gray-100 text-gray-400 font-bold hover:border-gray-200 transition-all">รุ่นพรีเมียม</button>
-                </div>
-            </div>
+            <!-- Info -->
+            <div class="flex flex-col gap-4">
+                <?php if ($category): ?>
+                    <a href="index.php?cat=<?php echo urlencode($category); ?>"
+                       class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-full w-fit hover:opacity-80 transition-all"
+                       style="background-color: color-mix(in srgb, <?php echo $theme_color; ?> 12%, white); color: <?php echo $theme_color; ?>">
+                        <i class="fas fa-tag text-[10px]"></i> <?php echo htmlspecialchars($category); ?>
+                    </a>
+                <?php endif; ?>
 
-            <!-- Action Buttons -->
-            <div class="grid sm:grid-cols-2 gap-4 mb-10">
-                <a href="<?php echo htmlspecialchars($product['cloaked_url']); ?>" target="_blank" 
-                   class="flex items-center justify-center gap-3 py-5 bg-gray-900 text-white rounded-2xl font-black text-lg hover:bg-black transition-all shadow-2xl shadow-gray-200">
-                    <i class="fas fa-info-circle"></i> ดูรายละเอียดเพิ่มเติม
-                </a>
-                <a href="<?php echo htmlspecialchars($product['cloaked_url']); ?>" target="_blank" 
-                   class="flex items-center justify-center gap-3 py-5 bg-primary text-white rounded-2xl font-black text-lg hover:opacity-90 transition-all shadow-2xl shadow-primary/20"
-                   style="background-color: <?php echo $config['themeColor']; ?>;">
-                    <i class="fas fa-shopping-cart"></i> สั่งซื้อสินค้านี้
-                </a>
-            </div>
+                <h1 class="text-xl font-black text-gray-900 leading-tight"><?php echo htmlspecialchars($display_name); ?></h1>
 
-            <!-- Product Features -->
-            <div class="grid grid-cols-3 gap-4 py-8 border-y border-gray-100">
-                <div class="text-center">
-                    <div class="text-primary mb-2" style="color: <?php echo $config['themeColor']; ?>;"><i class="fas fa-shield-alt text-xl"></i></div>
-                    <p class="text-[10px] font-bold text-gray-500 uppercase">รับประกันแท้ 100%</p>
+                <div class="flex items-center gap-2 flex-wrap">
+                    <div class="flex items-center gap-0.5">
+                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                            <i class="fas fa-star text-sm <?php echo $i <= round($rating) ? 'star-filled' : 'star-empty'; ?>"></i>
+                        <?php endfor; ?>
+                    </div>
+                    <span class="text-sm font-bold text-gray-700"><?php echo number_format($rating, 1); ?></span>
+                    <span class="text-sm text-gray-400">(<?php echo number_format($rating_count); ?>)</span>
+                    <span class="text-sm text-gray-300">•</span>
+                    <span class="text-sm text-gray-400">ขายแล้ว <?php echo number_format($sold_count); ?></span>
                 </div>
-                <div class="text-center">
-                    <div class="text-primary mb-2" style="color: <?php echo $config['themeColor']; ?>;"><i class="fas fa-truck text-xl"></i></div>
-                    <p class="text-[10px] font-bold text-gray-500 uppercase">จัดส่งรวดเร็ว</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-primary mb-2" style="color: <?php echo $config['themeColor']; ?>;"><i class="fas fa-undo text-xl"></i></div>
-                    <p class="text-[10px] font-bold text-gray-500 uppercase">คืนเงินใน 7 วัน</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Product Details Tabs -->
-    <div class="mb-20">
-        <div class="flex border-b border-gray-100 mb-8 overflow-x-auto">
-            <button class="px-8 py-4 border-b-4 border-primary font-black text-gray-900 whitespace-nowrap" style="border-color: <?php echo $config['themeColor']; ?>;">ข้อมูลสินค้า</button>
-            <button class="px-8 py-4 text-gray-400 font-bold hover:text-gray-600 whitespace-nowrap">เปรียบเทียบราคาจากหลายร้าน</button>
-            <button class="px-8 py-4 text-gray-400 font-bold hover:text-gray-600 whitespace-nowrap">รีวิวจากผู้ซื้อ (5)</button>
-        </div>
-        
-        <div class="prose prose-indigo max-w-none text-gray-600 leading-relaxed">
-            <p class="mb-6">สัมผัสประสบการณ์การใช้งานที่เหนือระดับด้วย <?php echo htmlspecialchars($product['product_name']); ?> สินค้าคุณภาพที่ผ่านการคัดสรรมาอย่างดีเพื่อคุณโดยเฉพาะ โดดเด่นด้วยดีไซน์ที่ทันสมัยและฟังก์ชันการใช้งานที่ครบครัน ตอบโจทย์ทุกไลฟ์สไตล์การใช้ชีวิตในปัจจุบัน</p>
-            
-            <h4 class="text-gray-900 font-black mb-4">คุณสมบัติเด่น:</h4>
-            <ul class="list-disc pl-6 space-y-2 mb-8">
-                <li>ผลิตจากวัสดุคุณภาพสูง ทนทานต่อการใช้งาน</li>
-                <li>ดีไซน์สวยงาม ทันสมัย เข้าได้กับทุกการแต่งกาย</li>
-                <li>ฟังก์ชันการใช้งานที่ง่ายและสะดวกสบาย</li>
-                <li>คุ้มค่าคุ้มราคา ด้วยส่วนลดพิเศษเฉพาะที่นี่เท่านั้น</li>
-            </ul>
+                <div class="flex items-end gap-3">
+                    <span class="text-4xl font-black" style="color: <?php echo $theme_color; ?>"><?php echo format_price($price); ?></span>
+                    <?php if ($original > $price): ?>
+                        <span class="text-lg text-gray-300 line-through font-semibold mb-1"><?php echo format_price($original); ?></span>
+                        <span class="bg-red-500 text-white text-sm font-black px-2.5 py-1 rounded-full mb-1">-<?php echo $discount_pct; ?>%</span>
+                    <?php endif; ?>
+                </div>
 
-            <?php if ($config['aiReviewsEnabled']): ?>
-                <div class="bg-indigo-50 p-8 rounded-[2rem] border border-indigo-100 mt-12">
-                    <h4 class="text-indigo-900 font-black mb-6 flex items-center gap-3">
-                        <i class="fas fa-robot"></i> AI Reviews & Insights
-                    </h4>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="h-12 w-12 rounded-full bg-white flex items-center justify-center shadow-sm text-indigo-600 font-bold">A</div>
-                            <div>
-                                <p class="font-bold text-gray-900 mb-1">สมชาย รักษ์ดี <span class="text-xs text-gray-400 font-normal ml-2">ยืนยันการซื้อแล้ว</span></p>
-                                <div class="flex text-yellow-400 text-xs mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="text-sm text-gray-600">สินค้าคุณภาพดีมากครับ คุ้มค่ากับราคาที่จ่ายไป การจัดส่งก็รวดเร็วทันใจ แนะนำเลยครับสำหรับใครที่กำลังลังเลอยู่</p>
+                <?php if ($config['flashSaleEnabled']): ?>
+                    <div class="flash-sale-bar text-white rounded-2xl p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-bolt text-yellow-300"></i>
+                            <span class="font-black text-sm">⚡ Flash Sale — เวลาจำกัด!</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="bg-white/20 rounded-lg px-3 py-1.5 text-center min-w-[52px]">
+                                <span class="text-xl font-black" id="hours"><?php echo str_pad($flash_hours, 2, '0', STR_PAD_LEFT); ?></span>
+                                <span class="text-xs block opacity-80">ชม.</span>
+                            </div>
+                            <span class="text-xl font-black opacity-60">:</span>
+                            <div class="bg-white/20 rounded-lg px-3 py-1.5 text-center min-w-[52px]">
+                                <span class="text-xl font-black" id="minutes"><?php echo str_pad($flash_minutes, 2, '0', STR_PAD_LEFT); ?></span>
+                                <span class="text-xs block opacity-80">นาที</span>
+                            </div>
+                            <span class="text-xl font-black opacity-60">:</span>
+                            <div class="bg-white/20 rounded-lg px-3 py-1.5 text-center min-w-[52px]">
+                                <span class="text-xl font-black" id="seconds"><?php echo str_pad($flash_seconds, 2, '0', STR_PAD_LEFT); ?></span>
+                                <span class="text-xs block opacity-80">วินาที</span>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="h-12 w-12 rounded-full bg-white flex items-center justify-center shadow-sm text-indigo-600 font-bold">W</div>
-                            <div>
-                                <p class="font-bold text-gray-900 mb-1">วิภาวรรณ สวยงาม <span class="text-xs text-gray-400 font-normal ml-2">ยืนยันการซื้อแล้ว</span></p>
-                                <div class="flex text-yellow-400 text-xs mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                                <p class="text-sm text-gray-600">ได้รับสินค้าแล้วค่ะ แพ็คมาอย่างดี สินค้าตรงปกมาก สีสวยถูกใจ ใช้งานได้ดีไม่มีปัญหาอะไรเลยค่ะ</p>
-                            </div>
-                        </div>
+                        <p class="text-xs opacity-90 flex items-center gap-1.5">
+                            <i class="fas fa-fire text-yellow-300"></i> สินค้ากำลังจะหมด รีบสั่งซื้อเลย!
+                        </p>
+                    </div>
+                <?php endif; ?>
+
+                <div class="flex items-center gap-3 flex-wrap">
+                    <div class="flex items-center gap-1.5 text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-2 rounded-xl">
+                        <i class="fas fa-shield-alt text-green-500"></i> สินค้าแท้ 100%
+                    </div>
+                    <div class="flex items-center gap-1.5 text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-2 rounded-xl">
+                        <i class="fas fa-truck text-blue-500"></i> จัดส่งฟรี
+                    </div>
+                    <div class="flex items-center gap-1.5 text-xs font-semibold text-gray-500 bg-gray-50 px-3 py-2 rounded-xl">
+                        <i class="fas fa-check-circle text-purple-500"></i> สั่งซื้อง่าย
                     </div>
                 </div>
-            <?php endif; ?>
-        </div>
-    </div>
 
-    <!-- Related Products -->
-    <?php if (!empty($related_products)): ?>
-        <div>
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-3">
-                    <span class="h-8 w-2 rounded-full bg-primary" style="background-color: <?php echo $config['themeColor']; ?>;"></span>
-                    สินค้าที่คุณอาจสนใจ
-                </h2>
+                <div class="flex flex-col gap-3">
+                    <a href="<?php echo htmlspecialchars($cloaked_url); ?>" target="_blank" rel="noopener"
+                       class="w-full py-4 rounded-2xl font-black text-base text-center flex items-center justify-center gap-2 btn-outline">
+                        <i class="fas fa-info-circle"></i> ดูรายละเอียดเพิ่มเติม
+                    </a>
+                    <a href="<?php echo htmlspecialchars($cloaked_url); ?>" target="_blank" rel="noopener"
+                       class="w-full py-4 rounded-2xl font-black text-base text-center flex items-center justify-center gap-2 btn-primary shadow-lg">
+                        <i class="fas fa-shopping-cart"></i> สั่งซื้อสินค้านี้
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <span class="text-sm font-semibold text-gray-400">แชร์:</span>
+                    <a href="https://social-plugins.line.me/lineit/share?url=<?php echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"
+                       target="_blank" class="h-9 w-9 rounded-xl bg-green-500 text-white flex items-center justify-center hover:opacity-80 transition-all shadow-sm">
+                        <i class="fab fa-line text-sm"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>"
+                       target="_blank" class="h-9 w-9 rounded-xl bg-blue-600 text-white flex items-center justify-center hover:opacity-80 transition-all shadow-sm">
+                        <i class="fab fa-facebook-f text-sm"></i>
+                    </a>
+                    <button onclick="copyLink()" class="h-9 w-9 rounded-xl bg-gray-100 text-gray-500 flex items-center justify-center hover:bg-gray-200 transition-all">
+                        <i class="fas fa-link text-sm"></i>
+                    </button>
+                    <span id="copyMsg" class="text-xs text-green-500 font-semibold hidden">คัดลอกแล้ว!</span>
+                </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <?php foreach ($related_products as $index => $p): ?>
-                    <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all overflow-hidden flex flex-col">
-                        <a href="product.php?id=<?php echo $index; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?><?php echo $category ? '&cat='.urlencode($category) : ''; ?>" class="relative aspect-square overflow-hidden bg-gray-50">
-                            <img src="<?php echo htmlspecialchars($p['product_image']); ?>" 
-                                 alt="<?php echo htmlspecialchars($p['product_name']); ?>"
-                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                 onerror="this.src='https://via.placeholder.com/400x400?text=No+Image'">
-                        </a>
-                        <div class="p-4 flex flex-col flex-grow">
-                            <a href="product.php?id=<?php echo $index; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?><?php echo $category ? '&cat='.urlencode($category) : ''; ?>" class="text-xs font-bold text-gray-800 line-clamp-2 mb-2 group-hover:text-primary transition-colors">
-                                <?php echo htmlspecialchars($p['product_name_display']); ?>
-                            </a>
-                            <div class="mt-auto">
-                                <span class="text-lg font-black text-primary" style="color: <?php echo $config['themeColor']; ?>">
-                                    <?php echo format_price($p['product_price']); ?>
-                                </span>
-                            </div>
+        </div>
+
+        <!-- Variations -->
+        <?php if (!empty($sizes) || !empty($colors)): ?>
+            <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 mb-6">
+                <h2 class="text-base font-black text-gray-900 mb-4 flex items-center gap-2">
+                    <i class="fas fa-sliders-h" style="color: <?php echo $theme_color; ?>"></i> ตัวเลือกสินค้า
+                </h2>
+                <?php if (!empty($sizes)): ?>
+                    <div class="mb-4">
+                        <p class="text-sm font-semibold text-gray-500 mb-2">ขนาด</p>
+                        <div class="flex flex-wrap gap-2">
+                            <?php foreach ($sizes as $size): ?>
+                                <button class="variation-btn" onclick="toggleVariation(this)"><?php echo htmlspecialchars($size); ?></button>
+                            <?php endforeach; ?>
                         </div>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($colors)): ?>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-500 mb-2">สี</p>
+                        <div class="flex flex-wrap gap-2">
+                            <?php foreach ($colors as $color): ?>
+                                <button class="variation-btn" onclick="toggleVariation(this)"><?php echo htmlspecialchars($color); ?></button>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
+        <!-- Product Info Table -->
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 mb-6">
+            <h2 class="text-base font-black text-gray-900 mb-4 flex items-center gap-2">
+                <i class="fas fa-info-circle" style="color: <?php echo $theme_color; ?>"></i> ข้อมูลสินค้า
+            </h2>
+            <table class="w-full text-sm">
+                <tbody class="divide-y divide-gray-50">
+                    <tr><td class="py-3 pr-4 text-gray-400 font-semibold w-1/3">ชื่อสินค้า</td><td class="py-3 text-gray-800 font-medium"><?php echo htmlspecialchars($product_name); ?></td></tr>
+                    <?php if ($category): ?><tr><td class="py-3 pr-4 text-gray-400 font-semibold">หมวดหมู่</td><td class="py-3 text-gray-800 font-medium"><?php echo htmlspecialchars($category); ?></td></tr><?php endif; ?>
+                    <tr><td class="py-3 pr-4 text-gray-400 font-semibold">ร้านค้า</td><td class="py-3 text-gray-800 font-medium"><?php echo htmlspecialchars($shop_name); ?></td></tr>
+                    <tr><td class="py-3 pr-4 text-gray-400 font-semibold">ราคาปกติ</td><td class="py-3 text-gray-400 font-medium line-through"><?php echo format_price($original); ?></td></tr>
+                    <tr><td class="py-3 pr-4 text-gray-400 font-semibold">ราคาพิเศษ</td><td class="py-3 font-black text-lg" style="color: <?php echo $theme_color; ?>"><?php echo format_price($price); ?></td></tr>
+                    <tr><td class="py-3 pr-4 text-gray-400 font-semibold">ส่วนลด</td><td class="py-3"><span class="bg-red-100 text-red-600 font-bold px-2 py-0.5 rounded-lg text-sm"><?php echo $discount_pct; ?>%</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Price Comparison -->
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 mb-6">
+            <h2 class="text-base font-black text-gray-900 mb-4 flex items-center gap-2">
+                <i class="fas fa-balance-scale" style="color: <?php echo $theme_color; ?>"></i> เปรียบเทียบราคาจากหลายร้าน
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-100">
+                            <th class="text-left py-3 pr-4 text-gray-400 font-semibold">ร้านค้า</th>
+                            <th class="text-center py-3 px-4 text-gray-400 font-semibold">คะแนน</th>
+                            <th class="text-right py-3 px-4 text-gray-400 font-semibold">ราคา</th>
+                            <th class="text-center py-3 pl-4 text-gray-400 font-semibold"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <?php foreach ($price_comparison as $shop): ?>
+                            <tr class="<?php echo isset($shop['cheapest']) ? 'bg-green-50/50' : ''; ?> hover:bg-gray-50 transition-colors">
+                                <td class="py-3.5 pr-4">
+                                    <div class="flex items-center gap-2 flex-wrap">
+                                        <span class="font-semibold text-gray-800"><?php echo htmlspecialchars($shop['shop_name']); ?></span>
+                                        <?php if ($shop['badge']): ?>
+                                            <span class="text-[11px] font-bold px-2 py-0.5 rounded-full"
+                                                  style="background-color: color-mix(in srgb, <?php echo $theme_color; ?> 12%, white); color: <?php echo $theme_color; ?>">
+                                                <?php echo $shop['badge_icon']; ?> <?php echo htmlspecialchars($shop['badge']); ?>
+                                            </span>
+                                        <?php endif; ?>
+                                        <?php if (isset($shop['cheapest'])): ?>
+                                            <span class="cheapest-badge">ถูกสุด</span>
+                                        <?php endif; ?>
+                                    </div>
+                                </td>
+                                <td class="py-3.5 px-4 text-center">
+                                    <div class="flex items-center justify-center gap-1">
+                                        <i class="fas fa-star star-filled text-xs"></i>
+                                        <span class="font-semibold text-gray-700"><?php echo $shop['rating']; ?></span>
+                                    </div>
+                                </td>
+                                <td class="py-3.5 px-4 text-right">
+                                    <span class="font-black text-base <?php echo isset($shop['cheapest']) ? 'text-green-600' : 'text-gray-800'; ?>">
+                                        ฿<?php echo number_format($shop['price']); ?>
+                                    </span>
+                                </td>
+                                <td class="py-3.5 pl-4 text-center">
+                                    <!-- Sale badge links to product URL -->
+                                    <a href="<?php echo htmlspecialchars($shop['url']); ?>" target="_blank" rel="noopener"
+                                       class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white shadow-sm hover:opacity-90 transition-all"
+                                       style="background-color: <?php echo $theme_color; ?>">
+                                        <i class="fas fa-external-link-alt text-[10px]"></i> ซื้อเลย
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 mb-8">
+            <h2 class="text-base font-black text-gray-900 mb-5 flex items-center gap-2">
+                <i class="fas fa-comments" style="color: <?php echo $theme_color; ?>"></i>
+                รีวิวจากผู้ซื้อ (<?php echo count($reviews); ?>)
+            </h2>
+            <div class="space-y-4">
+                <?php foreach ($reviews as $review): ?>
+                    <div class="border-b border-gray-50 pb-4 last:border-0 last:pb-0">
+                        <div class="flex items-start justify-between gap-4 mb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="h-9 w-9 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                                     style="background-color: <?php echo $theme_color; ?>">
+                                    <?php echo mb_substr($review['name'], 0, 1, 'UTF-8'); ?>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-900 text-sm"><?php echo htmlspecialchars($review['name']); ?></p>
+                                    <div class="flex items-center gap-0.5 mt-0.5">
+                                        <?php for ($i = 1; $i <= 5; $i++): ?>
+                                            <i class="fas fa-star text-xs <?php echo $i <= $review['rating'] ? 'star-filled' : 'star-empty'; ?>"></i>
+                                        <?php endfor; ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-300 flex-shrink-0"><?php echo htmlspecialchars($review['date']); ?></span>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed ml-12"><?php echo htmlspecialchars($review['comment']); ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
-    <?php endif; ?>
-</main>
 
-<?php include_once 'includes/footer.php'; ?>
+        <!-- Related Products -->
+        <?php if (!empty($related)): ?>
+            <div class="mb-8">
+                <h2 class="text-lg font-black text-gray-900 mb-5 flex items-center gap-2">
+                    <i class="fas fa-heart" style="color: <?php echo $theme_color; ?>"></i> สินค้าที่คุณอาจสนใจ
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                    <?php foreach ($related as $rp): ?>
+                        <?php
+                            $r_price    = (float)preg_replace('/[^0-9.]/', '', $rp['product_price']);
+                            $r_original = (float)preg_replace('/[^0-9.]/', '', $rp['product_discounted']);
+                            $r_discount = (int)$rp['product_discounted_percentage'];
+                            if ($r_original <= $r_price) $r_original = round($r_price * (1 + rand(20, 60) / 100));
+                            if ($r_discount <= 0) $r_discount = round((($r_original - $r_price) / $r_original) * 100);
+                            $r_rating = (float)($rp['rating'] ?: 4.0);
+                        ?>
+                        <a href="product.php?id=<?php echo urlencode($rp['product_slug']); ?>"
+                           class="product-card bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm block">
+                            <div class="relative aspect-square bg-gray-50">
+                                <?php if ($r_discount > 0): ?>
+                                    <div class="absolute top-2 left-2 z-10 bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">-<?php echo $r_discount; ?>%</div>
+                                <?php endif; ?>
+                                <?php if (!empty($rp['product_image'])): ?>
+                                    <img src="<?php echo htmlspecialchars($rp['product_image']); ?>"
+                                         alt="<?php echo htmlspecialchars($rp['product_name']); ?>"
+                                         class="w-full h-full object-cover"
+                                         onerror="this.src='https://via.placeholder.com/200x200?text=IMG'">
+                                <?php else: ?>
+                                    <div class="w-full h-full flex items-center justify-center"><i class="fas fa-image text-3xl text-gray-200"></i></div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="p-3">
+                                <p class="text-xs font-semibold text-gray-700 line-clamp-2 mb-2 leading-tight"><?php echo htmlspecialchars($rp['product_name_display'] ?? $rp['product_name']); ?></p>
+                                <div class="flex items-center gap-0.5 mb-1">
+                                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                                        <i class="fas fa-star text-[10px] <?php echo $i <= round($r_rating) ? 'star-filled' : 'star-empty'; ?>"></i>
+                                    <?php endfor; ?>
+                                    <span class="text-[10px] text-gray-400 ml-1"><?php echo number_format($r_rating, 1); ?></span>
+                                </div>
+                                <div class="flex items-end gap-1.5">
+                                    <span class="text-sm font-black" style="color: <?php echo $theme_color; ?>">฿<?php echo number_format($r_price); ?></span>
+                                    <span class="text-[11px] text-gray-300 line-through">฿<?php echo number_format($r_original); ?></span>
+                                </div>
+                                <?php if ($rp['sold_count']): ?>
+                                    <p class="text-[10px] text-gray-300 mt-1"><?php echo number_format($rp['sold_count']); ?></p>
+                                <?php endif; ?>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    </main>
+
+    <?php include 'includes/footer.php'; ?>
+
+    <script>
+        function setMainImage(src, el) {
+            document.getElementById('mainImage').src = src;
+            document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+        function toggleVariation(btn) { btn.classList.toggle('active'); }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const msg = document.getElementById('copyMsg');
+                msg.classList.remove('hidden');
+                setTimeout(() => msg.classList.add('hidden'), 2000);
+            });
+        }
+        let h = <?php echo $flash_hours; ?>, m = <?php echo $flash_minutes; ?>, s = <?php echo $flash_seconds; ?>;
+        function updateCountdown() {
+            if (s > 0) s--;
+            else if (m > 0) { m--; s = 59; }
+            else if (h > 0) { h--; m = 59; s = 59; }
+            else { h = 23; m = 59; s = 59; }
+            document.getElementById('hours').textContent   = String(h).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        function closeNotification() {
+            const el = document.getElementById('purchaseNotification');
+            if (el) { el.style.animation = 'fadeOut 0.3s ease-out forwards'; setTimeout(() => el.remove(), 300); }
+        }
+    </script>
+</body>
+</html>

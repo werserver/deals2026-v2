@@ -3,7 +3,7 @@ require_once 'includes/functions.php';
 
 // Handle Login
 if (isset($_POST['login'])) {
-    if (login($_POST['username'], $_POST['password'])) {
+    if (login($_POST['username'] ?? '', $_POST['password'] ?? '')) {
         header('Location: admin.php');
         exit;
     } else {
@@ -28,32 +28,43 @@ if (!is_logged_in()) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>เข้าสู่ระบบ - Admin Panel</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+            * { font-family: 'Prompt', sans-serif !important; }
+        </style>
     </head>
     <body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
-        <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl w-full max-w-md border border-gray-100">
+        <div class="bg-white p-8 rounded-3xl shadow-xl w-full max-w-sm border border-gray-100">
             <div class="text-center mb-8">
-                <div class="h-20 w-20 bg-indigo-600 text-white rounded-3xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-200">
-                    <i class="fas fa-lock text-3xl"></i>
+                <div class="h-16 w-16 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg" style="background-color: #ff6b00;">
+                    <i class="fas fa-lock text-2xl"></i>
                 </div>
-                <h1 class="text-2xl font-black text-gray-900">Admin Login</h1>
-                <p class="text-gray-500">กรุณาเข้าสู่ระบบเพื่อจัดการเว็บไซต์</p>
+                <h1 class="text-2xl font-black text-gray-900">เข้าสู่ระบบ Admin</h1>
+                <p class="text-gray-400 text-sm mt-1">กรุณากรอกชื่อผู้ใช้และรหัสผ่าน</p>
             </div>
             <?php if (isset($error)): ?>
-                <div class="bg-red-50 text-red-600 p-4 rounded-2xl mb-6 text-sm font-bold flex items-center gap-3">
-                    <i class="fas fa-exclamation-circle"></i> <?php echo $error; ?>
+                <div class="bg-red-50 text-red-600 p-3 rounded-xl mb-5 text-sm font-semibold flex items-center gap-2">
+                    <i class="fas fa-exclamation-circle"></i> <?php echo htmlspecialchars($error); ?>
                 </div>
             <?php endif; ?>
-            <form method="POST" class="space-y-6">
+            <form method="POST" class="space-y-4">
                 <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Username</label>
-                    <input type="text" name="username" class="w-full px-6 py-4 rounded-2xl bg-gray-50 border-0 focus:ring-4 focus:ring-indigo-100 outline-none transition-all" required>
+                    <label class="block text-sm font-semibold text-gray-600 mb-1.5">ชื่อผู้ใช้</label>
+                    <input type="text" name="username" placeholder="ชื่อผู้ใช้"
+                           class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:ring-2 focus:border-orange-400 outline-none transition-all text-sm" required>
                 </div>
                 <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Password</label>
-                    <input type="password" name="password" class="w-full px-6 py-4 rounded-2xl bg-gray-50 border-0 focus:ring-4 focus:ring-indigo-100 outline-none transition-all" required>
+                    <label class="block text-sm font-semibold text-gray-600 mb-1.5">รหัสผ่าน</label>
+                    <input type="password" name="password" placeholder="รหัสผ่าน"
+                           class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:ring-2 focus:border-orange-400 outline-none transition-all text-sm" required>
                 </div>
-                <button type="submit" name="login" class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-black hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200">เข้าสู่ระบบ</button>
+                <button type="submit" name="login" 
+                        class="w-full py-3 text-white rounded-xl font-bold hover:opacity-90 transition-all shadow-lg flex items-center justify-center gap-2 mt-2"
+                        style="background-color: #ff6b00;">
+                    <i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ
+                </button>
             </form>
         </div>
     </body>
@@ -63,80 +74,105 @@ if (!is_logged_in()) {
 }
 
 $config = get_config();
+$theme_color = $config['themeColor'] ?? '#ff6b00';
+
+// Handle Export Config
+if (isset($_GET['export'])) {
+    header('Content-Type: application/json');
+    header('Content-Disposition: attachment; filename="config_' . date('Ymd_His') . '.json"');
+    echo json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    exit;
+}
 
 // Handle Save Config
 if (isset($_POST['save_config'])) {
-    $config['siteName'] = $_POST['siteName'];
-    $config['siteFavicon'] = $_POST['siteFavicon'];
-    $config['themeColor'] = $_POST['themeColor'];
-    $config['themeName'] = $_POST['themeName'];
-    $config['cloakingBaseUrl'] = $_POST['cloakingBaseUrl'];
-    $config['cloakingToken'] = $_POST['cloakingToken'];
-    $config['flashSaleEnabled'] = isset($_POST['flashSaleEnabled']);
-    $config['aiReviewsEnabled'] = isset($_POST['aiReviewsEnabled']);
-    $config['prefixWordsEnabled'] = isset($_POST['prefixWordsEnabled']);
+    $config['siteName']          = trim($_POST['siteName'] ?? $config['siteName']);
+    $config['siteFavicon']       = trim($_POST['siteFavicon'] ?? $config['siteFavicon']);
+    $config['themeColor']        = trim($_POST['themeColor'] ?? $config['themeColor']);
+    $config['themeName']         = trim($_POST['themeName'] ?? $config['themeName']);
+    $config['cloakingBaseUrl']   = trim($_POST['cloakingBaseUrl'] ?? $config['cloakingBaseUrl']);
+    $config['cloakingToken']     = trim($_POST['cloakingToken'] ?? $config['cloakingToken']);
+    $config['flashSaleEnabled']  = isset($_POST['flashSaleEnabled']);
+    $config['aiReviewsEnabled']  = isset($_POST['aiReviewsEnabled']);
+    $config['prefixWordsEnabled']= isset($_POST['prefixWordsEnabled']);
     
-    if (!empty($_POST['keywords'])) {
-        $config['keywords'] = array_map('trim', explode(',', $_POST['keywords']));
+    if (isset($_POST['keywords'])) {
+        $kws = array_filter(array_map('trim', explode(',', $_POST['keywords'])));
+        $config['keywords'] = array_values($kws);
     }
-    if (!empty($_POST['prefixWords'])) {
-        $config['prefixWords'] = array_map('trim', explode(',', $_POST['prefixWords']));
+    if (isset($_POST['prefixWords'])) {
+        $pws = array_filter(array_map('trim', explode(',', $_POST['prefixWords'])));
+        $config['prefixWords'] = array_values($pws);
     }
 
     save_config($config);
     $success = "บันทึกการตั้งค่าเรียบร้อยแล้ว";
+    // Reload config after save
+    $config = get_config();
+    $theme_color = $config['themeColor'] ?? '#ff6b00';
 }
 
 // Handle Add Category
-if (isset($_POST['add_category'])) {
+if (isset($_POST['add_category']) && !empty($_POST['cat_name'])) {
     $new_cat = [
-        'id' => uniqid(),
-        'name' => $_POST['cat_name'],
+        'id'      => uniqid('cat_'),
+        'name'    => trim($_POST['cat_name']),
         'csvFile' => ''
     ];
     $config['categories'][] = $new_cat;
     save_config($config);
+    header('Location: admin.php#categories');
+    exit;
 }
 
 // Handle Delete Category
 if (isset($_GET['delete_cat'])) {
-    $config['categories'] = array_filter($config['categories'], fn($c) => $c['id'] !== $_GET['delete_cat']);
+    $del_id = $_GET['delete_cat'];
+    $config['categories'] = array_values(array_filter($config['categories'], function($c) use ($del_id) {
+        $c_id = is_array($c) ? ($c['id'] ?? '') : '';
+        return $c_id !== $del_id;
+    }));
     save_config($config);
-    header('Location: admin.php');
+    header('Location: admin.php#categories');
     exit;
 }
 
 // Handle CSV Upload
-if (isset($_POST['upload_csv'])) {
-    $target_dir = DATA_DIR;
-    $file_name = basename($_FILES["csv_file"]["name"]);
-    $target_file = $target_dir . $file_name;
+if (isset($_POST['upload_csv']) && isset($_FILES["csv_file"]) && $_FILES["csv_file"]["error"] === UPLOAD_ERR_OK) {
+    $file_name   = basename($_FILES["csv_file"]["name"]);
+    // FIX: Added "/" separator
+    $target_file = DATA_DIR . '/' . $file_name;
     
     if (move_uploaded_file($_FILES["csv_file"]["tmp_name"], $target_file)) {
-        if ($_POST['cat_id'] === 'main') {
-            rename($target_file, DATA_DIR . 'main.csv');
+        $cat_id = $_POST['cat_id'] ?? '';
+        if ($cat_id === 'main') {
+            // FIX: Added "/" separator
+            rename($target_file, DATA_DIR . '/main.csv');
         } else {
             foreach ($config['categories'] as &$cat) {
-                if ($cat['id'] === $_POST['cat_id']) {
+                if (is_array($cat) && ($cat['id'] ?? '') === $cat_id) {
                     $cat['csvFile'] = $file_name;
                     break;
                 }
             }
             save_config($config);
         }
+        clear_cache();
         $success = "อัปโหลดไฟล์ CSV เรียบร้อยแล้ว";
+    } else {
+        $error = "อัปโหลดไฟล์ไม่สำเร็จ กรุณาตรวจสอบสิทธิ์การเขียนไฟล์";
     }
 }
 
 $themes = [
     ['name' => 'orange', 'color' => '#ff6b00', 'label' => 'ส้ม (ค่าเริ่มต้น)'],
-    ['name' => 'blue', 'color' => '#2563eb', 'label' => 'น้ำเงิน'],
-    ['name' => 'green', 'color' => '#10b981', 'label' => 'เขียว'],
+    ['name' => 'blue',   'color' => '#2563eb', 'label' => 'น้ำเงิน'],
+    ['name' => 'green',  'color' => '#10b981', 'label' => 'เขียว'],
     ['name' => 'purple', 'color' => '#8b5cf6', 'label' => 'ม่วง'],
-    ['name' => 'red', 'color' => '#ef4444', 'label' => 'แดง'],
-    ['name' => 'teal', 'color' => '#0d9488', 'label' => 'เขียวปีกแมลง'],
-    ['name' => 'pink', 'color' => '#db2777', 'label' => 'ชมพู'],
-    ['name' => 'indigo', 'color' => '#4f46e5', 'label' => 'คราม']
+    ['name' => 'red',    'color' => '#ef4444', 'label' => 'แดง'],
+    ['name' => 'teal',   'color' => '#0d9488', 'label' => 'เขียวน้ำทะเล'],
+    ['name' => 'pink',   'color' => '#db2777', 'label' => 'ชมพู'],
+    ['name' => 'indigo', 'color' => '#4f46e5', 'label' => 'คราม'],
 ];
 ?>
 <!DOCTYPE html>
@@ -144,83 +180,121 @@ $themes = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - <?php echo $config['siteName']; ?></title>
+    <title>Admin Panel — <?php echo htmlspecialchars($config['siteName']); ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .card { @apply bg-white rounded-[2rem] border border-gray-100 shadow-sm p-8 mb-8; }
-        .section-title { @apply text-lg font-black text-gray-900 mb-6 flex items-center gap-3; }
-        .input-label { @apply block text-sm font-bold text-gray-500 mb-2; }
-        .input-field { @apply w-full px-6 py-4 rounded-2xl bg-gray-50 border-0 focus:ring-4 focus:ring-indigo-100 outline-none transition-all; }
-        .btn-primary { @apply px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 flex items-center gap-2; }
-        .btn-secondary { @apply px-6 py-3 bg-gray-100 text-gray-600 rounded-xl font-bold hover:bg-gray-200 transition-all flex items-center gap-2; }
+        * { font-family: 'Prompt', sans-serif !important; }
+        :root { --primary: <?php echo $theme_color; ?>; }
+        .card { background: white; border-radius: 1.25rem; border: 1px solid #f3f4f6; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+        .section-title { font-size: 1rem; font-weight: 800; color: #111827; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.625rem; }
+        .input-label { display: block; font-size: 0.8125rem; font-weight: 600; color: #6b7280; margin-bottom: 0.375rem; }
+        .input-field { width: 100%; padding: 0.75rem 1rem; border-radius: 0.75rem; background: #f9fafb; border: 1px solid #e5e7eb; outline: none; transition: all 0.2s; font-size: 0.875rem; }
+        .input-field:focus { border-color: var(--primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent); }
+        .btn-save { background-color: var(--primary); color: white; padding: 0.875rem 2.5rem; border-radius: 999px; font-weight: 700; font-size: 0.9375rem; display: flex; align-items: center; gap: 0.5rem; transition: all 0.2s; box-shadow: 0 4px 15px color-mix(in srgb, var(--primary) 30%, transparent); }
+        .btn-save:hover { opacity: 0.9; transform: translateY(-1px); }
+        .theme-card { border-radius: 0.875rem; border: 2px solid #f3f4f6; padding: 0.875rem 1rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 0.625rem; }
+        .theme-card:hover { border-color: #d1d5db; }
+        .theme-card.active { border-color: var(--primary); background-color: color-mix(in srgb, var(--primary) 8%, white); }
+        .toggle-switch { position: relative; display: inline-flex; align-items: center; cursor: pointer; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-track { width: 44px; height: 24px; background: #d1d5db; border-radius: 999px; transition: 0.3s; }
+        .toggle-switch input:checked + .toggle-track { background-color: var(--primary); }
+        .toggle-thumb { position: absolute; left: 2px; top: 2px; width: 20px; height: 20px; background: white; border-radius: 50%; transition: 0.3s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+        .toggle-switch input:checked ~ .toggle-thumb { transform: translateX(20px); }
+        .cat-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #f3f4f6; }
+        .upload-btn { font-size: 0.8125rem; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 0.375rem; padding: 0.375rem 0.75rem; border-radius: 0.5rem; transition: all 0.2s; }
+        .upload-btn:hover { background-color: color-mix(in srgb, var(--primary) 10%, white); }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen pb-20">
+<body class="bg-gray-50 min-h-screen pb-24">
+
     <!-- Header -->
-    <header class="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="h-10 w-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-indigo-100">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h1 class="text-xl font-black text-gray-900">Admin Panel</h1>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="admin.php?export=1" class="btn-secondary text-sm">
-                    <i class="fas fa-file-export"></i> Export Config
+                <a href="index.php" class="flex items-center gap-2">
+                    <div class="h-9 w-9 text-white rounded-xl flex items-center justify-center shadow-md" style="background-color: <?php echo $theme_color; ?>;">
+                        <i class="fas fa-shopping-bag text-sm"></i>
+                    </div>
+                    <span class="text-base font-black text-gray-900"><?php echo htmlspecialchars($config['siteName']); ?></span>
                 </a>
-                <button onclick="document.getElementById('import-input').click()" class="btn-secondary text-sm">
-                    <i class="fas fa-file-import"></i> Import Config
-                </button>
-                <a href="admin.php?logout=1" class="px-6 py-3 bg-red-50 text-red-600 rounded-xl font-bold hover:bg-red-100 transition-all flex items-center gap-2 text-sm">
-                    <i class="fas fa-sign-out-alt"></i> ออกจากระบบ
+                <span class="text-gray-300">|</span>
+                <span class="text-sm font-bold text-gray-500">🛠 Admin Panel</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="admin.php?export=1" class="text-sm font-semibold text-gray-500 hover:text-gray-700 px-3 py-2 rounded-xl hover:bg-gray-100 transition-all flex items-center gap-1.5">
+                    <i class="fas fa-file-export text-xs"></i> Export Config
+                </a>
+                <a href="admin.php?logout=1" class="text-sm font-semibold text-red-500 hover:text-red-600 px-3 py-2 rounded-xl hover:bg-red-50 transition-all flex items-center gap-1.5">
+                    <i class="fas fa-sign-out-alt text-xs"></i> ออกจากระบบ
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-10 max-w-5xl">
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+
+        <!-- Page Title -->
+        <div class="flex items-center justify-between mb-6">
+            <h1 class="text-2xl font-black text-gray-900 flex items-center gap-3">
+                <i class="fas fa-tools" style="color: <?php echo $theme_color; ?>"></i> Admin Panel
+            </h1>
+            <button form="configForm" type="submit" name="save_config" class="btn-save">
+                <i class="fas fa-save"></i> บันทึกการตั้งค่าทั้งหมด
+            </button>
+        </div>
+
         <?php if (isset($success)): ?>
-            <div class="bg-green-50 text-green-600 p-6 rounded-[2rem] mb-8 font-bold flex items-center gap-3 border border-green-100">
-                <i class="fas fa-check-circle text-xl"></i> <?php echo $success; ?>
+            <div class="bg-green-50 text-green-700 p-4 rounded-2xl mb-6 font-semibold flex items-center gap-3 border border-green-100">
+                <i class="fas fa-check-circle text-lg"></i> <?php echo htmlspecialchars($success); ?>
+            </div>
+        <?php endif; ?>
+        <?php if (isset($error)): ?>
+            <div class="bg-red-50 text-red-600 p-4 rounded-2xl mb-6 font-semibold flex items-center gap-3 border border-red-100">
+                <i class="fas fa-exclamation-circle text-lg"></i> <?php echo htmlspecialchars($error); ?>
             </div>
         <?php endif; ?>
 
         <form method="POST" id="configForm">
+
             <!-- Theme Selection -->
             <div class="card">
                 <h2 class="section-title">
-                    <i class="fas fa-palette text-indigo-600"></i> ธีมเว็บไซต์
+                    <i class="fas fa-palette" style="color: <?php echo $theme_color; ?>"></i> ธีมสีเว็บไซต์
                 </h2>
-                <p class="text-sm text-gray-400 mb-6">เลือกสีหลักของเว็บไซต์ จะมีผลทันทีหลังบันทึก</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <p class="text-sm text-gray-400 mb-4">เลือกสีหลักของเว็บไซต์ จะมีผลทันทีหลังบันทึก</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     <?php foreach ($themes as $theme): ?>
-                        <label class="relative flex items-center gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-all <?php echo $config['themeName'] === $theme['name'] ? 'border-indigo-600 bg-indigo-50' : 'border-gray-100 hover:border-gray-200'; ?>">
-                            <input type="radio" name="themeName" value="<?php echo $theme['name']; ?>" class="hidden" <?php echo $config['themeName'] === $theme['name'] ? 'checked' : ''; ?> onchange="document.getElementById('themeColorInput').value='<?php echo $theme['color']; ?>'">
-                            <div class="h-6 w-6 rounded-full shadow-sm" style="background-color: <?php echo $theme['color']; ?>;"></div>
-                            <span class="text-sm font-bold text-gray-700"><?php echo $theme['label']; ?></span>
+                        <label class="theme-card <?php echo ($config['themeName'] === $theme['name']) ? 'active' : ''; ?>" 
+                               onclick="selectTheme('<?php echo $theme['name']; ?>', '<?php echo $theme['color']; ?>')">
+                            <input type="radio" name="themeName" value="<?php echo $theme['name']; ?>" class="hidden" 
+                                   <?php echo ($config['themeName'] === $theme['name']) ? 'checked' : ''; ?>>
+                            <div class="h-5 w-5 rounded-full shadow-sm flex-shrink-0" style="background-color: <?php echo $theme['color']; ?>;"></div>
+                            <span class="text-sm font-semibold text-gray-700"><?php echo $theme['label']; ?></span>
                         </label>
                     <?php endforeach; ?>
-                    <input type="hidden" name="themeColor" id="themeColorInput" value="<?php echo $config['themeColor']; ?>">
                 </div>
+                <input type="hidden" name="themeColor" id="themeColorInput" value="<?php echo htmlspecialchars($theme_color); ?>">
             </div>
 
             <!-- Site Info -->
             <div class="card">
                 <h2 class="section-title">
-                    <i class="fas fa-globe text-indigo-600"></i> ข้อมูลเว็บไซต์
+                    <i class="fas fa-globe" style="color: <?php echo $theme_color; ?>"></i> ข้อมูลเว็บไซต์
                 </h2>
-                <div class="grid md:grid-cols-2 gap-6">
+                <div class="grid md:grid-cols-2 gap-4">
                     <div>
                         <label class="input-label">ชื่อเว็บไซต์</label>
-                        <input type="text" name="siteName" value="<?php echo htmlspecialchars($config['siteName']); ?>" class="input-field">
+                        <input type="text" name="siteName" value="<?php echo htmlspecialchars($config['siteName']); ?>" 
+                               class="input-field" placeholder="ตัวอย่าง: ThaiDeals">
                     </div>
                     <div>
                         <label class="input-label">URL ไอคอนเว็บ (Favicon)</label>
-                        <input type="text" name="siteFavicon" value="<?php echo htmlspecialchars($config['siteFavicon']); ?>" class="input-field">
+                        <input type="text" name="siteFavicon" value="<?php echo htmlspecialchars($config['siteFavicon'] ?? '/favicon.ico'); ?>" 
+                               class="input-field" placeholder="ตัวอย่าง: /favicon.ico หรือ https://...">
                     </div>
                 </div>
             </div>
@@ -228,146 +302,225 @@ $themes = [
             <!-- URL Cloaking -->
             <div class="card">
                 <h2 class="section-title">
-                    <i class="fas fa-link text-indigo-600"></i> URL Cloaking
+                    <i class="fas fa-link" style="color: <?php echo $theme_color; ?>"></i> URL Cloaking
                 </h2>
-                <div class="space-y-6">
+                <div class="space-y-4">
                     <div>
                         <label class="input-label">URL Cloaking Base URL</label>
-                        <input type="text" name="cloakingBaseUrl" value="<?php echo htmlspecialchars($config['cloakingBaseUrl']); ?>" class="input-field">
-                        <p class="text-[10px] text-gray-400 mt-2">ระบบจะสร้างลิงก์เป็น: base_url&url=encoded_product_url&source=api_product</p>
+                        <input type="text" name="cloakingBaseUrl" id="cloakingBaseUrl"
+                               value="<?php echo htmlspecialchars($config['cloakingBaseUrl']); ?>" 
+                               class="input-field" oninput="updateCloakPreview()">
+                        <p class="text-xs text-gray-400 mt-1.5">URL ที่สร้าง: base_url&url=encoded_product_url&source=api_product</p>
                     </div>
                     <div>
                         <label class="input-label">URL Cloaking Token</label>
-                        <input type="text" name="cloakingToken" value="<?php echo htmlspecialchars($config['cloakingToken']); ?>" class="input-field">
+                        <input type="text" name="cloakingToken" id="cloakingToken"
+                               value="<?php echo htmlspecialchars($config['cloakingToken']); ?>" 
+                               class="input-field" oninput="updateCloakPreview()">
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3 text-xs text-gray-400 font-mono break-all" id="cloakPreview">
+                        ตัวอย่าง: <?php echo htmlspecialchars($config['cloakingBaseUrl']); ?>&url=https%3A%2F%2Fshopee.co.th%2Fproduct&source=api_product
                     </div>
                 </div>
             </div>
 
-            <!-- Categories -->
+            <!-- Features -->
             <div class="card">
                 <h2 class="section-title">
-                    <i class="fas fa-tags text-indigo-600"></i> หมวดหมู่สินค้า
+                    <i class="fas fa-fire" style="color: <?php echo $theme_color; ?>"></i> ฟีเจอร์เสริม
                 </h2>
                 <div class="space-y-4">
-                    <div class="flex gap-3">
-                        <input type="text" id="new_cat_name" placeholder="เพิ่มหมวดหมู่..." class="input-field">
-                        <button type="button" onclick="addCategory()" class="btn-primary px-6"><i class="fas fa-plus"></i></button>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
-                            <div class="flex items-center gap-3">
-                                <i class="fas fa-file-csv text-gray-400"></i>
-                                <span class="font-bold text-gray-700">สินค้าแนะนำ (หน้าแรก)</span>
-                                <span class="text-xs text-gray-400">main.csv</span>
-                            </div>
-                            <button type="button" onclick="openUploadModal('main')" class="text-sm font-bold text-indigo-600 hover:underline flex items-center gap-2">
-                                <i class="fas fa-upload"></i> อัปโหลด CSV
-                            </button>
-                        </div>
-                        <?php foreach ($config['categories'] as $cat): ?>
-                            <?php 
-                                $cat_id = is_array($cat) ? ($cat['id'] ?? uniqid()) : $cat;
-                                $cat_name = is_array($cat) ? ($cat['name'] ?? $cat) : $cat;
-                                $cat_csv = is_array($cat) ? ($cat['csvFile'] ?? '') : '';
-                            ?>
-                            <div class="flex items-center justify-between p-4 bg-white rounded-2xl border border-gray-100">
-                                <div class="flex items-center gap-3">
-                                    <i class="fas fa-folder text-gray-400"></i>
-                                    <span class="font-bold text-gray-700"><?php echo htmlspecialchars($cat_name); ?></span>
-                                    <span class="text-xs text-gray-400"><?php echo $cat_csv ?: 'ยังไม่มีไฟล์'; ?></span>
-                                </div>
-                                <div class="flex items-center gap-6">
-                                    <button type="button" onclick="openUploadModal('<?php echo htmlspecialchars($cat_id); ?>')" class="text-sm font-bold text-indigo-600 hover:underline flex items-center gap-2">
-                                        <i class="fas fa-upload"></i> อัปโหลด CSV
-                                    </button>
-                                    <a href="admin.php?delete_cat=<?php echo htmlspecialchars($cat_id); ?>" class="text-red-400 hover:text-red-600 transition-colors"><i class="fas fa-times"></i></a>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Keywords & Prefix -->
-            <div class="card">
-                <h2 class="section-title">
-                    <i class="fas fa-magic text-indigo-600"></i> ฟีเจอร์เสริม
-                </h2>
-                <div class="space-y-8">
-                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-2xl">
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                         <div>
-                            <p class="font-bold text-gray-900">Flash Sale Countdown</p>
+                            <p class="font-semibold text-gray-900 text-sm">Flash Sale Countdown</p>
                             <p class="text-xs text-gray-400">แสดงเวลานับถอยหลังสำหรับสินค้าลดราคา</p>
                         </div>
-                        <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" name="flashSaleEnabled" class="sr-only peer" <?php echo $config['flashSaleEnabled'] ? 'checked' : ''; ?>>
-                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" name="flashSaleEnabled" <?php echo $config['flashSaleEnabled'] ? 'checked' : ''; ?>>
+                            <div class="toggle-track"></div>
+                            <div class="toggle-thumb"></div>
                         </label>
                     </div>
-                    <div>
-                        <label class="input-label">คำค้นหาแนะนำ (คั่นด้วยคอมม่า ,)</label>
-                        <textarea name="keywords" class="input-field h-32 py-6"><?php echo implode(', ', $config['keywords']); ?></textarea>
-                    </div>
-                    <div>
-                        <label class="input-label">คำนำหน้าชื่อสินค้า (Prefix Words)</label>
-                        <textarea name="prefixWords" class="input-field h-32 py-6"><?php echo implode(', ', $config['prefixWords']); ?></textarea>
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+                        <div>
+                            <p class="font-semibold text-gray-900 text-sm">AI Reviews</p>
+                            <p class="text-xs text-gray-400">แสดงรีวิวที่สร้างโดย AI เพื่อความน่าเชื่อถือ</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" name="aiReviewsEnabled" <?php echo $config['aiReviewsEnabled'] ? 'checked' : ''; ?>>
+                            <div class="toggle-track"></div>
+                            <div class="toggle-thumb"></div>
+                        </label>
                     </div>
                 </div>
             </div>
 
-            <div class="fixed bottom-10 left-0 right-0 flex justify-center pointer-events-none z-50">
-                <button type="submit" name="save_config" class="pointer-events-auto btn-primary py-5 px-16 rounded-full shadow-2xl transition-transform hover:scale-105">
-                    <i class="fas fa-save text-xl"></i> บันทึกการตั้งค่าทั้งหมด
-                </button>
+            <!-- Keywords -->
+            <div class="card">
+                <h2 class="section-title">
+                    <i class="fas fa-search" style="color: <?php echo $theme_color; ?>"></i> คำค้นหาแนะนำ
+                </h2>
+                <div>
+                    <label class="input-label">คำค้นหา (คั่นด้วยคอมม่า)</label>
+                    <textarea name="keywords" class="input-field h-24 resize-none" 
+                              placeholder="ตัวอย่าง: iPhone, Samsung, Nike"><?php echo htmlspecialchars(implode(', ', $config['keywords'] ?? [])); ?></textarea>
+                </div>
             </div>
+
+            <!-- Prefix Words -->
+            <div class="card">
+                <h2 class="section-title">
+                    <i class="fas fa-tag" style="color: <?php echo $theme_color; ?>"></i> คำนำหน้าชื่อสินค้า (Prefix Words)
+                </h2>
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-xl mb-4">
+                    <div>
+                        <p class="font-semibold text-gray-900 text-sm">เปิดใช้งาน Prefix Words</p>
+                        <p class="text-xs text-gray-400">เพิ่มคำนำหน้าชื่อสินค้าเพื่อดึงดูดความสนใจ</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" name="prefixWordsEnabled" <?php echo $config['prefixWordsEnabled'] ? 'checked' : ''; ?>>
+                        <div class="toggle-track"></div>
+                        <div class="toggle-thumb"></div>
+                    </label>
+                </div>
+                <div>
+                    <label class="input-label">รายการคำนำหน้า (คั่นด้วยคอมม่า)</label>
+                    <textarea name="prefixWords" class="input-field h-24 resize-none"
+                              placeholder="ตัวอย่าง: ลดราคา, ขายดี, แนะนำ"><?php echo htmlspecialchars(implode(', ', $config['prefixWords'] ?? [])); ?></textarea>
+                </div>
+            </div>
+
         </form>
+
+        <!-- Categories (separate form for uploads) -->
+        <div class="card" id="categories">
+            <h2 class="section-title">
+                <i class="fas fa-tags" style="color: <?php echo $theme_color; ?>"></i> หมวดหมู่สินค้า
+            </h2>
+            
+            <!-- Add Category -->
+            <form method="POST" class="flex gap-2 mb-4">
+                <input type="text" name="cat_name" placeholder="เพิ่มหมวดหมู่..." 
+                       class="input-field flex-1" required>
+                <button type="submit" name="add_category" 
+                        class="px-4 py-2.5 text-white rounded-xl font-bold flex items-center gap-1.5 text-sm flex-shrink-0"
+                        style="background-color: <?php echo $theme_color; ?>">
+                    <i class="fas fa-plus"></i> เพิ่ม
+                </button>
+            </form>
+
+            <div class="space-y-2">
+                <!-- Main CSV -->
+                <div class="cat-row">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-file-csv text-gray-400 text-sm"></i>
+                        <div>
+                            <p class="font-semibold text-gray-800 text-sm">สินค้าแนะนำ (หน้าแรก)</p>
+                            <p class="text-xs text-gray-400">main.csv <?php echo file_exists(DATA_DIR . '/main.csv') ? '✓ มีไฟล์แล้ว' : '— ยังไม่มีไฟล์'; ?></p>
+                        </div>
+                    </div>
+                    <button type="button" onclick="openUploadModal('main')" class="upload-btn" style="color: <?php echo $theme_color; ?>">
+                        <i class="fas fa-upload text-xs"></i> อัปโหลด CSV
+                    </button>
+                </div>
+
+                <?php foreach ($config['categories'] as $cat): ?>
+                    <?php 
+                        $cat_id   = is_array($cat) ? ($cat['id'] ?? uniqid('cat_')) : $cat;
+                        $cat_name = is_array($cat) ? ($cat['name'] ?? $cat) : $cat;
+                        $cat_csv  = is_array($cat) ? ($cat['csvFile'] ?? '') : '';
+                        $has_file = !empty($cat_csv) && file_exists(DATA_DIR . '/' . $cat_csv);
+                    ?>
+                    <div class="cat-row">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-folder text-gray-400 text-sm"></i>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm"><?php echo htmlspecialchars($cat_name); ?></p>
+                                <p class="text-xs text-gray-400"><?php echo $has_file ? htmlspecialchars($cat_csv) . ' ✓' : 'ยังไม่มีไฟล์ CSV'; ?></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button type="button" onclick="openUploadModal('<?php echo htmlspecialchars($cat_id); ?>')" 
+                                    class="upload-btn" style="color: <?php echo $theme_color; ?>">
+                                <i class="fas fa-upload text-xs"></i> แนบ CSV
+                            </button>
+                            <a href="admin.php?delete_cat=<?php echo urlencode($cat_id); ?>" 
+                               onclick="return confirm('ลบหมวดหมู่ <?php echo htmlspecialchars($cat_name); ?> ใช่หรือไม่?')"
+                               class="text-red-400 hover:text-red-600 transition-colors p-1">
+                                <i class="fas fa-times text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Fixed Save Button -->
+        <div class="fixed bottom-8 left-0 right-0 flex justify-center pointer-events-none z-50">
+            <button form="configForm" type="submit" name="save_config" 
+                    class="pointer-events-auto btn-save py-4 px-12 rounded-full shadow-2xl hover:scale-105 transition-transform">
+                <i class="fas fa-save text-lg"></i> บันทึกการตั้งค่าทั้งหมด
+            </button>
+        </div>
     </main>
 
     <!-- Upload Modal -->
     <div id="uploadModal" class="fixed inset-0 bg-black/50 hidden z-[100] flex items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white rounded-[2.5rem] p-10 w-full max-w-md shadow-2xl">
-            <h3 class="text-2xl font-black mb-6">อัปโหลดไฟล์ CSV</h3>
-            <form method="POST" enctype="multipart/form-data" class="space-y-6">
+        <div class="bg-white rounded-3xl p-8 w-full max-w-md shadow-2xl">
+            <h3 class="text-xl font-black mb-2">อัปโหลดไฟล์ CSV</h3>
+            <p class="text-sm text-gray-400 mb-6">รองรับไฟล์ .csv เท่านั้น</p>
+            <form method="POST" enctype="multipart/form-data" class="space-y-5">
                 <input type="hidden" name="cat_id" id="modal_cat_id">
-                <div class="border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center hover:border-indigo-300 transition-colors">
-                    <input type="file" name="csv_file" accept=".csv" class="hidden" id="csv_input" required>
-                    <label for="csv_input" class="cursor-pointer">
-                        <i class="fas fa-cloud-upload-alt text-4xl text-indigo-400 mb-4"></i>
-                        <p class="text-sm font-bold text-gray-500">คลิกเพื่อเลือกไฟล์ .csv</p>
-                    </label>
+                <div class="border-2 border-dashed border-gray-200 rounded-2xl p-8 text-center hover:border-gray-300 transition-colors cursor-pointer" 
+                     onclick="document.getElementById('csv_input').click()">
+                    <input type="file" name="csv_file" accept=".csv" class="hidden" id="csv_input" 
+                           onchange="document.getElementById('csv_filename').textContent = this.files[0]?.name || 'คลิกเพื่อเลือกไฟล์'" required>
+                    <i class="fas fa-cloud-upload-alt text-4xl text-gray-300 mb-3"></i>
+                    <p class="text-sm font-semibold text-gray-400" id="csv_filename">คลิกเพื่อเลือกไฟล์ .csv</p>
                 </div>
                 <div class="flex gap-3">
-                    <button type="button" onclick="closeUploadModal()" class="flex-1 py-4 bg-gray-100 text-gray-600 rounded-2xl font-bold">ยกเลิก</button>
-                    <button type="submit" name="upload_csv" class="flex-1 py-4 bg-indigo-600 text-white rounded-2xl font-black shadow-lg shadow-indigo-100">อัปโหลด</button>
+                    <button type="button" onclick="closeUploadModal()" 
+                            class="flex-1 py-3 bg-gray-100 text-gray-600 rounded-xl font-semibold hover:bg-gray-200 transition-all">
+                        ยกเลิก
+                    </button>
+                    <button type="submit" name="upload_csv" 
+                            class="flex-1 py-3 text-white rounded-xl font-bold shadow-lg transition-all hover:opacity-90"
+                            style="background-color: <?php echo $theme_color; ?>">
+                        <i class="fas fa-upload mr-1"></i> อัปโหลด
+                    </button>
                 </div>
             </form>
         </div>
     </div>
 
     <script>
+        // Theme selection
+        function selectTheme(name, color) {
+            document.getElementById('themeColorInput').value = color;
+            document.querySelectorAll('.theme-card').forEach(el => el.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+
+        // Upload modal
         function openUploadModal(id) {
             document.getElementById('modal_cat_id').value = id;
+            document.getElementById('csv_filename').textContent = 'คลิกเพื่อเลือกไฟล์ .csv';
             document.getElementById('uploadModal').classList.remove('hidden');
         }
         function closeUploadModal() {
             document.getElementById('uploadModal').classList.add('hidden');
         }
-        function addCategory() {
-            const name = document.getElementById('new_cat_name').value;
-            if (!name) return;
-            const form = document.createElement('form');
-            form.method = 'POST';
-            const input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = 'cat_name';
-            input.value = name;
-            const btn = document.createElement('input');
-            btn.type = 'hidden';
-            btn.name = 'add_category';
-            form.appendChild(input);
-            form.appendChild(btn);
-            document.body.appendChild(form);
-            form.submit();
+        document.getElementById('uploadModal').addEventListener('click', function(e) {
+            if (e.target === this) closeUploadModal();
+        });
+
+        // Cloak preview
+        function updateCloakPreview() {
+            const base = document.getElementById('cloakingBaseUrl').value;
+            const preview = document.getElementById('cloakPreview');
+            if (preview) {
+                preview.textContent = 'ตัวอย่าง: ' + base + '&url=https%3A%2F%2Fshopee.co.th%2Fproduct&source=api_product';
+            }
         }
     </script>
 </body>
