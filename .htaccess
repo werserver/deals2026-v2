@@ -1,0 +1,19 @@
+# Disable directory browsing
+Options -Indexes
+
+# Protect data folder
+<Files "data/*.json">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files "data/*.csv">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Basic URL rewriting (Optional, if host supports mod_rewrite)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # You can add pretty URL rules here if needed
+</IfModule>
