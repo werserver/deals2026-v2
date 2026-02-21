@@ -1,6 +1,883 @@
-product_id,product_name,product_price,product_discounted,product_discounted_percentage,product_image,tracking_link,category_name
-1,iPhone 15 Pro Max 256GB Natural Titanium,48900,44900,8,https://images.unsplash.com/photo-1696446701796-da61225697cc?q=80&w=500,https://example.com/iphone15,Electronics
-2,Samsung Galaxy S24 Ultra 512GB Titanium Gray,46900,42900,9,https://images.unsplash.com/photo-1707148703444-63307270387d?q=80&w=500,https://example.com/s24ultra,Electronics
-3,Sony WH-1000XM5 Wireless Noise Canceling Headphones,14900,11900,20,https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=500,https://example.com/sony-wh1000xm5,Electronics
-4,Nike Air Jordan 1 Low G Wolf Grey,5200,4680,10,https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=500,https://example.com/nike-aj1,Fashion
-5,Adidas Ultraboost Light Running Shoes,7000,4900,30,https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?q=80&w=500,https://example.com/adidas-ub,Fashion
+﻿"id","url","name","price","price_max","price_min","original_price","discount","discount_text","deal","shopid","shop_name","shop_location","rating","rating_count","star_1_count","star_2_count","star_3_count","star_4_count","star_5_count","sold_count","sold_count_text","monthly_sold_count","liked_count","colors","sizes","image","images","variations","variations_images","category","is_adult","is_service_by_shopee","is_shopee_choice","is_on_flash_sale","is_official_shop","is_preferred_plus_seller","is_lowest_price","is_live_streaming_price","is_mart","can_use_cod","can_use_wholesale","has_lowest_price_guarantee","show_free_shipping","created_time","source_url","extracted_at"
+28332112655,"https://shopee.co.th/1พีซี-ตะขอแม่เหล็กที่แข็งแกร่งกลางแจ้งตะขอแม่เหล็กที่แข็งแกร่งไฟตั้งแคมป์แขวนหลังคาเต็นท์สมอตะขอหัวเข็มขัดปีน-i.891468627.28332112655","1พีซี ตะขอแม่เหล็กที่แข็งแกร่งกลางแจ้งตะขอแม่เหล็กที่แข็งแกร่งไฟตั้งแคมป์แขวนหลังคาเต็นท์สมอตะขอหัวเข็มขัดปีน","17.00",,,"38.00",55,"-55%",,891468627,"FITFLOW.TH","จังหวัดสมุทรปราการ",4.926304801670146,4790,9,7,39,218,4517,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 3พัน+ ชิ้น/เดือน",790,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0u-mbqgadt1x198eb","https://down-sg.img.susercontent.com/file/th-11134207-7ra0u-mbqgadt1x198eb
+https://down-sg.img.susercontent.com/file/sg-11134201-7reps-m879yj504fc9c3
+https://down-sg.img.susercontent.com/file/sg-11134201-7reos-m879yj9pxh9j84
+https://down-sg.img.susercontent.com/file/sg-11134201-7rens-m879yjefush34a
+https://down-sg.img.susercontent.com/file/sg-11134201-7reo8-m879yjldgeyod9
+https://down-sg.img.susercontent.com/file/sg-11134201-7reor-m879yjq39ixh2a
+https://down-sg.img.susercontent.com/file/sg-11134201-7req6-m879yjv329bd6b
+https://down-sg.img.susercontent.com/file/sg-11134201-7req2-m879yk0wtorrf7
+https://down-sg.img.susercontent.com/file/sg-11134201-7reqj-m879yk5mmsd1e4","color_family: สีดํา-L, ขาว-L, สีขาว-S, สีดํา -S","https://down-sg.img.susercontent.com/file/sg-11134201-7reps-m879yj504fc9c3
+https://down-sg.img.susercontent.com/file/sg-11134201-7reos-m879yj9pxh9j84
+https://down-sg.img.susercontent.com/file/sg-11134201-7reo8-m879yjldgeyod9
+https://down-sg.img.susercontent.com/file/sg-11134201-7rens-m879yjefush34a",100637,false,,,,,,,,,,,,,"2025-04-05T05:58:10.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.615Z"
+28732991020,"https://shopee.co.th/[แพ็ก-2-กระป๋อง]-MR.D.I.Y-BUTANE-GAS-แก๊สกระป๋อง-ขนาด-230-กรัม-i.868298740.28732991020","[แพ็ก 2 กระป๋อง] MR.D.I.Y BUTANE GAS แก๊สกระป๋อง ขนาด 230 กรัม","56.00",,,"58.00",3,"-3%",,868298740,"MR.DIY THAILAND OFFICIAL","จังหวัดสมุทรปราการ",4.925672961028526,7541,8,2,87,344,7100,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 6พัน+ ชิ้น/เดือน",1238,"","","https://down-sg.img.susercontent.com/file/th-11134207-81ztl-mj53ypl4xpmqbf","https://down-sg.img.susercontent.com/file/th-11134207-81ztl-mj53ypl4xpmqbf
+https://down-sg.img.susercontent.com/file/sg-11134201-7reqb-m8fp66as4ddsc1
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m8fp7036kg09d9
+https://down-sg.img.susercontent.com/file/sg-11134201-7rent-m8fp66tnfl3r8c
+https://down-sg.img.susercontent.com/file/sg-11134201-7reon-m8fp679gshbdab
+https://down-sg.img.susercontent.com/file/sg-11134201-7reod-m8fp67ri0n1j4e
+https://down-sg.img.susercontent.com/file/sg-11134201-7repx-m8fp688pa1ts0e","null: ","",100637,false,,,,,,,,,,,,,"2025-04-11T03:35:47.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.615Z"
+27613459050,"https://shopee.co.th/TRAILTOP-เก้าอี้สนาม-เก้าอี้ปิคนิค-เก้าอี้แคมป์ปิ้ง-เก้าอี้พับขนาดเล็ก-พับได้-พกพาสะดวก-i.1203592517.27613459050","TRAILTOP เก้าอี้สนาม เก้าอี้ปิคนิค เก้าอี้แคมป์ปิ้ง เก้าอี้พับขนาดเล็ก พับได้ พกพาสะดวก","58.00",,,"150.00",61,"-61%",,1203592517,"TRAILTOP.TH","จังหวัดสมุทรปราการ",4.814906832298137,14490,146,80,385,1088,12791,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",8007,"","","https://down-sg.img.susercontent.com/file/th-11134207-81zth-mhfum0mzn2mnca","https://down-sg.img.susercontent.com/file/th-11134207-81zth-mhfum0mzn2mnca
+https://down-sg.img.susercontent.com/file/th-11134207-81ztg-mhhe4u06hcli21
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m13mm12nq97scd
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m13mlrpjfl7s27
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m13mlu2zyj3c39
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-m13mlvivulx502
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m13mm3g497cp94
+https://down-sg.img.susercontent.com/file/th-11134207-81ztn-mhhe8s51pvcz4a","VARIANTS: K01-7 ใบไม้, K01-8 สีดำ, K01-9 กากี, K01-7*2 ใบไม้, K01-8*2 สีดำ, K01-9*2 กากี, K01-1 สีดำ-L, K01-3 สีดำ-XL, K01-4 ใบไม้-XL, K01-5 สีดำ-XXL","https://down-sg.img.susercontent.com/file/th-11134207-81ztl-mjdlteahrtom64
+https://down-sg.img.susercontent.com/file/th-11134207-81ztc-mjdlttuyek93be
+https://down-sg.img.susercontent.com/file/th-11134207-81ztj-mjdlu355i96r6f
+https://down-sg.img.susercontent.com/file/th-11134207-81ztm-mjdlue5uhog433
+https://down-sg.img.susercontent.com/file/th-11134207-81ztk-mjdlumz0qbcw24
+https://down-sg.img.susercontent.com/file/th-11134207-81ztl-mjdluwbvl1xg82
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mdr9uely86sy34
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0n-mdpogyitcuia8e
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mdpohbk0a8oi19
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0k-mdpohhyax8fi8a",100637,false,,,,,,,,,,,,,"2024-10-08T03:44:57.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+20788178536,"https://shopee.co.th/ที่ดักปลา-ดักกุ้ง-ที่ดักกุ้ง-4-6-8-ช่อง-มุ้งดักปลา-มุ้งดักกุ้ง-ที่ดักกุ้งฝอย-ตาข่ายดักปลา-i.431533361.20788178536","ที่ดักปลา ดักกุ้ง ที่ดักกุ้ง 4 6 8 ช่อง มุ้งดักปลา มุ้งดักกุ้ง ที่ดักกุ้งฝอย ตาข่ายดักปลา","22.00",,,"70.00",69,"-69%",,431533361,"ChicMirr","จังหวัดกรุงเทพมหานคร",4.814999643544593,14052,105,72,395,1170,12310,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 10พัน+ ชิ้น/เดือน",1786,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7qvdy-lg3j2ja5gity92","https://down-sg.img.susercontent.com/file/sg-11134201-7qvdy-lg3j2ja5gity92
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvfw-lg3j2nob2hth6c
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvg5-lg3j2k6c6u2d8d
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvda-lg3j2kqbdldg79
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvcv-lg3j2l6ynuf797
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvem-lg3j2lsbtyxa6d
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvdf-lg3j2me8whlxc9
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvd7-lg3j2my839flce
+https://down-sg.img.susercontent.com/file/sg-11134201-7qve4-lg3j2n73q9oh50","ช่อง: มุ้งดักกุ้ง-4 ช่อง, มุ้งดักกุ้ง-6ช่อง, มุ้งดักกุ้ง-8ช่อง, ที่ดักปลาไหล-8ช่อง, สไตล์2-ดักปลา-6ช่อง, สไตล์2-ดักปลา-8ช่อง, สไตล์2-ดักปลา-10ช่อง","https://down-sg.img.susercontent.com/file/sg-11134201-7qvet-lg3j2t3n38fo91
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvg5-lg3j2ti2i4l150
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvd9-lg3j2tvny8jk8e
+https://down-sg.img.susercontent.com/file/th-11134207-81ztn-mf52531yx3wqa2
+https://down-sg.img.susercontent.com/file/th-11134207-81ztd-miqqpm98x4ar73
+https://down-sg.img.susercontent.com/file/th-11134207-81zte-miqqpmad143n0a
+https://down-sg.img.susercontent.com/file/th-11134207-81zte-miqqpnovivpifa",100637,false,,,,,,,,,,,,,"2023-04-27T09:19:10.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+23754738324,"https://shopee.co.th/เชือก-ยาว-10-เมตร-เชือกพาราคอร์ด-สำหรับเดินป่า-ตั้งแคมป์-คละสี-สี-สุ่ม-i.448606036.23754738324","เชือก ยาว 10 เมตร เชือกพาราคอร์ด สำหรับเดินป่า ตั้งแคมป์ คละสี สี สุ่ม","8.00",,,"16.00",50,"-50%",,448606036,"TWOcatty_mall","จังหวัดกรุงเทพมหานคร",4.782103515919722,6628,41,61,210,677,5639,,"ขายได้ 90พัน+ ชิ้น","ขายได้ 935 ชิ้น/เดือน",1606,"สี สุ่ม10M×1 ชิ้น","","https://down-sg.img.susercontent.com/file/sg-11134201-7rbk0-lkotpmafygtq71","https://down-sg.img.susercontent.com/file/sg-11134201-7rbk0-lkotpmafygtq71
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbmt-llnaz4zvgziy7e
+https://down-sg.img.susercontent.com/file/sg-11134201-7rblv-llnaz5cmyal9e5
+https://down-sg.img.susercontent.com/file/sg-11134201-7rblz-llnaz5qidzpi76
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbmm-llnaz5zy06unba
+https://down-sg.img.susercontent.com/file/sg-11134201-7r99n-llnaz6cphj3ub1
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbko-llnaz6xin21pb9
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbl8-llnaz7be5koz10
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbl8-llnaz7m7mxkk38","Color: สี สุ่ม10M×1 ชิ้น","https://down-sg.img.susercontent.com/file/sg-11134201-7rblq-llnaz84svpr196",100637,false,,,,,,,,,,,,,"2023-09-14T08:33:48.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+29270813273,"https://shopee.co.th/มุ้งดักปลา-4-6-8-10-ช่อง-ตาข่ายดักปลา-กระชังปลา-ที่ดักปลา-ที่ดักกุ้ง-พับเก็บได้-ร้านไทย-i.431816630.29270813273","มุ้งดักปลา 4 6 8 10 ช่อง ตาข่ายดักปลา กระชังปลา ที่ดักปลา ที่ดักกุ้ง พับเก็บได้ ร้านไทย","27.00",,,"65.00",58,"-58%",,431816630,"Abby mall","จังหวัดกรุงเทพมหานคร",4.812171628721541,4569,34,18,153,362,4002,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 4พัน+ ชิ้น/เดือน",1277,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m3ud8ucc2ocb06","https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m3ud8ucc2ocb06
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m3udflqdwgh391
+https://down-sg.img.susercontent.com/file/th-11134207-7rasf-m3udflqdwh4r13
+https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m3ud964kttuv97
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m3udgse5h1t3b7
+https://down-sg.img.susercontent.com/file/th-11134207-7rasb-m3ud90pir9t33b
+https://down-sg.img.susercontent.com/file/th-11134207-7rasb-m3udflqdxvp7b8
+https://down-sg.img.susercontent.com/file/th-11134201-7rasm-m3udngbcdl176e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m3udtmxcm1d3a2","จำนวนช่อง: 4ช่อง, 6ช่อง, 8ช่อง","https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m3ue3i4kthvf1d
+https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m3ue3i4kth7r50
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m3ue3iznk0qj64",100637,false,,,,,,,,,,,,,"2024-12-16T07:56:50.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+10432102421,"https://shopee.co.th/กางเกงกีฬาขาสั้น-FBT-รุ่น-มีกระเป๋า-C2B201-และ-รุ่น-ไม่มีกระเป๋า-ตัดต่อลาย-22-260-i.73867041.10432102421","กางเกงกีฬาขาสั้น FBT รุ่น มีกระเป๋า C2B201 และ รุ่น ไม่มีกระเป๋า ตัดต่อลาย 22-260","96.00",,,"159.00",40,"-40%",,73867041,"bello_shop","จังหวัดสระบุรี",4.851215666749647,12058,55,42,252,943,10766,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",3563,"","","https://down-sg.img.susercontent.com/file/th-11134207-7qul1-lhq8471r44r783","https://down-sg.img.susercontent.com/file/th-11134207-7qul1-lhq8471r44r783
+https://down-sg.img.susercontent.com/file/th-11134207-81ztn-mguujhfkgwem1a
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-l7qg2ugnh9kv74
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-jj3axygnh9kv72
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-gg29a1gnh9kv46
+https://down-sg.img.susercontent.com/file/e88b564482191c2165c329f24940d604
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lhlg60k45v3765
+https://down-sg.img.susercontent.com/file/th-11134207-7quky-lhlg60k44gir04
+https://down-sg.img.susercontent.com/file/th-11134207-7qul7-lhlg60k431yb93","สี: FBTขาสั้น201 ดำ, FBTขาสั้น201 กรม, FBTขาสั้น201 เทาเข้ม, FBTขาสั้น260 ดำขาว, FBTขาสั้น260 ดำแดง, FBTขาสั้น260 ดำฟ้า, FBTขาสั้น260 ดำเขียว, FBTขาสั้น260 กรม, FBTขาสั้น260 น้ำเงิน, FBTขาสั้น260 เทาเข้ม
+ไซต์: S, M, L, XL, 2XL, 3XL","https://down-sg.img.susercontent.com/file/sg-11134201-22120-qvqaks1nh9kvd8
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-9ufdxi6nh9kv4a
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-6kmh3u9nh9kv4f
+https://down-sg.img.susercontent.com/file/th-11134207-7quky-lhlg60k408tfae
+https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mguujhfkfhu639
+https://down-sg.img.susercontent.com/file/th-11134207-81zto-mguujhfeummkcd
+https://down-sg.img.susercontent.com/file/th-11134207-81ztf-mguujhfyv7ykb9
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lhlg60k3yu8za9
+https://down-sg.img.susercontent.com/file/th-11134207-7qul6-lhlg60k3xfojcf
+https://down-sg.img.susercontent.com/file/th-11134207-7qul6-lhlg60k3w143ac",100637,false,,,,,,,,,,,,,"2021-08-18T13:57:55.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+22890178740,"https://shopee.co.th/MAXSUN-MSF-3P-แก๊สกระป๋อง-แพ็คสาม-ผลิตและนำเข้าจากเกาหลี-แก๊ส-แก๊สกระป๋อง-gas-i.175056502.22890178740","MAXSUN MSF-3P  แก๊สกระป๋อง แพ็คสาม ผลิตและนำเข้าจากเกาหลี แก๊ส แก๊สกระป๋อง gas","98.00",,,"149.00",34,"-34%",,175056502,"AIKO Electric","จังหวัดกรุงเทพมหานคร",4.919116142672031,14666,25,13,130,787,13711,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 3พัน+ ชิ้น/เดือน",2341,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lwi20e9scb7zbb","https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lwi20e9scb7zbb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lwgpepzvxrdb13
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lwgpepzwd7m76a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lwgpepzvxr5cb0
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m20rkam4139y89
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lwi20e9s83in4c
+https://down-sg.img.susercontent.com/file/th-11134207-81zte-mie8ehaclsli2c","null: ","",100637,false,,,,,,,,,,,,,"2024-06-10T08:09:40.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+29851908858,"https://shopee.co.th/กระเป๋าเก็บรองเท้า-ถุงเก็บรองเท้าเดินทางไม่ทอ-ถุงผ้าใส่รองเท้า-เก็บรองเท้าG2700-i.373563293.29851908858","กระเป๋าเก็บรองเท้า ถุงเก็บรองเท้าเดินทางไม่ทอ ถุงผ้าใส่รองเท้า เก็บรองเท้าG2700","1.00",,,"10.00",90,"-90%",,373563293,"YW-GO","จังหวัดกรุงเทพมหานคร",4.785865724381625,2831,37,19,88,225,2462,,"ขายได้ 80พัน+ ชิ้น","ขายได้ 20พัน+ ชิ้น/เดือน",213,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lw8c6gjjsn9r34","https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lw8c6gjjsn9r34
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lw8c6gjjn0zz4d
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lw8cgb7wggjz32
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lw8c6gjjpu4v3f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lw8c6gjjlmfja0
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lw8c6gjjvgen73
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lw8c6gjju1u764
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lz1d81zcuv7l53","สินค้า: S-24x38cm, M-32x38cm, L-32x48cm","https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lz1d0vnuvk3l5f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lz1d0xojx6ehad
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lz1d10ddzgxta5",100637,false,,,,,,,,,,,,,"2024-06-06T05:29:19.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+21667067894,"https://shopee.co.th/1คู่-ถุงมือมอเตอร์ไซค์-กันแดด-ระบายอากาศ-ครึ่งนิ้ว-กันลื่น-UPF50+ป้องกันรังสียูวี-ปั่นจักรยาน-ตกปล-i.341614842.21667067894","1คู่ ถุงมือมอเตอร์ไซค์ กันแดด ระบายอากาศ ครึ่งนิ้ว กันลื่น UPF50+ป้องกันรังสียูวี ปั่นจักรยาน ตกปล","8.00",,,"40.00",80,"-80%",,341614842,"sportsman_life","จังหวัดสมุทรสาคร",4.802262386248736,15824,146,117,458,1278,13825,,"ขายได้ 80พัน+ ชิ้น","ขายได้ 2พัน+ ชิ้น/เดือน",3491,"สีดำ,ผู้ญิง, สีดำ,ผู้ชาย, สีน้ำเงินม่วง,ผู้ชาย, สีเทา,ผู้ชาย, สีดำ,ปลอกแขน, สีขาว,ปลอกแขน","","https://down-sg.img.susercontent.com/file/sg-11134201-22120-w0etklzo4qkv78","https://down-sg.img.susercontent.com/file/sg-11134201-22120-w0etklzo4qkv78
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-k1ngptcp4qkv8e
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-zhpihurp4qkv3d
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-4nnbqldp4qkvff
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-ga3bgldp4qkv73
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-88eip6dp4qkvf1
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-71q80qdp4qkv3f
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-zso5budp4qkv5a
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-bg0utnrp4qkv22","Color: สีดำ,ผู้ญิง, สีดำ,ผู้ชาย, สีน้ำเงินม่วง,ผู้ชาย, สีเทา,ผู้ชาย, สีดำ,ปลอกแขน, สีขาว,ปลอกแขน","https://down-sg.img.susercontent.com/file/sg-11134201-22120-wpnm088m4qkv2d
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-gffmzccn4qkv48
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lsjkifnfd77h4f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lsjkifnfbsn197
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lx0xx4e260mo2a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lx0xx4e27f7491",100637,false,,,,,,,,,,,,,"2022-12-06T08:41:31.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+27405700661,"https://shopee.co.th/TRAILTOP-เสื่อโยคะ-หนาพิเศษ-8/10-mm.-Yoga-mat-กันลื่น-ลดเสียงรบกวน-แผ่นรองโยคะ-NBR-มีหลายสีให้เลือก-i.1203592517.27405700661","TRAILTOP เสื่อโยคะ หนาพิเศษ 8/10 mm. Yoga mat กันลื่น ลดเสียงรบกวน แผ่นรองโยคะ NBR มีหลายสีให้เลือก","91.00",,,"178.00",49,"-49%",,1203592517,"TRAILTOP.TH","จังหวัดสมุทรปราการ",4.880567780010684,39319,125,78,665,2653,35798,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 7พัน+ ชิ้น/เดือน",17272,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0m-mcd6p7f434v0b8","https://down-sg.img.susercontent.com/file/th-11134207-7ra0m-mcd6p7f434v0b8
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m686okylqf1yba
+https://down-sg.img.susercontent.com/file/th-11134207-7ras8-m6yv3q2wil130c
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m320d4z663tua4
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m320d0uq7c2q2d
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m320d3o034rm75
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0i-mcd6pf22wqtb6e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m320d0tmad4284
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m6yv4a4v62uv83","VARIANT: Blue 8mm, Pink 8mm, Black 8mm, Grey 8mm, Blue 8mm+Bag, Pink 8mm+Bag, Black 8mm+Bag🔥, Grey 8mm+Bag🔥🔥, Blue 10mm, Pink 10mm, Black 10mm, Grey 10mm, Blue 10mm+Bag, Pink 10mm+Bag, Black 10mm+Bag🔥, Grey 10mm+Bag🔥","https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m1w5s1ykq3qh6d
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m19nmvu9q94j39
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m19nmzt5x57zb0
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m19nn336vfeb06
+https://down-sg.img.susercontent.com/file/th-11134207-7rasb-m1w5sbwi6bftb9
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m19nna092rozbc
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m19nnetdyldbda
+https://down-sg.img.susercontent.com/file/th-11134207-7ras8-m2hk7ar0k4wx7b
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m19nnpd8iqb7be
+https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m19nnuh71j1r32
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m19no2yomhf300
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m19no6p95k1fcd
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m19noc8r1m7jf7
+https://down-sg.img.susercontent.com/file/th-11134207-7rase-m19npygfutv7ea
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m19notoxicof01
+https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m19noy64yg1fdb",100637,false,,,,,,,,,,,,,"2024-07-19T04:16:53.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+2903867334,"https://shopee.co.th/101-ไฟฉายคาดหัว-Q5+COB-Outdoor-USB-Rechargeable-พร้อมแม่เหล็ก-i.22048095.2903867334","101 ไฟฉายคาดหัว Q5+COB  Outdoor USB Rechargeable พร้อมแม่เหล็ก","32.00",,,"75.00",57,"-57%",,22048095,"y_shopping","จังหวัดกรุงเทพมหานคร",4.85792646768136,20349,67,69,354,1700,18159,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 623 ชิ้น/เดือน",4761,"","","https://down-sg.img.susercontent.com/file/7feb377ec9b79b41ce7cdaabc97df7d3","https://down-sg.img.susercontent.com/file/7feb377ec9b79b41ce7cdaabc97df7d3
+https://down-sg.img.susercontent.com/file/67c4cc9326eb6fae5fa071a253f82b6e
+https://down-sg.img.susercontent.com/file/a24e9f25bfed7975159ec891213e3a2d
+https://down-sg.img.susercontent.com/file/9ac1d45feabf65b222b9c13e4cc8f231
+https://down-sg.img.susercontent.com/file/f3a39e88f61bc9c5638a859967d74f52
+https://down-sg.img.susercontent.com/file/a2c631e8d6aae8501ff7e270a546dedf
+https://down-sg.img.susercontent.com/file/0e379fb8c089fb6e5a7f30f24bd6cd34","ไฟฉายคาดหัว: 101 ไฟฉายคาดหัว, 103 ไฟฉายคาดหัว, L-105 ไฟฉายคาดหัว, L3030 5LED, SH-T11  11LED, L-212 2IN1, 510คาดหัวCOB, HX-817S 5LED, MH-818 LASER LED, YD-959 LASER LED","https://down-sg.img.susercontent.com/file/f3a39e88f61bc9c5638a859967d74f52
+https://down-sg.img.susercontent.com/file/4bd368a447b4385f43953e3c0fc687ef
+https://down-sg.img.susercontent.com/file/f3a6b6fa9fffe17ad5929cecb0f39d06
+https://down-sg.img.susercontent.com/file/ed4880a7778c9e89ad1b0d9e7844ebe4
+https://down-sg.img.susercontent.com/file/506cb054cf32aea7b1b042a2c3d44bfa
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-w7k57bhrmblv08
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-lh6j6gxubxuw1c
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lkba6e57cosb2f
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lzm5w50qtz8p5a
+https://down-sg.img.susercontent.com/file/th-11134207-81ztk-mfwtdfvj8h71e1",100637,false,,,,,,,,,,,,,"2019-09-27T18:07:55.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+27204969990,"https://shopee.co.th/กระเป๋าเก็บรองเท้าแบบหนา-(ป้องกันฝุ่น/แดด-ระบายอากาศดี)---ห้อยแขวนได้-มีสายรูดปิดปากถุง-G2700-i.1296904589.27204969990","กระเป๋าเก็บรองเท้าแบบหนา (ป้องกันฝุ่น/แดด ระบายอากาศดี) - ห้อยแขวนได้ มีสายรูดปิดปากถุง G2700","1.00",,,"7.00",86,"-86%",,1296904589,"YL-Top","จังหวัดกรุงเทพมหานคร",4.811238406983088,1838,14,11,33,191,1589,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 10พัน+ ชิ้น/เดือน",224,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mcu2hacfibid6e","https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mcu2hacfibid6e
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0u-mb7ygionpcoh9a
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mb90gg6kykvq16
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0r-mb7ygo3fsbcx9a
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0i-mb90gg6kvrsk96
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mb90gg6kx6ba77
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0m-mb90gg6kvrqua0
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m9tvkre0648h3c","Color family: G2700-S, G2700-M, G2700-L","https://down-sg.img.susercontent.com/file/sg-11134201-7rdyf-m10s2udngmp5d1
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwh-m10s3aac6kvl56
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwh-m10s3aac6kvl56",100637,false,,,,,,,,,,,,,"2024-07-10T08:41:05.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+25982459894,"https://shopee.co.th/COD-ถุงใส่รองเท้าแบบหูรูด-ถุงเก็บรองเท้า-ถุงกันเปียกเก็บรองเท้า-ถุงรองเท้า-ถุงเก็บของอเนกประสงค์-กระเป๋าเก็บรองเท้า-i.1253886558.25982459894","COD ถุงใส่รองเท้าแบบหูรูด ถุงเก็บรองเท้า ถุงกันเปียกเก็บรองเท้า ถุงรองเท้า ถุงเก็บของอเนกประสงค์ กระเป๋าเก็บรองเท้า","4.00",,,"9.00",56,"-56%",,1253886558,"BUJOY","จังหวัดสมุทรปราการ",4.86425902864259,6440,35,29,112,421,5843,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 10พัน+ ชิ้น/เดือน",1884,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0n-mcildz2moiuece","https://down-sg.img.susercontent.com/file/th-11134207-7ra0n-mcildz2moiuece
+https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m9fkp02schuocb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lwqo22itrk5r7d
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-lwqo22iszgkw1b
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lwqo22it3oa88a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lwqo22it52uo10
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-m01agofjjlbd64
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-m01agofjjla95d
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-m01agxi49ortdf","สี: ดำ, เทา, ชมพู
+ไซส์: เล็ก 27X36cm, ใหญ่ 32X44 cm","https://down-sg.img.susercontent.com/file/th-11134207-7r992-lwqo22itc3owf2
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lwqo22itdi9c39
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lwqo22itewtsdb",100637,false,,,,,,,,,,,,,"2024-06-20T05:41:05.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+24676943984,"https://shopee.co.th/กางเกงผช-กางเกงกีฬาขาสั้น-ผ้าไมโครเกรดเอ-นุ่ม-ลื่น-ใส่สบาย-ราคาส่ง-มีบริการเก็บเงินปลายทาง-i.1121912810.24676943984","กางเกงผช กางเกงกีฬาขาสั้น ผ้าไมโครเกรดเอ นุ่ม ลื่น ใส่สบาย ราคาส่ง มีบริการเก็บเงินปลายทาง","48.00",,,"159.00",70,"-70%",,1121912810,"ไอ.อาร์.เอ็น. สปอร์ต","จังหวัดสมุทรปราการ",4.768448709161526,8754,49,66,332,969,7338,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",1854,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7rd75-lulp9hilz1pl0f","https://down-sg.img.susercontent.com/file/sg-11134201-7rd75-lulp9hilz1pl0f
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd51-lulp9hyfbwjuba
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd3n-lulp9ieiocquf1
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd4l-lulp9iuw0eio22
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd6m-lulp9j91fp2k1e
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd4u-lulp9jtklnpvcb
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd5l-lulp9kt35o6ldd
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mb4h144qnb80d6
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0j-mb4h144qopsg15","สี: Adidasแดง, Adidasเหลือง, Adidasน้ำเงิน, Adidasขาว
+ไซส์: Int:2XL, Int:3XL, Int:XL, Int:L, Int:M, Int:S, Int:4XL","https://down-sg.img.susercontent.com/file/sg-11134201-7rd5d-lulp9k9ny3gx85
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd4g-lulp9l9qhbegb6
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd5l-lulp9kt35o6ldd
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd4u-lulp9jtklnpvcb",100637,false,,,,,,,,,,,,,"2024-04-27T05:42:26.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+7758610750,"https://shopee.co.th/ที่ดักปลา-ดักกุ้ง-ที่ดักกุ้ง-4-6-8-10ช่อง-มุ้งดักปลา-มุ้งดักกุ้ง-ที่ดักกุ้งฝอย-ตาข่ายดักปลา-(แถมอาหาร1ถุงต่อ1ออเดอร์)-i.323993232.7758610750","ที่ดักปลา ดักกุ้ง ที่ดักกุ้ง 4 6 8 10ช่อง มุ้งดักปลา มุ้งดักกุ้ง ที่ดักกุ้งฝอย ตาข่ายดักปลา (แถมอาหาร1ถุงต่อ1ออเดอร์)","15.00",,,"60.00",75,"-75%",,323993232,"Helloshop888","จังหวัดกรุงเทพมหานคร",4.700533718796909,36066,367,317,1711,4995,28676,,"ขายได้ 500พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",7071,"","4ช่อง.แถมอาหารปลา, 6ช่อง.แถมอาหารปลา, 8ช่อง.แถมอาหารปลา, 10ช่อง.แถมอาหารปลา, 0133-เก้าอี้ตกปลา, 0132-เก้าอี้ตกปลา, อาหารปลา","https://down-sg.img.susercontent.com/file/th-11134207-7ras8-maa064b6ahzn3e","https://down-sg.img.susercontent.com/file/th-11134207-7ras8-maa064b6ahzn3e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasl-ma9nj42asrgf5b
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-ma9niel03473d0
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-ma9niay1g61f2e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-ma9p0hjaydsa27
+https://down-sg.img.susercontent.com/file/th-11134207-7ras8-ma9p0no5z6sqf5
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-ma9p0pvir296fe
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-ma9njg711nrned
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-ma9njqwpd9tr1d","Size: 4ช่อง.แถมอาหารปลา, 6ช่อง.แถมอาหารปลา, 8ช่อง.แถมอาหารปลา, 10ช่อง.แถมอาหารปลา, 0133-เก้าอี้ตกปลา, 0132-เก้าอี้ตกปลา, อาหารปลา","https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lu8mxdglojyp02
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m1e1mp18in5bfb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lu8mxdglrd3lca
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m1e1muxhw0xbd1
+https://down-sg.img.susercontent.com/file/a59409730243d9313e66282daf17778f
+https://down-sg.img.susercontent.com/file/05cd14c18644063120dbc1df5b06aae8
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0h-mcudw01ifim8ef",100637,false,,,,,,,,,,,,,"2020-10-22T10:27:21.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+24101676735,"https://shopee.co.th/SS5-ชุดมีดคู่-ใบสองด้าน-แบบพกพา-สําหรับตั้งแคมป์กลางแจ้ง-เหมาะสำหรับห้องครัว-โรงแรม-i.171709679.24101676735","SS5 ชุดมีดคู่ ใบสองด้าน  แบบพกพา สําหรับตั้งแคมป์กลางแจ้ง เหมาะสำหรับห้องครัว โรงแรม","24.00",,,"139.00",83,"-83%",,171709679,"toolforyou","จังหวัดสมุทรสาคร",4.618747929778072,9057,193,189,551,1012,7112,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 319 ชิ้น/เดือน",7302,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rasf-macrlvoomyz49b","https://down-sg.img.susercontent.com/file/th-11134207-7rasf-macrlvoomyz49b
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-loew282cpja7ec
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-loew282dsv6n18
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-loew282ciifzb8
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-loew282ceaw457
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-loew282ddexr41","null: ","",100637,false,,,,,,,,,,,,,"2023-11-23T03:07:36.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+9741510318,"https://shopee.co.th/🔥ที่ดักกุ้ง-ดักปลา-4-6-8-10ช่อง-มุ้งกุ้งฝอย-ที่ฝอย-อุปกรณ์ตก-ตาข่ายปลา-กระชัง-มุ้งป-อาหารปลา-i.240498153.9741510318","🔥ที่ดักกุ้ง ดักปลา 4 6 8 10ช่อง มุ้งกุ้งฝอย ที่ฝอย อุปกรณ์ตก ตาข่ายปลา  กระชัง มุ้งป อาหารปลา","10.00",,,"169.00",94,"-94%",,240498153,"surpriselab","จังหวัดสมุทรปราการ",4.721181609535797,13512,124,136,573,1719,10960,,"ขายได้ 200พัน+ ชิ้น","ขายได้ 174 ชิ้น/เดือน",2786,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0h-mcub9hjhkuaua3","https://down-sg.img.susercontent.com/file/th-11134207-7ra0h-mcub9hjhkuaua3
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mcuazi83ifs655
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mcuazi83fmnaf5
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0q-mcuazi83e7swaa
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mcuazi83h0xs71
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mcuazi83ifi8b5
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mcuazi83h17q1a
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0h-mcuazi83e82u0f
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0p-mcuazi83fmdc42","colour: 4 ช่อง, 6 ช่อง, 8 ช่อง, 10 ช่อง, อาหารปลา","https://down-sg.img.susercontent.com/file/th-11134207-7ra0o-mdjze8yoo2gu19
+https://down-sg.img.susercontent.com/file/th-11134207-81ztg-mgel8s6abg221e
+https://down-sg.img.susercontent.com/file/42f755d047a678aece6661f3b58d74f4
+https://down-sg.img.susercontent.com/file/35bb11cafd370e1257599a5be252078b
+https://down-sg.img.susercontent.com/file/6ae3c8fd769dbba4a03e47d3b1745a0b",100637,false,,,,,,,,,,,,,"2021-04-13T11:59:02.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+28482108401,"https://shopee.co.th/รอกเชือก-1/8-นิ้ว-150lb-ล้อเลื่อนโลหะ-ล็อกหนัก-เชือกยก-เชือกเส้นเล็ก-สําหรับเต็นท์-ห้อง-พัดลม-ปลูกพืช-ตั้งแคมป์-เดินป่า-i.891468627.28482108401","รอกเชือก 1/8 นิ้ว  150lb ล้อเลื่อนโลหะ ล็อกหนัก เชือกยก เชือกเส้นเล็ก สําหรับเต็นท์ ห้อง พัดลม ปลูกพืช ตั้งแคมป์ เดินป่า","17.00",,,"35.00",51,"-51%",,891468627,"FITFLOW.TH","จังหวัดสมุทรปราการ",4.897627118644068,2950,6,2,35,202,2705,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",570,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mc7bdagzjhar8a","https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mc7bdagzjhar8a
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0u-mc7bebh3e3pvd4
+https://down-sg.img.susercontent.com/file/sg-11134201-7ren9-m87a2fj0pvo13b
+https://down-sg.img.susercontent.com/file/sg-11134201-7reph-m87a2foagrz6c0
+https://down-sg.img.susercontent.com/file/sg-11134201-7repx-m87a2fue7uead7
+https://down-sg.img.susercontent.com/file/sg-11134201-7reov-m87a2e16v7b474
+https://down-sg.img.susercontent.com/file/sg-11134201-7reok-m87a2ej84unq8f
+https://down-sg.img.susercontent.com/file/sg-11134201-7reqa-m87a2eq5up86a0
+https://down-sg.img.susercontent.com/file/sg-11134201-7rep3-m87a2f4v96kxaa","color_family: สีดํา (2 ม.), สีดํา (4 ม.), สีเบจ (4 ม.), สีส้ม (4 ม.), สีดํา-L, สีดํา -S, ขาว-L, สีขาว-S","https://down-sg.img.susercontent.com/file/sg-11134201-7renz-m87a2fzo0429c2
+https://down-sg.img.susercontent.com/file/sg-11134201-7reph-m87a2foagrz6c0
+https://down-sg.img.susercontent.com/file/sg-11134201-7ren9-m87a2fj0pvo13b
+https://down-sg.img.susercontent.com/file/sg-11134201-7repx-m87a2fue7uead7
+https://down-sg.img.susercontent.com/file/th-11134207-81zth-meib89bgd3pi9b
+https://down-sg.img.susercontent.com/file/th-11134207-81zti-meib8abh0w79b8
+https://down-sg.img.susercontent.com/file/th-11134207-81ztq-meib8lmlbs3l3f
+https://down-sg.img.susercontent.com/file/th-11134207-81ztg-meib8okhcmww93",100637,false,,,,,,,,,,,,,"2025-04-05T06:01:12.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+25820537123,"https://shopee.co.th/ปลอกแขนกันแดด-หลายสี-แขนเสื้อ-ผ้าละเอียด-กันแดด-UV-ใส่ได้ทั้งชายและหญิง-i.1201351732.25820537123","ปลอกแขนกันแดด หลายสี แขนเสื้อ ผ้าละเอียด กันแดด UV ใส่ได้ทั้งชายและหญิง","6.00",,,"12.00",50,"-50%",,1201351732,"Meet store","จังหวัดกรุงเทพมหานคร",4.482861105607292,5047,183,147,409,619,3689,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 350 ชิ้น/เดือน",2266,"สีขาว, สีน้ำเงิน, สีดำ, ชมพู, สี, เทา","","https://down-sg.img.susercontent.com/file/sg-11134201-7rcee-lt7ubixe5vks00","https://down-sg.img.susercontent.com/file/sg-11134201-7rcee-lt7ubixe5vks00
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcca-lt7u6l22gd4xda
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcdm-lt7u6lc21rekc4
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcde-lt7u6lghv92b58
+https://down-sg.img.susercontent.com/file/sg-11134201-7rce1-lt7u6lnfl3t8bc
+https://down-sg.img.susercontent.com/file/sg-11134201-7rce5-lt7u6lw18ix8e2
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcbs-lt7u6m38xyz406
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcd7-lt7u6ma6ntgxe4
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcet-lt7u6memhbl72c","Color: สีขาว, สีน้ำเงิน, สีดำ, ชมพู, สี, เทา","https://down-sg.img.susercontent.com/file/sg-11134201-7rcep-lt7u6misb7u0d8
+https://down-sg.img.susercontent.com/file/sg-11134201-7rccx-lt7u6mn84qgb49
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcf7-lt7u6mrny80gbe
+https://down-sg.img.susercontent.com/file/sg-11134201-7rccb-lt7u6mylo2sf0e
+https://down-sg.img.susercontent.com/file/sg-11134201-7rce8-lt7u6n63d47gaa
+https://down-sg.img.susercontent.com/file/sg-11134201-7rcf0-lt7u6naj6mm44d",100637,false,,,,,,,,,,,,,"2024-03-23T07:14:54.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+24253620707,"https://shopee.co.th/💪จัดส่งรวดเร็ว💪ผ้าก๊อซ-เทปพันออกกำลังกาย-ผ้าล็อค-เทปพันแผลแบบยืดหยุ่น-ยาว-4.5-เมตร-i.1128844635.24253620707","💪จัดส่งรวดเร็ว💪ผ้าก๊อซ เทปพันออกกำลังกาย ผ้าล็อค เทปพันแผลแบบยืดหยุ่น ยาว 4.5 เมตร","3.00",,,"7.00",57,"-57%",,1128844635,"greentheshop","จังหวัดกรุงเทพมหานคร",4.8886283704572095,3412,10,8,31,254,3109,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 10พัน+ ชิ้น/เดือน",617,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lpb5sbrfzxwp63","https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lpb5sbrfzxwp63
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lpb5sbrfyjc9af
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lpb5sbrg1ch5f4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lpb5sbrg2r1l61
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-lpb5sbrh1vgee7
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lpb5sbrh0gvy69
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lpb5sbrh3a0uf6
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lpb5sbrfvq7d96
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lpb5sbrfx4rt24","ข้อมูลจำเพาะ: A022-1 สีดำ BLACK, A022-1 สีขาว WHITE, A022-1 สีครีม CREAM, A022-2 สีดำ BLACK, A022-2 สีขาว WHITE, A022-2 สีครีม CREAM, A022-3 สีดำ BLACK, A022-3 สีขาว WHITE, A022-3 สีครีม CREAM, A038 สีดำ BLACK","https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lpb5sbrg45m1c4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lpb5sbrg5k6hce
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lpb5sbrg6yqxeb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lpb5sbrg8dbdd7
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lpb5sbrq6k4p2e
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lpb5sbrq7yp5be
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lpb5sbrq9d9l00
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lpb5sbrqaru16a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lpb5sbrqc6eh02
+https://down-sg.img.susercontent.com/file/th-11134207-81ztg-mez73uhoptzje0",100637,false,,,,,,,,,,,,,"2023-12-15T20:15:25.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+22538332533,"https://shopee.co.th/ที่ซับพอร์ตข้อเท้า-1-ข้าง-ที่พยุงเข่า-ผ้ารัดข้อเท้า-i.341603585.22538332533","ที่ซับพอร์ตข้อเท้า 1 ข้าง ที่พยุงเข่า ผ้ารัดข้อเท้า","23.00",,,"89.00",74,"-74%",,341603585,"enjoylife555","จังหวัดสมุทรสาคร",4.661553686293914,2021,26,24,121,266,1584,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 295 ชิ้น/เดือน",789,"","","https://down-sg.img.susercontent.com/file/th-11134207-7qul5-lfhphoq7ec32f7","https://down-sg.img.susercontent.com/file/th-11134207-7qul5-lfhphoq7ec32f7
+https://down-sg.img.susercontent.com/file/th-11134207-7qukz-lfhphoq6yvifdc
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-lfhphoqqy29z96
+https://down-sg.img.susercontent.com/file/th-11134207-7quky-lfhphoot0wlj54
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lfhphoqqy2lqd1
+https://down-sg.img.susercontent.com/file/th-11134207-7qula-lfhphoqrdiiv05
+https://down-sg.img.susercontent.com/file/th-11134207-7qul6-lfhphoqr6i0e34
+https://down-sg.img.susercontent.com/file/th-11134207-7qul6-lfhphoq7tsby9f
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lfhphoq6yvu6df","ไซส์: ซ้าย M, ซ้าย L, ซ้าย XL, ขวา M, ขวา L, ขวา XL","https://down-sg.img.susercontent.com/file/th-11134207-7qul7-lfhphoot2b5z7f
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lfhphoot3pqfb6
+https://down-sg.img.susercontent.com/file/th-11134207-7qul8-lfhphoot54av4e
+https://down-sg.img.susercontent.com/file/th-11134207-7qul6-lfhphoot6ivb4f
+https://down-sg.img.susercontent.com/file/th-11134207-7qul3-lfhphoot7xfr33
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-lfhphoot9c070e",100637,false,,,,,,,,,,,,,"2023-04-12T02:30:03.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+17067898979,"https://shopee.co.th/ปลอกแขนกันแดด-กันแสง-UV-เนื้อผ้าบางเบา-แบบสวมนิ้ว-และ-แบบไม่สวมนิ้ว-Let's-Slim-&-Aqua-X-1-คู่-i.89595394.17067898979","ปลอกแขนกันแดด กันแสง UV เนื้อผ้าบางเบา แบบสวมนิ้ว และ แบบไม่สวมนิ้ว  Let's Slim & Aqua X 1 คู่","6.00",,,"7.00",14,"-14%",,89595394,"Maxx.stores","จังหวัดกรุงเทพมหานคร",4.621216054831508,38619,850,740,2341,4292,30396,,"ขายได้ 300พัน+ ชิ้น","ขายได้ 5พัน+ ชิ้น/เดือน",9968,"","","https://down-sg.img.susercontent.com/file/6cc57dd3845fda39c908af6ed4f8a89a","https://down-sg.img.susercontent.com/file/6cc57dd3845fda39c908af6ed4f8a89a
+https://down-sg.img.susercontent.com/file/17ae8e0dc26fea6d2300670024436f4c
+https://down-sg.img.susercontent.com/file/9a765cd6e273f3d0d7b84ac4ee8b59e4
+https://down-sg.img.susercontent.com/file/5eebcd925ec1457c51619a7ba11f5de8
+https://down-sg.img.susercontent.com/file/a47b1c943566e80e07c04c133d787e28
+https://down-sg.img.susercontent.com/file/1103217643352ccc00136a2caee34fd6
+https://down-sg.img.susercontent.com/file/13a67bd42e0f7deeffae195b2b2c8718
+https://down-sg.img.susercontent.com/file/cc41daa4eaf98e36d37c751fdaad99b3
+https://down-sg.img.susercontent.com/file/c1c4cc54ed3bf6e7454dbda5ee5b9d2e","สี: ดำบาง-สวมนิ้ว, ดำบาง-ไม่สวมนิ้ว, เทาบาง-สวมนิ้ว, เทาบาง-ไม่สวมนิ้ว, เนื้อบาง-สวมนิ้ว, เนื้อบาง-ไม่สวมนิ้ว, ม่วงบาง-สวมนิ้ว, ม่วงบาง-ไม่สวมนิ้ว, ฟ้าบาง-สวมนิ้ว, ฟ้าบาง-ไม่สวมนิ้ว, ขาวบาง-สวมนิ้ว, ขาวบาง-ไม่สวมนิ้ว, ชมพูบาง-สวมนิ้ว, ชมพูบาง-ไม่สวมนิ้ว, ดำหนา-สวมนิ้ว, ดำหนา-ไม่สวมนิ้ว, เทาหนา-สวมนิ้ว, เทาหนา-ไม่สวมนิ้ว, เนื้อหนา-สวมนิ้ว, เนื้อหนา-ไม่สวมนิ้ว","https://down-sg.img.susercontent.com/file/c1c4cc54ed3bf6e7454dbda5ee5b9d2e
+https://down-sg.img.susercontent.com/file/d1cc14bb67ef974bd2300e813c9e0f0b
+https://down-sg.img.susercontent.com/file/0d4aa8027571e314d6e38af119e79f8f
+https://down-sg.img.susercontent.com/file/c84e558252c901b82fd17d4344830b97
+https://down-sg.img.susercontent.com/file/807f3a7b16e2fdfeb8fde42f018f50bd
+https://down-sg.img.susercontent.com/file/2d4f8c63e782fc75bdf1421e65bc5ec5
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m0fk7aa7azfcbc
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m0fk7d4b5k8qe1
+https://down-sg.img.susercontent.com/file/th-11134207-7ras8-m0fk7gdydejc12
+https://down-sg.img.susercontent.com/file/th-11134207-7rase-m0fk7k032z0aa5
+https://down-sg.img.susercontent.com/file/th-11134207-7rase-m88rnvcgq2xbb0
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m88ro73lg26hd6
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m88rohfyb5s905
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m88rop72yosp02
+https://down-sg.img.susercontent.com/file/th-11134207-81zti-mdwtcd2kwrnm1b
+https://down-sg.img.susercontent.com/file/th-11134207-81ztm-mdwtcg1njime53
+https://down-sg.img.susercontent.com/file/th-11134207-81zth-meputvd6ox6p32
+https://down-sg.img.susercontent.com/file/th-11134207-81ztd-mepuvk298jycfa
+https://down-sg.img.susercontent.com/file/th-11134207-81ztn-mepuwa5zsd1j79
+https://down-sg.img.susercontent.com/file/th-11134207-81ztk-mepux639w26944",100637,false,,,,,,,,,,,,,"2022-05-17T10:13:26.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+27569127643,"https://shopee.co.th/5cm*4.5m/5cmX2.5m-เทปบำบัด-ขนาด-เทปพันแผลแบบยืดหยุ่น-ผ้าล็อคเหนียว-ผ้าล็อค-ผ้าพันแผลเทปกล้ามเนื้อ-ผ้าล็อคสี-เทปพันข้อมื-i.891468627.27569127643","5cm*4.5m/5cmX2.5m เทปบำบัด ขนาด เทปพันแผลแบบยืดหยุ่น ผ้าล็อคเหนียว ผ้าล็อค ผ้าพันแผลเทปกล้ามเนื้อ ผ้าล็อคสี เทปพันข้อมื","6.00",,,"9.00",33,"-33%",,891468627,"FITFLOW.TH","จังหวัดสมุทรปราการ",4.808108108108108,5923,63,33,170,447,5210,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 10พัน+ ชิ้น/เดือน",690,"","2.5cm*4.5m, 5cm*4.5m","https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m5dxdpjfkhi59e","https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m5dxdpjfkhi59e
+https://down-sg.img.susercontent.com/file/sg-11134201-7rffe-m35ud68nxfbx8c
+https://down-sg.img.susercontent.com/file/sg-11134201-7rfgn-m35ud6fbqj7f59
+https://down-sg.img.susercontent.com/file/sg-11134201-7rff1-m35ud6m9exdw4b
+https://down-sg.img.susercontent.com/file/sg-11134201-7rff7-m35ud6tr40s091
+https://down-sg.img.susercontent.com/file/sg-11134201-7rfhu-m35ud70osg6u49
+https://down-sg.img.susercontent.com/file/sg-11134201-7rfho-m35ud77whum237
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m5dxf3m4ah0df4
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m5dxgtspakrhad","color_family: Light Blue, Apricot, White, Red, Blue, Black, 2.5cm/black*6
+Size: 2.5cm*4.5m, 5cm*4.5m","https://down-sg.img.susercontent.com/file/sg-11134201-7rfie-m35ud7y9fab7ae
+https://down-sg.img.susercontent.com/file/sg-11134201-7rffp-m35ud8gkpw4j32
+https://down-sg.img.susercontent.com/file/sg-11134201-7rfey-m35ud8vu25c47d
+https://down-sg.img.susercontent.com/file/sg-11134201-7rfhy-m35ud9il4v3s1a
+https://down-sg.img.susercontent.com/file/sg-11134201-7rfgo-m35uda0megvn90
+https://down-sg.img.susercontent.com/file/sg-11134201-7rffv-m35udatr7vln46
+https://down-sg.img.susercontent.com/file/th-11134207-81zth-mj9o5zc4fyf6e4",100637,false,,,,,,,,,,,,,"2024-11-29T03:08:59.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+15693452124,"https://shopee.co.th/อุปกรณ์บริหารมือ-ที่บีบมือ-เครื่องบริหารมือ-บริหารนิ้วมือ-อุปกรณ์ฝึกความแข็งแกร่ง-#-B-085-i.410613044.15693452124","อุปกรณ์บริหารมือ ที่บีบมือ เครื่องบริหารมือ บริหารนิ้วมือ อุปกรณ์ฝึกความแข็งแกร่ง # B-085","9.00",,,"39.00",77,"-77%",,410613044,"Indigo.Official.Shop","จังหวัดสมุทรสาคร",4.782392530164312,16494,111,121,525,1732,14005,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 513 ชิ้น/เดือน",6412,"แบบโฟมน้ำเงิน-ดำ, แบบโฟมแดง-ดำ, A-ฟ้าอ่อน-นับ99, A-สีเทา-นับ99, A-สีเขียว-นับ99, B-สีเทา-นับ9999, B-เขียว-นับ9999, B-ฟ้าอ่อน-นับ9999, A-ฟ้าเข้ม-นับ99, แบบโฟมสีเทา-ดำ, ดำ-จับเวลา+นับ9999, เขียวจับเวลา+นับ9999, ขาว/นับถึง9999, ดำ/นับถึง9999, เขียว/นับถึง9999","","https://down-sg.img.susercontent.com/file/sg-11134201-7qve1-lgnjwg95bd4v81","https://down-sg.img.susercontent.com/file/sg-11134201-7qve1-lgnjwg95bd4v81
+https://down-sg.img.susercontent.com/file/ed385679aef23bb545fc032586747a79
+https://down-sg.img.susercontent.com/file/sg-11134201-22100-ypjnnsoifyivb3
+https://down-sg.img.susercontent.com/file/4349accacd8050c5d8094b3238c3557d
+https://down-sg.img.susercontent.com/file/363289f6ef563030e3881f7f4f8408c5
+https://down-sg.img.susercontent.com/file/e0b3e5609b767bcf9cd8327123070261
+https://down-sg.img.susercontent.com/file/0278eaeed70c649518d412dc1e39e95c
+https://down-sg.img.susercontent.com/file/sg-11134201-22100-19kskvuifyive0
+https://down-sg.img.susercontent.com/file/sg-11134201-22100-ip9t8y6ljdive8","Color: แบบโฟมน้ำเงิน-ดำ, แบบโฟมแดง-ดำ, A-ฟ้าอ่อน-นับ99, A-สีเทา-นับ99, A-สีเขียว-นับ99, B-สีเทา-นับ9999, B-เขียว-นับ9999, B-ฟ้าอ่อน-นับ9999, A-ฟ้าเข้ม-นับ99, แบบโฟมสีเทา-ดำ, ดำ-จับเวลา+นับ9999, เขียวจับเวลา+นับ9999, ขาว/นับถึง9999, ดำ/นับถึง9999, เขียว/นับถึง9999","https://down-sg.img.susercontent.com/file/sg-11134201-7qvd7-lijt0vnpkivj4f
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvfy-lijt0vsfdmh931
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvda-lijt0vxp8psf0e
+https://down-sg.img.susercontent.com/file/sg-11134201-7rauy-matjkho48hyr80
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lw6zz37ly95b6b
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvez-lijt0wcoldrr79
+https://down-sg.img.susercontent.com/file/sg-11134201-7qve7-lijt0wj2c1xdfe
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvdn-lijt0wom2j5f68
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvf7-lijt0wvjts6iab
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvdl-lijt0x45h728da
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lmfws1opw3k7a8
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lmfws1opxi4nb8
+https://down-sg.img.susercontent.com/file/sg-11134201-7rasd-mamlxyizjtyue2
+https://down-sg.img.susercontent.com/file/sg-11134201-7rav7-mamlxyzmsmir60
+https://down-sg.img.susercontent.com/file/sg-11134201-7ravb-mamlxzltxjkg31",100637,false,,,,,,,,,,,,,"2022-09-30T09:12:35.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+7795501549,"https://shopee.co.th/BOYO-ถุงใส่รองเท้า-ถุงใส่รองเท้าแบบหูรูด-กันฝุ่นและความชื้น-กระเป๋าใส่รองเท้า-กระเป๋าใส่รองเท้า-i.485401629.7795501549","BOYO ถุงใส่รองเท้า ถุงใส่รองเท้าแบบหูรูด กันฝุ่นและความชื้น กระเป๋าใส่รองเท้า กระเป๋าใส่รองเท้า","4.00",,,"45.00",91,"-91%",,485401629,"BOYO HOME","จังหวัดกรุงเทพมหานคร",4.78805120910384,2109,10,13,68,232,1786,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 101 ชิ้น/เดือน",7248,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7qvfq-liy4mnkov51lc8","https://down-sg.img.susercontent.com/file/sg-11134201-7qvfq-liy4mnkov51lc8
+https://down-sg.img.susercontent.com/file/6e5b3bf5fd802b913bdd0fe10756d3bc
+https://down-sg.img.susercontent.com/file/a1cbf97824f8e3f171c33eb557136127
+https://down-sg.img.susercontent.com/file/edc52f1377c7e10e817e9721700543be
+https://down-sg.img.susercontent.com/file/5254cee71bb5b90534ac8699422c4fd2
+https://down-sg.img.susercontent.com/file/ad8ac477e758cd2e624b232d5e559029
+https://down-sg.img.susercontent.com/file/40dc86433b593b17ef9df0f5b25b0606
+https://down-sg.img.susercontent.com/file/1fd55e10e723be1825b9fdba0d87b749","กระเป๋าหูรูด: สีใสครึ่งล่าง","https://down-sg.img.susercontent.com/file/25ddeadcd2a719f7ef75820baa0017b0",100637,false,,,,,,,,,,,,,"2021-07-24T07:39:52.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.616Z"
+2185943083,"https://shopee.co.th/นาฬิกาจับเวลา-ขนาดใหญ่-นาฬิกาจับเวลา-นับถอยหลัง-ตั้งโต๊ะ-ติดผนัง-แบบดิจิตอล-นาฬิกา-จับเวลา-No.XL103-i.81245665.2185943083","นาฬิกาจับเวลา ขนาดใหญ่ นาฬิกาจับเวลา นับถอยหลัง  ตั้งโต๊ะ ติดผนัง แบบดิจิตอล นาฬิกา จับเวลา No.XL103","26.00",,,"60.00",57,"-57%",,81245665,"SMALL HAVEN","จังหวัดกรุงเทพมหานคร",4.774888321633695,6268,69,39,195,628,5337,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 397 ชิ้น/เดือน",2053,"","","https://down-sg.img.susercontent.com/file/a39a36f39066a122c8bab4d3dc7176ae","https://down-sg.img.susercontent.com/file/a39a36f39066a122c8bab4d3dc7176ae
+https://down-sg.img.susercontent.com/file/3159468ae94852b5d57a5c2bc1b27256
+https://down-sg.img.susercontent.com/file/db5c67869aaa3f5ad13fa2c88c965cd3
+https://down-sg.img.susercontent.com/file/8dbe57b3d810460c7110c868c0341ec4
+https://down-sg.img.susercontent.com/file/332dbf7309f470a813c2d12a1ca18c8b
+https://down-sg.img.susercontent.com/file/d6cbf7ff93cdaebb28b2bcf65a522260
+https://down-sg.img.susercontent.com/file/ed38f5bce1e2685c92aa804c9b45c188
+https://down-sg.img.susercontent.com/file/4a204f54ba4d8c4be77f89937f882a65","ขนาดใหญ่ 7.5x8: รุ่นอัพเกรด  สีขาวW, รุ่นธรรมดา สีขาวW, รุ่นธรรมดา สีเขียวG, รุ่นธรรมดา สีฟ้าB, รุ่นธรรมดา สีชมพูP, รุ่นอัพเกรด สุ่มสี","https://down-sg.img.susercontent.com/file/ebad6f3749e0ebf96666623116164a36
+https://down-sg.img.susercontent.com/file/395c637c9723373557ec81a33af5d813
+https://down-sg.img.susercontent.com/file/1ea0d4a0419ef791f3c4246378341132
+https://down-sg.img.susercontent.com/file/fd2a78cbbe642ac7bfde06eb0491c9c0
+https://down-sg.img.susercontent.com/file/16a566b39855f378d9da54b635768dda
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lto6aas9shmw2a",100637,false,,,,,,,,,,,,,"2019-05-05T13:55:08.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+17697405626,"https://shopee.co.th/ผ้าพันแผล-เทปผ้ายืดหยุ่น-เทปพันออกกำลังกาย-ผ้าล็อค-แบบมีกาวในตัว-สำหรับเล่นกีฬา-ขนาด2.5cm/5cm-เทปผ้าพันข้อมือ-ข้อเท้า-เท-i.448548570.17697405626","ผ้าพันแผล เทปผ้ายืดหยุ่น เทปพันออกกำลังกาย ผ้าล็อค แบบมีกาวในตัว สำหรับเล่นกีฬา ขนาด2.5cm/5cm เทปผ้าพันข้อมือ ข้อเท้า เท","5.00",,,"8.00",38,"-38%",,448548570,"Highlight_Shop88","จังหวัดกรุงเทพมหานคร",4.823668639053254,2535,17,12,55,233,2218,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 358 ชิ้น/เดือน",765,"AS：Black 2.5cm*4.5m, BS：White 2.5cm*4.5m, CS：Yellow 2.5cm*4.5m, AM：Black 5cm*4.5m, BM：White 5cm*4.5m, CM：Yellow 5cm*4.5m","","https://down-sg.img.susercontent.com/file/sg-11134201-7qvdn-lgm1xm495ub937","https://down-sg.img.susercontent.com/file/sg-11134201-7qvdn-lgm1xm495ub937
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvd6-lgm1xm8z0c5018
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvew-lgm1xmcuw2gxcc
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvf6-lgm1xmggnywk5f
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvfr-lgm1xmvq1myc9d
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvde-lgm1xnazgq83cb
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvfs-lgm1xnn6xg8x2f
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvew-lgm1xo1wbx8lb2
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvd2-lgm1xorz9rr797","Color: AS：Black 2.5cm*4.5m, BS：White 2.5cm*4.5m, CS：Yellow 2.5cm*4.5m, AM：Black 5cm*4.5m, BM：White 5cm*4.5m, CM：Yellow 5cm*4.5m","https://down-sg.img.susercontent.com/file/sg-11134201-7qvg2-lgm1xp2ivqps06
+https://down-sg.img.susercontent.com/file/sg-11134201-7qve4-lgm1xpb4hqr904
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvdc-lgm1xpqdveo56f
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvf4-lgm1xqad26m804
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvf1-lgm1xqgqsu1x5e
+https://down-sg.img.susercontent.com/file/sg-11134201-7qvep-lgm1xqtia5rp58",100637,false,,,,,,,,,,,,,"2023-05-10T08:21:28.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+13247861497,"https://shopee.co.th/เปลยวนผู้ใหญ่-แบบพกพา-เปลยวน280X80CM-เปลญวนผ้าใบ(แถมฟรีกระเป๋าและเชือก)-บ้าน-เปลเดินป่า-เปล-เปลญวน-เปลสีรุ้ง-ขนาดใหญ่-i.431816630.13247861497","เปลยวนผู้ใหญ่ แบบพกพา เปลยวน280X80CM เปลญวนผ้าใบ(แถมฟรีกระเป๋าและเชือก) บ้าน เปลเดินป่า เปล เปลญวน เปลสีรุ้ง ขนาดใหญ่","65.00",,,"139.00",53,"-53%",,431816630,"Abby mall","จังหวัดกรุงเทพมหานคร",4.699397781299525,15778,158,187,768,2013,12652,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 811 ชิ้น/เดือน",5083,"","","https://down-sg.img.susercontent.com/file/d9ec320c5f0f50eaaeaf825c2a083b27","https://down-sg.img.susercontent.com/file/d9ec320c5f0f50eaaeaf825c2a083b27
+https://down-sg.img.susercontent.com/file/31d911a44847d770449502225907b4d5
+https://down-sg.img.susercontent.com/file/8d095060a32eac546a33aaae15d62c45
+https://down-sg.img.susercontent.com/file/484cd8e98f47db5ff1921d277c46ef37
+https://down-sg.img.susercontent.com/file/6f7a6c87b221038854ec0be94326a876
+https://down-sg.img.susercontent.com/file/540c9b927dcbed0370e9f3e2a62ff47b
+https://down-sg.img.susercontent.com/file/f6c69162c19a8a97e17296dc4e5bfbcb
+https://down-sg.img.susercontent.com/file/4a8b99d2b79ca494791e304de5bc90bb
+https://down-sg.img.susercontent.com/file/69c38ac90e7e3e5c6002157670d20a08","colour: blue=BLUE1, red=RED1, BLUE1, RED1","https://down-sg.img.susercontent.com/file/th-11134207-7r98u-ltbr9uyrxvi53a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-ltaby91t033x35
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lu8pxp5upgapc9
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lu8pxp5upg5t0b",100637,false,,,,,,,,,,,,,"2021-11-10T14:13:52.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+15414988037,"https://shopee.co.th/DeeThai-ที่อุดหูกันเสียง-ปลั๊กอุดหูลดเสียง-ซิลิโคน-เอียร์ปลั๊ก-สำหรับเรียนว่ายน้ำ-มีสาย-Earplugs-i.319632904.15414988037","DeeThai ที่อุดหูกันเสียง ปลั๊กอุดหูลดเสียง ซิลิโคน เอียร์ปลั๊ก สำหรับเรียนว่ายน้ำ มีสาย Earplugs","7.00",,,"18.00",61,"-61%",,319632904,"DeeThaiShop","จังหวัดกรุงเทพมหานคร",4.809429280397023,4048,31,18,135,320,3544,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 982 ชิ้น/เดือน",761,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7renk-m8y75oqosuxu92","https://down-sg.img.susercontent.com/file/sg-11134201-7renk-m8y75oqosuxu92
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd6g-lufsu1c65lpvfe
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd4z-lufsu22t2mgj99
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd51-lufsu2b4qg2hbf
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd5l-lufsu2goibgj20
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd6h-lufsu2p064vm66
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd6x-lufsu37lexeu01
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd6h-lufsu3iez3jh0c
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd59-lufsu3w0f6tz97","รูปร่าง: แบบมีสาย, แบบไม่มีสาย
+สี: สีเหลือง yellow, ส้ม Orange, สีกรมท่า Navy blue, สีฟ้า blue, สีดำ black, สีแดง Red, เขียว green","https://down-sg.img.susercontent.com/file/sg-11134201-7rd41-lufsu47xxqwz36
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd69-lufsu4j1hi6493",100637,false,,,,,,,,,,,,,"2021-12-09T07:01:22.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+20796406387,"https://shopee.co.th/ลูกแบดมินตัน-ลูกแบดพลาสติก-ลูกขนไก่-AR-ไนล่อน-พลาสติก-1-ชิ้น-i.1128812000.20796406387","ลูกแบดมินตัน ลูกแบดพลาสติก ลูกขนไก่ AR ไนล่อน พลาสติก 1 ชิ้น","2.00",,,"10.00",80,"-80%",,1128812000,"HH gymnasium","จังหวัดกรุงเทพมหานคร",4.639545884578997,2114,48,41,107,233,1685,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 3พัน+ ชิ้น/เดือน",507,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lszifwrnokhp2b","https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lszifwrnokhp2b
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lszifwrnlrctd4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lszifwrnpz2507
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lszifwrnn5x9b0
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lszifwrng53183
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lszifwrnhjnh79
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lszifwro88fx18
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lszifwrniy7xb0
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lszifwrnkcsd09","ข้อมูลจำเพาะ: A030","https://down-sg.img.susercontent.com/file/th-11134207-7r992-lszifwro9n0dfe",100637,false,,,,,,,,,,,,,"2024-03-17T11:49:17.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+28107676699,"https://shopee.co.th/[COD]ถุงเก็บรองเท้า-ขนาดใหญ่-ถุงตากรองเท้า-ใช้ซ้ําได้-ผ้าไม่ทอ-กันความชื้น-และกันฝุ่น-ผ้าคลุมรองเท้า(พร้อมส่งในไทย)G2700-i.1321699705.28107676699","[COD]ถุงเก็บรองเท้า ขนาดใหญ่ ถุงตากรองเท้า ใช้ซ้ําได้ ผ้าไม่ทอ กันความชื้น และกันฝุ่น ผ้าคลุมรองเท้า(พร้อมส่งในไทย)G2700","1.00",,,"10.00",90,"-90%",,1321699705,"CLFMM","จังหวัดกรุงเทพมหานคร",4.698089171974522,1571,30,17,82,139,1303,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",499,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7rdvv-lyuf2hd37ciwa5","https://down-sg.img.susercontent.com/file/sg-11134201-7rdvv-lyuf2hd37ciwa5
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdvd-lyuf2i8px25k92
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lz45bv962hz558
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdxv-lyuf2iqr826ff9
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwr-lyuf2jsroflzb7
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdx8-lyuf2k6d34smca
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdww-lyuf2gqw3u5wef
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdxu-lyuf2km6g0144a
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdxo-lyuf2kto510ib1","สินค้า: S 24*38CM, M 32*38CM, L 32*48CM","https://down-sg.img.susercontent.com/file/sg-11134201-7rdww-lyuf2gqw3u5wef
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdww-lyuf2gqw3u5wef
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdww-lyuf2gqw3u5wef",100637,false,,,,,,,,,,,,,"2024-08-12T05:41:08.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+2270460156,"https://shopee.co.th/Lee-Bicycle-ผ้าบัฟกันฝุ่น-ป้องกันUV-i.19684910.2270460156","Lee Bicycle ผ้าบัฟกันฝุ่น ป้องกันUV","10.00",,,"12.00",17,"-17%",,19684910,"LEEBICYCLE","จังหวัดกรุงเทพมหานคร",4.742398443201168,8229,122,50,290,901,6866,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 4พัน+ ชิ้น/เดือน",1256,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7rd4h-lwzenbe6dt8o6b","https://down-sg.img.susercontent.com/file/sg-11134201-7rd4h-lwzenbe6dt8o6b
+https://down-sg.img.susercontent.com/file/bea6480fdaeb0240a9d40de239ea43f0
+https://down-sg.img.susercontent.com/file/2d4c00d83787cd649c78f22f6cff5865
+https://down-sg.img.susercontent.com/file/b0697928e89edb63457460e9603ddb18
+https://down-sg.img.susercontent.com/file/23a60f33eb76cf6c2c4c32fdf6c62007
+https://down-sg.img.susercontent.com/file/b9c959f4f1a84de64b1a52c76000ebd4
+https://down-sg.img.susercontent.com/file/4288894cae4ae86d93d0a60e15dbd0ab
+https://down-sg.img.susercontent.com/file/d37daab3bb3c4d97521f00b616d87d43","ผ้าคลุมหน้า: A, B, C, D, E, F, G, H, I, J, K, L, M, N, ผ้าบัฟ-คละลาย1ชิ้น","https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lw41a3m786nk19
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lw41a3m79l809f
+https://down-sg.img.susercontent.com/file/1ba86221a115624a6300f2ed189bb192
+https://down-sg.img.susercontent.com/file/274f8de72e2fb0b415bc8048f19c8cbc
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lw41a3m7azsg79
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lw41a3m7cecw92
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lw41a3m7dsxc41
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lw41a3m7f7hsa4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lw41a3m7gm2861
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lw41a3m7i0moc4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lw41a3m7jf7409
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lw41a3m7ktrka1
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lw41a3m7m8c0c9
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lw41bqr6oo8g6c
+https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mgnjih5go4ctcb",100637,false,,,,,,,,,,,,,"2019-05-26T15:16:19.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+22163097320,"https://shopee.co.th/ผ้าพันแผล-เทปผ้ายืดหยุ่น-เทปพันออกกำลังกาย-ผ้าล็อค-แบบมีกาวในตัว-สำหรับเล่นกีฬา-i.1097471022.22163097320","ผ้าพันแผล เทปผ้ายืดหยุ่น เทปพันออกกำลังกาย ผ้าล็อค แบบมีกาวในตัว สำหรับเล่นกีฬา","5.00",,,"9.00",44,"-44%",,1097471022,"Cheapest Mall","จังหวัดกรุงเทพมหานคร",4.798695246971109,2146,18,19,48,207,1854,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 611 ชิ้น/เดือน",394,"AS：Black 2.5cm*4.5m, BS：White 2.5cm*4.5m, CS：Yellow 2.5cm*4m, AM：Black 5cm*4.5m, BM：White 5cm*4.5m, CM：Yellow 5cm*4.5m","","https://down-sg.img.susercontent.com/file/sg-11134201-7rblr-lpeso3hhmtgaa2","https://down-sg.img.susercontent.com/file/sg-11134201-7rblr-lpeso3hhmtgaa2
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbka-lpeso3mhgwwqc5
+https://down-sg.img.susercontent.com/file/sg-11134201-7rblq-lpeso3yoxmn1a8
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbm9-lpeso44sopgz23
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbnb-lpeso4acgl4j03
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbkc-lpeso4hu5m2md0
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbl0-lpeso4orvh0zf6
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbl3-lpeso4zbg15p79
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbmm-lpeso57d49o37d","Color: AS：Black 2.5cm*4.5m, BS：White 2.5cm*4.5m, CS：Yellow 2.5cm*4m, AM：Black 5cm*4.5m, BM：White 5cm*4.5m, CM：Yellow 5cm*4.5m","https://down-sg.img.susercontent.com/file/sg-11134201-7rbld-lpeso5m2lk372f
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbkc-lpeso5qic8w833
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbka-lpeso5vi6ccof1
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbk7-lpeso66loorbce
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbn5-lpeso6bvgzke53
+https://down-sg.img.susercontent.com/file/sg-11134201-7rbmc-lpeso6glbhfs31",100637,false,,,,,,,,,,,,,"2023-12-18T06:52:10.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+23354910785,"https://shopee.co.th/ปลอกแขนกันแดด-UV-ติดแอร์-SOCKSY-รุ่น-AIR+-ผ้าละเอียด-นุ่มเย็นสบาย-ป้องกันแสง-UV-99%-free-size-ใส่ได้ทั้งชายหญิง-พร้อมส่ง-i.9416761.23354910785","ปลอกแขนกันแดด UV ติดแอร์ SOCKSY รุ่น AIR+ ผ้าละเอียด นุ่มเย็นสบาย ป้องกันแสง UV 99% free size ใส่ได้ทั้งชายหญิง พร้อมส่ง","19.00",,,"55.00",65,"-65%",,9416761,"SNEAKER MARK","จังหวัดกรุงเทพมหานคร",4.890707604717365,9836,20,22,142,645,9007,,"ขายได้ 80พัน+ ชิ้น","ขายได้ 3พัน+ ชิ้น/เดือน",2999,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lv22lm3pkpgzf3","https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lv22lm3pkpgzf3
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-llpmy3cdahaf06
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-llpmy3h33kpa82
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-llpmy3c3avwn85
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-llpmy3cdpxfyb1
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-llpmy3h3j0y6fb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-llpmy3c3cah3b0
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-llpmy3cdah721b
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-llpmy3c3dp1jc8","สี+แบบ: ดำ-สวมนิ้ว, เทาเข้ม-สวมนิ้ว, เทาอ่อน-สวมนิ้ว, เนื้อ-สวมนิ้ว, ขาว-สวมนิ้ว, ดำ-ข้อมือบาง, เทาเข้ม-ข้อมือบาง, เทาอ่อน-ข้อมือบาง, เนื้อ-ข้อมือบาง, ขาว-ข้อมือบาง, ดำ-ข้อมือหนา, เทาเข้ม-ข้อมือหนา, เทาอ่อน-ข้อมือหนา, เนื้อ-ข้อมือหนา, ขาว-ข้อมือหนา","https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lsd7cs7smp9q2f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lsd7cs7so3u694
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lsd7cs7spieme1
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lsd7cs7sqwz2b6
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lsd7cs7ssbji0b
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m4yxmlma9k7xa0
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lv22lm3pujg38a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lv22lm3pvy0j9a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lv22lm3pxckz95
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lv22lm3pyr5f5e
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lv22lm3pm41ff2
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lv22lm3pnilva8
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lv22lm3pox6b09
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lv22lm3pqbqr5b
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lv22lm3prqb764",100637,false,,,,,,,,,,,,,"2023-09-15T23:50:48.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+9287654908,"https://shopee.co.th/🔥-Best-Seller-🔥BG-Push-Up-Board-บอร์ดวิดพื้น-กระดานวิดพื้น-อุปกรณ์ฟิตเนส-แข็งแรง-ทนทาน-ใช้งานง่าย-i.4858517.9287654908","🔥 Best Seller 🔥BG Push Up Board บอร์ดวิดพื้น กระดานวิดพื้น อุปกรณ์ฟิตเนส แข็งแรง ทนทาน ใช้งานง่าย","87.00",,,"199.00",56,"-56%",,4858517,"HTD SHOP","จังหวัดกรุงเทพมหานคร",4.770036465202886,12898,100,84,435,1478,10801,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 395 ชิ้น/เดือน",8333,"","","https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mkt5udyhlddz00","https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mkt5udyhlddz00
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m1rv374p7safaa
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-m1fec4w0eenj67
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m1fece9oo9f3c2
+https://down-sg.img.susercontent.com/file/c7d255711fc8dbe25c662908cb871376
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lxw8t5cjyuvjff
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lxw8t5cjyunkb8
+https://down-sg.img.susercontent.com/file/273ecc686d37bacf003428d778960e29
+https://down-sg.img.susercontent.com/file/ace639027ea13a28077f7cf03347c31d","รุ่น: ไม่มีหน้าจอ 28 หลุม, ไม่มีหน้าจอ 30 หลุม, มีหน้าจอ 30 หลุม, มีหน้าจอ+สายแรงต้าน, ไม่มีหน้าจอ 54 หลุม, ไม่มีหน้าจอ 52 หลุม, 52 หลุม รุ่นอัพกรด","https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m19cg23j9uib82
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lyg7c7tyc3ah9e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m1fe7lajsx4f6e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m1fe7qr9t1gz31
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m7rl9nhqtntjad
+https://down-sg.img.susercontent.com/file/th-11134207-81zto-mjgflqj4zrwnc0
+https://down-sg.img.susercontent.com/file/th-11134207-81zth-mjgfemzo52iq2d",100637,false,,,,,,,,,,,,,"2021-08-07T08:31:17.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+17684903770,"https://shopee.co.th/kingshopping-RWQ222-(ร้านไทย)ถุงใส่รองเท้าแบบหูรูด-พกพาง่าย-เก็บรองเท้ากันเปียก-เก็บกักฝุ่น(อุปกรณ์สำหรับจัดเก็บรองเท้า)-i.162894152.17684903770","kingshopping RWQ222 (ร้านไทย)ถุงใส่รองเท้าแบบหูรูด พกพาง่าย เก็บรองเท้ากันเปียก เก็บกักฝุ่น(อุปกรณ์สำหรับจัดเก็บรองเท้า)","3.00",,,"8.00",63,"-63%",,162894152,"kingshopping","จังหวัดสมุทรสาคร",4.834385443743037,2693,19,5,57,241,2371,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 420 ชิ้น/เดือน",1153,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r990-ltlh8yj8q8vzfa","https://down-sg.img.susercontent.com/file/th-11134207-7r990-ltlh8yj8q8vzfa
+https://down-sg.img.susercontent.com/file/399e421fa86199838ba9adaed100f6a2
+https://down-sg.img.susercontent.com/file/f9ddacc22f9998b9b2b0393c0e98ce97
+https://down-sg.img.susercontent.com/file/a7dc8f3aa17735b364d8b9b1aeb55edf
+https://down-sg.img.susercontent.com/file/bed2967c2233ad9e3d8838c3fab8a805
+https://down-sg.img.susercontent.com/file/3f4999db4ed9e1898e4e7c3a788329ac
+https://down-sg.img.susercontent.com/file/e61647277f43d85de921d3ac2b0790b3
+https://down-sg.img.susercontent.com/file/0e4c777f5492e0b20bd765af45e1256b
+https://down-sg.img.susercontent.com/file/9e184f2dc9e5f15a4c94fc8990f360ee","สี: ใส่รองเท้า(เทาเล็ก), ใส่รองเท้า(เทาใหญ่), ใส่รองเท้า(ดำเล็ก), ใส่รองเท้า(ดำใหญ่), ใส่รองเท้า(ชมพูเล็ก), ใส่รองเท้า(ฟ้าเล็ก), ใส่รองเท้า(ฟ้าใหญ่), ใส่รองเท้า(กรมใหญ่), ใส่รองเท้า(กรมเล็ก), ใส่รองเท้า (ขาวใหญ่), ใส่รองเท้า (ขาวเล็ก), ใส่รองเท้า(ชมพูใหญ่)","https://down-sg.img.susercontent.com/file/th-11134207-7r98u-ltw63df5kn7j28
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-ltw64ptcmxkv1d
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-ltw64ptcoc5be0
+https://down-sg.img.susercontent.com/file/30cc2c7b99274f69626e06ff7a238580
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-ltw65jysiibs6d
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-ltw65jysjww8d4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-ltw65rk3ekqneb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-ltw65rk3fzb345
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-ltw66f2wzcsf7d
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-ltw63764lpoo87
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-ltw63764n49491
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-ltw66f2x0rcv38",100637,false,,,,,,,,,,,,,"2022-09-10T19:48:12.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+2600281975,"https://shopee.co.th/【TH-Delivery】ROCKBROS-หน้ากากแบบครึ่งหน้า-ป้องกันรังสี-UV-400-สำหรับขับขี่-i.66845735.2600281975","【TH Delivery】ROCKBROS หน้ากากแบบครึ่งหน้า ป้องกันรังสี UV 400 สำหรับขับขี่","92.00",,,"199.00",54,"-54%",,66845735,"Rockbros Official Shop","จังหวัดสมุทรสาคร",4.845786736947076,14041,48,48,301,1234,12410,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",8856,"","","https://down-sg.img.susercontent.com/file/dca8a87e45ff0427f64c811907c48cbe","https://down-sg.img.susercontent.com/file/dca8a87e45ff0427f64c811907c48cbe
+https://down-sg.img.susercontent.com/file/0d2eae00e44ffbc9cbe26571d3b0cc51
+https://down-sg.img.susercontent.com/file/bf90b332838c342e86578fe9d209a2da
+https://down-sg.img.susercontent.com/file/38dbbe38b338427869a78c0353dd3258
+https://down-sg.img.susercontent.com/file/10946dbcfb1c0d0a85aed89c9c93d85e
+https://down-sg.img.susercontent.com/file/b70bf335a9bef3854b107ec8d2966feb
+https://down-sg.img.susercontent.com/file/31d79ab2e86416971ed132051a11022f
+https://down-sg.img.susercontent.com/file/6edd83318d8a442dfa85251e6409a836
+https://down-sg.img.susercontent.com/file/4b0e91140e132cf81df0cb7e31ab87a0","COLOR: BLACK, WHITE, Gray-black, Blue","https://down-sg.img.susercontent.com/file/38dbbe38b338427869a78c0353dd3258
+https://down-sg.img.susercontent.com/file/bf90b332838c342e86578fe9d209a2da
+https://down-sg.img.susercontent.com/file/868b154e2f21319529af7e190bdb1384
+https://down-sg.img.susercontent.com/file/d71f34d91cc3832ad21def9c670eb66a",100637,false,,,,,,,,,,,,,"2019-08-03T03:59:06.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+13123825408,"https://shopee.co.th/Max-Fire-แก๊สกระป๋อง-น้ำก๊าซ-250-กรัม-จำนวน-3-กระป๋อง-ก๊าซ-Maxfire-แม็กไฟ-แก๊สหุงต้ม-i.97609398.13123825408","Max Fire แก๊สกระป๋อง น้ำก๊าซ 250 กรัม จำนวน 3 กระป๋อง ก๊าซ Maxfire แม็กไฟ แก๊สหุงต้ม","98.00",,,"177.00",45,"-45%",,97609398,"Bike-Boulevard","จังหวัดสมุทรปราการ",4.8743469892768765,25485,83,88,414,1775,23125,,"ขายได้ 90พัน+ ชิ้น","ขายได้ 751 ชิ้น/เดือน",3451,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lx7njib3mrin24","https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lx7njib3mrin24
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lx7njib3o633ca
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lx7njib3lcy7bd
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lx7njib3pknjd6
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lvwlwbibdvind5","ตัวเลือก: MaxFire 3 กระป๋อง","https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m5mebgefw3h9bd",100637,false,,,,,,,,,,,,,"2021-10-07T19:51:24.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+8347104913,"https://shopee.co.th/ตาข่ายดักปลา-มุ้งดักปลา-ที่ดักกุ้ง-ลอบดักปลา-ไซดักปลา-แห่จับปลา-อุปกรณ์ตกปลา-4-6-8-10ช่องมุ้งดักปลา-ที่ดักกุ้งฝอย-กรงปลา-i.421834248.8347104913","ตาข่ายดักปลา มุ้งดักปลา ที่ดักกุ้ง ลอบดักปลา ไซดักปลา แห่จับปลา อุปกรณ์ตกปลา 4 6 8 10ช่องมุ้งดักปลา ที่ดักกุ้งฝอย กรงปลา","10.00",,,"38.00",74,"-74%",,421834248,"Health home Shopping Mall","จังหวัดสมุทรปราการ",4.732515894641235,4405,36,39,181,555,3594,,"ขายได้ 90พัน+ ชิ้น","ขายได้ 210 ชิ้น/เดือน",853,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lukj37dfjqy6f2","https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lukj37dfjqy6f2
+https://down-sg.img.susercontent.com/file/324812afd8f6eff44c8aaab0ab67a333
+https://down-sg.img.susercontent.com/file/bf10fe499d74a05ec02238d6481dd185
+https://down-sg.img.susercontent.com/file/385bf243a113ec80a4b071741185651f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lukj37dfl5im40
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-lukj37dfmk3206
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lukj37dfnyni1d
+https://down-sg.img.susercontent.com/file/5364aef5c55f447c7b9c657eb6adb6dc
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lukj37dfpd7yfa","size: 4ช่อง, 6ช่อง, 8ช่อง, 10 ช่อง, bait เหยื่อ","https://down-sg.img.susercontent.com/file/999ce5d65e78f1a3f8f78bd78047f2fa
+https://down-sg.img.susercontent.com/file/e97682710e82c7f5e15c63b62dfc381b
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-ltkp0idyv51k98
+https://down-sg.img.susercontent.com/file/335bf9ea0a8ef6a3a05b8f88594c40f1
+https://down-sg.img.susercontent.com/file/3fddb51b6d8aaf1873f3e014c238856c",100637,false,,,,,,,,,,,,,"2021-04-23T10:42:17.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+22131185228,"https://shopee.co.th/ถุงคลุมรองเท้า-ที่หุ้มรองเท้ากันฝน-ถุงเท้ากันน้ำ-กันน้ำ-ทรงยาว-แบบใช้แล้วทิ้ง-รุ่นหนา-กันฝุ่น-ถุงพลาสติก-i.494111558.22131185228","ถุงคลุมรองเท้า ที่หุ้มรองเท้ากันฝน ถุงเท้ากันน้ำ กันน้ำ ทรงยาว แบบใช้แล้วทิ้ง รุ่นหนา กันฝุ่น ถุงพลาสติก","3.00",,,"9.00",67,"-67%",,494111558,"Top10_Store","จังหวัดกรุงเทพมหานคร",4.733739837398374,1476,13,18,67,153,1225,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 55 ชิ้น/เดือน",462,"A：Blue 8g, B：White 26g, C：White 8g","","https://down-sg.img.susercontent.com/file/sg-11134201-23030-bx9ybq5griovc3","https://down-sg.img.susercontent.com/file/sg-11134201-23030-bx9ybq5griovc3
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-huxrbv5griov11
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-jftjv15griov73
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-4ywcl65griove4
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-lrt8105griov66
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-vsb17d6griov4a
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-20mu3h6griovcb
+https://down-sg.img.susercontent.com/file/sg-11134201-23030-jb6nim6griovf7
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd6z-lvvepin8np8c78","Color: A：Blue 8g, B：White 26g, C：White 8g","https://down-sg.img.susercontent.com/file/sg-11134201-7rd46-lvvepiwy9hlxa3
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd5h-lvvezqe6i3mw02
+https://down-sg.img.susercontent.com/file/sg-11134201-7rd42-lvvezqka966460",100637,false,,,,,,,,,,,,,"2023-03-11T09:49:36.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+43457717558,"https://shopee.co.th/12สีให้เลือก-เสื้อคลุมกันยูวี-เสื้อเเจ็ตเก็ตกัน-UV-SPF50+-เบาบางสบาย-พร้อมหมวก-ระบายอากาศ-#1502340-i.402322583.43457717558","12สีให้เลือก เสื้อคลุมกันยูวี เสื้อเเจ็ตเก็ตกัน UV SPF50+ เบาบางสบาย พร้อมหมวก ระบายอากาศ #1502340","45.00",,,"118.00",62,"-62%",,402322583,"OhMyYaYa","จังหวัดสมุทรสาคร",4.7123103772318435,7458,73,73,382,868,6062,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 3พัน+ ชิ้น/เดือน",4863,"","","https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mbx90rro8dlzf7","https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mbx90rro8dlzf7
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0k-mbx91zy3kzc799
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0u-mbx91zy3kz3087
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0t-mbx91zzrijmv40
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0q-mbx91zzrijdof4
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0q-mbx91zzhkctj5b
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0o-mbx91zzrjxy481
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0o-mbx91zzrjy7bc0
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mbx91zzrlcikf8","สี: ขาว, ชมพู, ดำ, เหลือง, ฟ้า, เขียว, เทาอ่อน, เทาเข้ม, น้ำเงิน, สีเขียวเข้ม, ม่วง, น้ำตาล, A-ขาว（เสื้อยืด）
+ไซส์: M, L, XL, 2XL, 3XL, 4XL","https://down-sg.img.susercontent.com/file/th-11134207-7ra0k-mbx91zy3kzc799
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0u-mbx91zy3kz3087
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0t-mbx91zzrijmv40
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0q-mbx91zzrijdof4
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0q-mbx91zzhkctj5b
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0o-mbx91zzrjxy481
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0o-mbx91zzrjy7bc0
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mbx91zzrlcikf8
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0k-mbx91zzhlrdz6d
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0g-mbx91zzhiy93ae
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0s-mbx91zzhixzw12
+https://down-sg.img.susercontent.com/file/th-11134207-7ra0h-mbx91zzrlcrr30
+https://down-sg.img.susercontent.com/file/th-11134207-81ztd-me5529aopwch10",100637,false,,,,,,,,,,,,,"2025-07-08T03:46:43.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+27463972314,"https://shopee.co.th/ผ้าพันแผล-เทปผ้ายืดหยุ่น-เทปพันออกกำลังกาย-ผ้าล็อค-แบบมีกาวในตัว-สำหรับเล่นกีฬา-i.221676363.27463972314","ผ้าพันแผล เทปผ้ายืดหยุ่น เทปพันออกกำลังกาย ผ้าล็อค แบบมีกาวในตัว สำหรับเล่นกีฬา","5.00",,,"25.00",80,"-80%",,221676363,"FTSGS01","จังหวัดกรุงเทพมหานคร",4.811004784688995,3344,27,12,102,284,2919,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 2พัน+ ชิ้น/เดือน",611,"Skin color, Black, Blue, White","2.5cm*4.5m, 5cm*4.5m","https://down-sg.img.susercontent.com/file/sg-11134201-7rdve-m1cl84rbrg9k1e","https://down-sg.img.susercontent.com/file/sg-11134201-7rdve-m1cl84rbrg9k1e
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwr-m1cl861nvn2v98
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwv-m1cl87a242vr34
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdxb-m1cl88mc5fml97
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdw9-m1cl89kqpohm44
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdxy-m1cl8asuyiz90a
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdyx-m1cl8bxd9typ7f
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdy4-m1cl8d4xi3ayc7","Color: Skin color, Black, Blue, White
+Size: 2.5cm*4.5m, 5cm*4.5m","https://down-sg.img.susercontent.com/file/sg-11134201-7rdww-m0r294h19tac77
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdy6-m0r295e1ywfk50
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwc-m0r296gwcnke43
+https://down-sg.img.susercontent.com/file/sg-11134201-7rdwr-m0r297dd15ce2d",100637,false,,,,,,,,,,,,,"2024-10-14T09:53:55.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+3008484525,"https://shopee.co.th/[พร้อมส่ง]DoDo-โต๊ะพับได้-โต๊ะพับแคมป์ปิ้ง-Folding-table-แบบพกพา-อลูมิเนียม-กลางแจ้ง-ในร่ม-แคมป์ปิ้งปิกนิก-พกพาสะดวก-i.393020635.3008484525","[พร้อมส่ง]DoDo โต๊ะพับได้ โต๊ะพับแคมป์ปิ้ง Folding table แบบพกพา อลูมิเนียม กลางแจ้ง ในร่ม แคมป์ปิ้งปิกนิก พกพาสะดวก","198.00",,,"1999.00",90,"-90%",,393020635,"DoDoMall","จังหวัดสมุทรปราการ",4.635902960657569,25073,562,378,1292,3181,19660,,"ขายได้ 60พัน+ ชิ้น","ขายได้ 442 ชิ้น/เดือน",28240,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m7d1ptnrcz1f9b","https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m7d1ptnrcz1f9b
+https://down-sg.img.susercontent.com/file/th-11134207-7qula-lii95tgvjxqp63
+https://down-sg.img.susercontent.com/file/4b8fef729584915b40949e5275d4c283
+https://down-sg.img.susercontent.com/file/9eb1a20f10d7c2db34bcf58962655d50
+https://down-sg.img.susercontent.com/file/6b2c0b8f65aebea206225c969700a077
+https://down-sg.img.susercontent.com/file/6314232a9d8cab1f980e69956132d3a6
+https://down-sg.img.susercontent.com/file/b5a349c6b5af6fda3034e9434177a91e
+https://down-sg.img.susercontent.com/file/4711cd1c77a7b24551424e59a1345504
+https://down-sg.img.susercontent.com/file/b1eb59f05bceca95efc0c8c185044c3b","ชื่อผลิตภัณฑ์: 🔥สีดำ52cm-เสริมแรง, 🔥สีดำ95cm-เสริมแรง, 🔥สีดำ95+netเสริมแรง, 🔥สีดำ120cm-เสริมแรง, 🔥สีดำ120netเสริมแรง, สีดำ 52x52x50cm, สีดำ 95x55x50cm, สีดำ 95x55x50cm+net, สีดำ 120x55x67cm, สีดำ120x55x67+net, สีกากี 52x52x50cm, สีกากี 95x55x50cm, สีกากี95x55x50cm+net, สีกากี 120x55x67cm, สีกากี 120x55x67+net, สีกาแฟ 52x52x50cm, สีกาแฟ 95x55x50cm, สีกาแฟ95x55x50cm+net, สีกาแฟ 120x55x67cm, สีกาแฟ 120x55x67+net, ✨Table 95cm(อัพเกรด), ✨Table 95อัพเกรด+net, ✨Table120cm(อัพเกรด), ✨Table120อัพเกรด+net","https://down-sg.img.susercontent.com/file/th-11134207-7rash-m3pal85ubhpj15
+https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m5qzicmroty500
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lxrq6by3bgds76
+https://down-sg.img.susercontent.com/file/th-11134207-7rasf-m5qzka5hye47bd
+https://down-sg.img.susercontent.com/file/th-11134207-7rasb-m5qzkbp9orz185
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-5ky65hgxmqlvb5
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m5qzhmojo0jace
+https://down-sg.img.susercontent.com/file/th-11134207-7qul4-li4cgei8276w8f
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-hr7vtxqxmqlv34
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lvwv2zyknu1bb7
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lvwv2zykfemncb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lvwv2zykgt730c
+https://down-sg.img.susercontent.com/file/th-11134207-7qukz-ligq9tso2okoa5
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-m3vww97b01uv0a
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-ligq9tso4354d9
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lvwv2zykjmbzc2
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lvwv2zykl0wf01
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-llk0o5u9glrg09
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m3vwwkg4jowr4f
+https://down-sg.img.susercontent.com/file/th-11134207-7rasi-m3vwx3812l7s54
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-ln6on0ejhc952b
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-ln6on0ejiqtlca
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-ln6on0ejk5e1ec
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-ln6on0ejljyh21",100637,false,,,,,,,,,,,,,"2021-03-02T12:28:18.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+25256264160,"https://shopee.co.th/ร่มพับอัตโนมัติ-อัตโนมัติ-UV-สำหรับวันที่แดดจัดและฝนตกคุณภาพร่ม-UV-เสริมโครง-(8-กระดูก)-i.1128049590.25256264160","ร่มพับอัตโนมัติ อัตโนมัติ UV สำหรับวันที่แดดจัดและฝนตกคุณภาพร่ม UV เสริมโครง (8 กระดูก)","75.00",,,"129.00",42,"-42%",,1128049590,"HOLO TH","จังหวัดกรุงเทพมหานคร",4.7800730207532665,10410,105,74,364,919,8948,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",15385,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m27kaxj58lwh2e","https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m27kaxj58lwh2e
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lq1brdby48h0a4
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lq1brdby5n1g7a
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lq1brdby71lwbd
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lq1brdby8g6cb3
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-lq1brdby9uqs80
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lq1brdbyb9b8c3
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lq1brdbycnvo3f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lq1brdbye2g406","colour: สีดำ, สีเทาอ่อน, เขียว, สีน้ำเงินเข้ม, สีชมพู, สีแดง","https://down-sg.img.susercontent.com/file/th-11134207-7r98q-luywxdtaz7th00
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-luywxdtb0mdx99
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-luywxdtb7n85a3
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-luywxdtbagd171
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-luywxdtbbuxh18
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-luywxdtbd9hx9e",100637,false,,,,,,,,,,,,,"2024-01-03T02:00:37.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+6216960990,"https://shopee.co.th/CRX-ไฟฉายคาดหัว-Outdoor-ไฟฉายชาร์จไฟ-USB-Rechargeable-Headlight-/101-i.186847242.6216960990","CRX ไฟฉายคาดหัว Outdoor ไฟฉายชาร์จไฟ USB Rechargeable Headlight /101","29.00",,,"38.00",24,"-24%",,186847242,"crxled","จังหวัดสมุทรสาคร",4.711062362895644,9576,150,91,400,1101,7834,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 43 ชิ้น/เดือน",3072,"","","https://down-sg.img.susercontent.com/file/5d78e3ba12fa14bff5d79487aeaa3425","https://down-sg.img.susercontent.com/file/5d78e3ba12fa14bff5d79487aeaa3425
+https://down-sg.img.susercontent.com/file/65e22c8faafcdd3a937610837da05844
+https://down-sg.img.susercontent.com/file/43455ed40179d75d96f9aadd6977c678
+https://down-sg.img.susercontent.com/file/50d382222b23835bd184443e221200b0
+https://down-sg.img.susercontent.com/file/537c125f6c62c88b2d9efd7356ac93f4
+https://down-sg.img.susercontent.com/file/2e66189ed056ee4525ddfaa9c0960cca
+https://down-sg.img.susercontent.com/file/f9488d3f3cae1610155e27bf302350df
+https://down-sg.img.susercontent.com/file/cfec4a1f7332af80ff7eee69162337d4
+https://down-sg.img.susercontent.com/file/812e1a0c2038d245d5547faae67c3024","color: ไฟฉายคาดหัว-101, ไฟฉายคาดหัว-T22, ไฟฉายคาดหัว-T21, ไฟฉายคาดหัว-T40","https://down-sg.img.susercontent.com/file/8b2c120e6d36613b09a0c4721987cacf
+https://down-sg.img.susercontent.com/file/f9488d3f3cae1610155e27bf302350df
+https://down-sg.img.susercontent.com/file/50d382222b23835bd184443e221200b0
+https://down-sg.img.susercontent.com/file/b89a5f065a7927fceaa3f130813446ae",100637,false,,,,,,,,,,,,,"2020-02-12T13:41:07.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+22945578741,"https://shopee.co.th/หนอนยาง-จากค่าย-Hunsa-Bait-รุ่น-Hunsa-Spike-i.58632089.22945578741","หนอนยาง จากค่าย Hunsa Bait รุ่น Hunsa Spike","44.00",,,"45.00",2,"-2%",,58632089,"Hunsabait","จังหวัดนครราชสีมา",4.911608645011,7744,14,16,107,365,7242,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 8พัน+ ชิ้น/เดือน",1399,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m9jw9yvm8cfl3c","https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m9jw9yvm8cfl3c
+https://down-sg.img.susercontent.com/file/th-11134207-7r98t-lzrkh7rnx38p81
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lzrkh7rocjhlfb
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lzrkh7rocjghf6
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lzrkh7rorzqh11
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lzrkh7rorzpddb
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lzrkh7rxwomh7a
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-ll61486wq1mm7d","สี: ดำ, ขาว, แดง, ส้ม, เขียว, ม่วง, น้ำเงิน, เทาา
+ขนาด: 6.5cm., 7.5cm.","https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m9jwaeibcw9b85
+https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m9jwcgxsft5b96
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m9jwb1f7tr2nbc
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m9jwb8azr65t27
+https://down-sg.img.susercontent.com/file/th-11134207-7rasc-m9jwbhl26amn9e
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m9jwbozpc3qp32
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m9jwc8d8zbw1b2
+https://down-sg.img.susercontent.com/file/th-11134207-7rasb-m9jwcvvikx69e5",100637,false,,,,,,,,,,,,,"2023-06-15T07:59:15.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+23649379581,"https://shopee.co.th/ร่มกันฝน-แดด-แฟชั่น-เนื้อโปร่งแสง-ขนาดใหญ่สีรุ้ง-สีสันสดใส-ป้องกันแสงแดด-กันฝน-ป้องกันรังสียูวี-ด้ามยาว-i.1008608919.23649379581","ร่มกันฝน แดด แฟชั่น เนื้อโปร่งแสง ขนาดใหญ่สีรุ้ง สีสันสดใส ป้องกันแสงแดด กันฝน ป้องกันรังสียูวี ด้ามยาว","27.00",,,"89.00",70,"-70%",,1008608919,"Whale Store","จังหวัดกรุงเทพมหานคร",4.653834586466165,6658,149,107,332,721,5349,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 72 ชิ้น/เดือน",1933,"","","https://down-sg.img.susercontent.com/file/th-11134207-7qul2-ljmizzadlr9lce","https://down-sg.img.susercontent.com/file/th-11134207-7qul2-ljmizzadlr9lce
+https://down-sg.img.susercontent.com/file/th-11134207-7quky-ljmizzadpyyx02
+https://down-sg.img.susercontent.com/file/th-11134207-7qul1-ljmizzadokeh05
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-ljmizzadrdjdf6
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-ljmizzadwzt543
+https://down-sg.img.susercontent.com/file/th-11134207-7qul0-ljmizzadn5u1c7
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-ljmizzadu6o992
+https://down-sg.img.susercontent.com/file/th-11134207-7qula-ljmizzadss3t28
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-ljmizzadvl8p6f","สี: สีรุ้ง-16 ก้าน, สีรุ้ง-8 ก้าน, ขาว-8 ก้าน, สีดำ-8 ก้าน","https://down-sg.img.susercontent.com/file/th-11134207-7qul6-ljmizzadyedlde
+https://down-sg.img.susercontent.com/file/th-11134207-7qul0-ljmizzadzsy16e
+https://down-sg.img.susercontent.com/file/th-11134207-7qukz-ljmizzadn5ly60
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-ljmizzadpyqu2e",100637,false,,,,,,,,,,,,,"2023-07-25T09:27:05.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+24530652809,"https://shopee.co.th/คาราบิเนอร์-304-สแตนเลสสปริง-ไม่เป็นสนิม-แข็งแรง-รับน้ำหนักได้-เหมาะกับ-ไต่เขา-โยคะ-ฟิตเนส-Spring-Carabiner-Snap-Hook-Lo-i.1204079553.24530652809","คาราบิเนอร์ 304 สแตนเลสสปริง ไม่เป็นสนิม แข็งแรง รับน้ำหนักได้ เหมาะกับ ไต่เขา โยคะ ฟิตเนส Spring Carabiner Snap Hook Lo","7.00",,,"20.00",65,"-65%",,1204079553,"MOGEE Hardware","จังหวัดสมุทรปราการ",4.8,2546,39,10,71,181,2245,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 4พัน+ ชิ้น/เดือน",683,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m7d3xxdndwiicf","https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m7d3xxdndwiicf
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m7d3xxbzj5cqda
+https://down-sg.img.susercontent.com/file/th-11134207-7rasf-m7d3xxbzgcpv2a
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m7d3xxdndx0j68
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m7d3xxbzhqsa82
+https://down-sg.img.susercontent.com/file/th-11134207-7rase-m7d3xxbzj5urce
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m7d3xxbzhraba4
+https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m7d3xxbzgc7u9f","ขนาด: m4（4*40mm）, m5（5*50mm）, m6（6*60mm）, m8（8*80mm）, m10（10*10mm）","https://down-sg.img.susercontent.com/file/th-11134207-7rasa-m75xuhkbqak7e7
+https://down-sg.img.susercontent.com/file/th-11134207-7rasf-m75xuj11ibw5fb
+https://down-sg.img.susercontent.com/file/th-11134207-7rase-m75xul6gd1x353
+https://down-sg.img.susercontent.com/file/th-11134207-7rasf-m75xunc57ctx96
+https://down-sg.img.susercontent.com/file/th-11134207-7rase-m75xup9sdg53bd",100637,false,,,,,,,,,,,,,"2024-05-15T03:30:10.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+28467601385,"https://shopee.co.th/HEXMA-หมวกกันแดด-100%-หมวกปีกกว้างสำหรับฤดูใบไม้ผลิและฤดูร้อน-กันแดด-UPF50+-ระบายความร้อนเร็ว-i.1383045115.28467601385","HEXMA  หมวกกันแดด 100% หมวกปีกกว้างสำหรับฤดูใบไม้ผลิและฤดูร้อน กันแดด UPF50+ ระบายความร้อนเร็ว","33.00",,,"109.00",70,"-70%",,1383045115,"HEXMA.TH","จังหวัดสมุทรปราการ",4.675816773324351,5938,107,74,356,563,4838,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 2พัน+ ชิ้น/เดือน",1747,"","","https://down-sg.img.susercontent.com/file/th-11134207-7rask-m3kgp6gpvil7ab","https://down-sg.img.susercontent.com/file/th-11134207-7rask-m3kgp6gpvil7ab
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-m2kqspkt4ryr7d
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-m2kqspkt66j70a
+https://down-sg.img.susercontent.com/file/th-11134207-7rasf-m2kqspkt4rik7c
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m2kqspkt6630a7
+https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m2kqspkt3cy484
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m2kqspkt7l3n50
+https://down-sg.img.susercontent.com/file/th-11134207-7rasb-m2kqspkt3deb63","ตัวเลือกสี: M2-สีเขียว, M2-สีดำ, M2-สีเทาเข้ม, khaki, Navy blue, Forest green, BLACK","https://down-sg.img.susercontent.com/file/th-11134207-7rasd-m2krdqp94uoc19
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-m2kre96cc0wjcd
+https://down-sg.img.susercontent.com/file/th-11134207-7rash-m2kreuzu63yr54
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-m9y4ej4xuyni13
+https://down-sg.img.susercontent.com/file/th-11134207-7rasj-m9y4f5z2fv4w7a
+https://down-sg.img.susercontent.com/file/th-11134207-7rasl-m9y4fsabselq50
+https://down-sg.img.susercontent.com/file/th-11134207-81zto-mj87p9liemm9a3",100637,false,,,,,,,,,,,,,"2024-11-14T08:40:21.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+23344701719,"https://shopee.co.th/เสื้อกันฝนสีใส-ชุดกันฝน-ง่ายต่อการพกพาไม่กินพื้นที่-เหมาะสำหรับฉากกลางแจ้งที่หลากหลาย-i.481551189.23344701719","เสื้อกันฝนสีใส ชุดกันฝน ง่ายต่อการพกพาไม่กินพื้นที่ เหมาะสำหรับฉากกลางแจ้งที่หลากหลาย","5.00",,,"18.00",72,"-72%",,481551189,"Tenal Mall","จังหวัดกรุงเทพมหานคร",4.689703271620593,7886,206,117,327,618,6618,,"ขายได้ 70พัน+ ชิ้น","ขายได้ 52 ชิ้น/เดือน",684,"","","https://down-sg.img.susercontent.com/file/th-11134207-7qukz-lhpm8bbjk3yr37","https://down-sg.img.susercontent.com/file/th-11134207-7qukz-lhpm8bbjk3yr37
+https://down-sg.img.susercontent.com/file/th-11134207-7qul4-lhpm8bbi9r8350
+https://down-sg.img.susercontent.com/file/th-11134207-7qukz-lhpm8bejpuar13
+https://down-sg.img.susercontent.com/file/th-11134207-7qul8-lhpm8bbhuaz770
+https://down-sg.img.susercontent.com/file/th-11134207-7qul0-lhpm8bbhub3791
+https://down-sg.img.susercontent.com/file/th-11134207-7qula-lhpm8bclsombf7
+https://down-sg.img.susercontent.com/file/th-11134207-7qukx-lhpm8bdpr21f7c
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lhpm8bbj4npv8f
+https://down-sg.img.susercontent.com/file/th-11134207-7qul5-lhpm8bbip7gz47","ผลิตภัณฑ์: สีสุ่ม1PCS, สีสุ่ม3PCS","https://down-sg.img.susercontent.com/file/th-11134207-7rash-m3g1f4p6zexz1a
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-m3g1eeswvqor8d",100637,false,,,,,,,,,,,,,"2023-06-07T02:11:36.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+28705112274,"https://shopee.co.th/ร่มพับ-ร่ม-กันฝน-ร่มพกพา-ร่มกันแดด-ร่มกันUV-ร่มกันฝน-ด้านในดำ-YS-01-i.1145215052.28705112274","ร่มพับ ร่ม กันฝน ร่มพกพา ร่มกันแดด  ร่มกันUV ร่มกันฝน ด้านในดำ YS-01","49.00",,,"89.00",45,"-45%",,1145215052,"ceard","จังหวัดกรุงเทพมหานคร",4.614082969432315,9165,248,164,548,955,7250,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 883 ชิ้น/เดือน",4764,"","","https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lxlezseycvdb7f","https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lxlezseycvdb7f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-lxlezrtb8jin1f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lxlezrppdtbkd0
+https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lxlezrppf7w0d5
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lxlezrppf83z11
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lxlezrppdtjjc9
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lxlezrsr9cr3d7
+https://down-sg.img.susercontent.com/file/th-11134207-7r98r-lxlezrt18xwwbb
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lxlezru57bg0c1","สี: ดํา/black, เขียว/green, น้ำเงิน/Dark Blue, ฟ้า/blue, ขาว/White, ชมพู/pink, ไวน์แดง/wine red, ดํา（อัตโนมัติ）, เขียว（อัตโนมัติ）, น้ำเงิน（อัตโนมัติ）, ฟ้า（อัตโนมัติ）, ขาว（อัตโนมัติ）, ชมพู（อัตโนมัติ）, ไวน์แดง（อัตโนมัติ）","https://down-sg.img.susercontent.com/file/th-11134207-7r98w-lxlfaeondrcg71
+https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lxlfal9bbyrz76
+https://down-sg.img.susercontent.com/file/th-11134207-7r98z-lxlfaqsj8fkfdc
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lxlfaxb9oxcf34
+https://down-sg.img.susercontent.com/file/th-11134207-7r98o-lxlfb1pz8o1cb7
+https://down-sg.img.susercontent.com/file/th-11134207-7r98x-lxlfb7797z5c13
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lz77hgi29sapdd
+https://down-sg.img.susercontent.com/file/th-11134207-7rasm-mat8c4zc6rsmba
+https://down-sg.img.susercontent.com/file/th-11134207-7rask-mat8cc7bmbg4a2
+https://down-sg.img.susercontent.com/file/th-11134207-7rasg-mat8cg99oqr8d1
+https://down-sg.img.susercontent.com/file/th-11134207-7ras8-mat8cib2oqiee2
+https://down-sg.img.susercontent.com/file/th-11134207-7rasa-mat8cmcgrz3oa9
+https://down-sg.img.susercontent.com/file/th-11134207-7rasa-mat8cpupn86uc3
+https://down-sg.img.susercontent.com/file/th-11134207-7ras9-mat8cwzn78l249",100637,false,,,,,,,,,,,,,"2024-07-11T17:07:57.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+8515101129,"https://shopee.co.th/NEW!!!หนึบสุดลองยัง!-กริ๊ปพันด้ามไม้-แบดมินตัน-เทนนิส-บางเรียบ-Yonex-โยเนก-i.11204215.8515101129","NEW!!!หนึบสุดลองยัง! กริ๊ปพันด้ามไม้ แบดมินตัน เทนนิส  บางเรียบ Yonex โยเนก","20.00",,,"0.00",0,,,11204215,"Shopfee","จังหวัดกรุงเทพมหานคร",4.863829367038609,10128,32,23,166,854,9053,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",3666,"","","https://down-sg.img.susercontent.com/file/th-11134207-81ztd-mgusj5evvken3d","https://down-sg.img.susercontent.com/file/th-11134207-81ztd-mgusj5evvken3d
+https://down-sg.img.susercontent.com/file/th-11134207-81zto-mgusiexv8gei6a
+https://down-sg.img.susercontent.com/file/th-11134207-81zth-mgusiexoen0r52
+https://down-sg.img.susercontent.com/file/th-11134207-81ztq-mk16ehodkydc07
+https://down-sg.img.susercontent.com/file/th-11134207-81ztd-mk16enojcbgha1
+https://down-sg.img.susercontent.com/file/th-11134207-81ztq-mgusiextvaj28b
+https://down-sg.img.susercontent.com/file/th-11134207-81ztg-mgusiextwp3i6e
+https://down-sg.img.susercontent.com/file/th-11134207-81ztj-mgusiey5do259f
+https://down-sg.img.susercontent.com/file/th-11134207-81ztl-mgusiez2ff2j81","สี: ดำ, ม่วง, ฟ้าอ่อน, เหลืองอ่อน, ขาว, เขียวสะท้อนแสง, ส้มสะท้อนแสง, ชมพูสะท้อนแสง, เขียวมิ้น, ชมพูพลาสเทล, อิฐ, ม่วงพลาสเทล, เทาอมฟ้า2โทน, มิ้น2โทน, ชมพู2โทน","https://down-sg.img.susercontent.com/file/th-11134207-81ztj-mguskbsv89an58
+https://down-sg.img.susercontent.com/file/th-11134207-81zth-mgusko768rnt82
+https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mguskvspzojt37
+https://down-sg.img.susercontent.com/file/th-11134207-81ztc-mgusl0v4658t7c
+https://down-sg.img.susercontent.com/file/th-11134207-81zto-mgusl4iul7nu11
+https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mgusl7bnf66j2a
+https://down-sg.img.susercontent.com/file/th-11134207-81ztf-mguslhc4ye4u0b
+https://down-sg.img.susercontent.com/file/th-11134207-81zte-mguslm71wob1fb
+https://down-sg.img.susercontent.com/file/th-11134207-81ztc-mguslq5dqbyke9
+https://down-sg.img.susercontent.com/file/th-11134207-81ztd-mguslux2wz601c
+https://down-sg.img.susercontent.com/file/th-11134207-81zto-mgusm0i7q2ve9c
+https://down-sg.img.susercontent.com/file/th-11134207-81ztg-mgusm3cxjhftba
+https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mk16haitadjc28
+https://down-sg.img.susercontent.com/file/th-11134207-81ztp-mk16dm7wum8726
+https://down-sg.img.susercontent.com/file/th-11134207-81ztd-mk16dx4svo5he7",100637,false,,,,,,,,,,,,,"2021-02-11T16:54:31.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+6063599013,"https://shopee.co.th/(ของแท้-คุณภาพดี)-หัวพ่นไฟ-หัวพ่นแก๊ส-สำหรับแก๊สกระป๋อง-MASTER-TORCH-หัวเป่าแก๊ส-หัวเบิร์นอาหาร-ให้ความร้อนสูง-1,300องศา-i.340370043.6063599013","(ของแท้ คุณภาพดี) หัวพ่นไฟ หัวพ่นแก๊ส สำหรับแก๊สกระป๋อง MASTER TORCH หัวเป่าแก๊ส หัวเบิร์นอาหาร ให้ความร้อนสูง 1,300องศา","29.00",,,"0.00",0,,,340370043,"hardware tools shop","จังหวัดปทุมธานี",4.729249282100369,7317,87,59,286,891,5994,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 163 ชิ้น/เดือน",2231,"","","https://down-sg.img.susercontent.com/file/4877f8dc1610fc1ca7a0bc20515e4bc0","https://down-sg.img.susercontent.com/file/4877f8dc1610fc1ca7a0bc20515e4bc0
+https://down-sg.img.susercontent.com/file/8eb8a5c5b0bfa328cc70cdfe906efec3
+https://down-sg.img.susercontent.com/file/4ed748fb9362ed0b78148671908ac08e
+https://down-sg.img.susercontent.com/file/7bd0c28a7aa32d78e031ec0691c4a10e
+https://down-sg.img.susercontent.com/file/4ea96a2b55ae28b89118b08800885f7b
+https://down-sg.img.susercontent.com/file/2e1da60b1074aa8cb41cabf31d7fccbe
+https://down-sg.img.susercontent.com/file/fdb98d9f3ac9e677d5f2f41d1b0d7ffd","ชื่อ: A-215","",100637,false,,,,,,,,,,,,,"2020-11-18T11:03:52.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+20152210757,"https://shopee.co.th/ไฟพวงกุญแจLED-ไฟLED-ไฟฉาย-ไฟฉายฉุกเฉิน-ไฟสปอร์ตไลท์พวงกุญแจพกพา-500mAh-COB-800LM-3-โหมด-ไฟฉาย-i.62203295.20152210757","ไฟพวงกุญแจLED ไฟLED ไฟฉาย ไฟฉายฉุกเฉิน ไฟสปอร์ตไลท์พวงกุญแจพกพา 500mAh COB 800LM 3 โหมด ไฟฉาย","29.00",,,"90.00",68,"-68%",,62203295,"THAIRSO","จังหวัดกรุงเทพมหานคร",4.716728099756882,12751,200,157,516,1309,10569,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 405 ชิ้น/เดือน",5874,"","","https://down-sg.img.susercontent.com/file/sg-11134201-22100-x2w68aqxtbiv19","https://down-sg.img.susercontent.com/file/sg-11134201-22100-x2w68aqxtbiv19
+https://down-sg.img.susercontent.com/file/sg-11134201-22100-dai9r9hh5aivda
+https://down-sg.img.susercontent.com/file/84912d9ca90cb6050680c4898b6c5902
+https://down-sg.img.susercontent.com/file/sg-11134201-22100-21mkxahh5aive4
+https://down-sg.img.susercontent.com/file/sg-11134201-22100-lk85glhh5aive0
+https://down-sg.img.susercontent.com/file/1a23bd54a2364d7c819d278a3f591751
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-xcp06az04zkv9e
+https://down-sg.img.susercontent.com/file/sg-11134201-22120-k652bms04zkv8c
+https://down-sg.img.susercontent.com/file/th-11134207-23030-gwwdcdeubqov6a","ไฟฉาย: ไฟ3โหมด+ไฟเช็ค, แรงสูง ไฟ3สี-7โหมด, ไฟ3สี 7โหมด+ไขควง, อัพเกรด-โลหะ-3โหมด, ธรรมดา-3โหมด, ไฟฉายคาดหัว","https://down-sg.img.susercontent.com/file/th-11134207-7r98q-lp9fr6j78v3yb3
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lldz4yl1xfpa89
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lqkc1ewq5ntwdf
+https://down-sg.img.susercontent.com/file/sg-11134201-22110-sbbp0u7crekva5
+https://down-sg.img.susercontent.com/file/sg-11134201-22110-8rqo0shdrekve9
+https://down-sg.img.susercontent.com/file/th-11134207-7r98v-lpes48zf9ca195",100637,false,,,,,,,,,,,,,"2022-10-05T17:18:56.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+6589470356,"https://shopee.co.th/เสื้อกันฝน-ใหม่-เสื้อกันฝน-สีกรมท่า-มีแถบสะท้อนแสง-รุ่น-หมวกติดเสื้อ-Waterproof-Rain-Suitคุณภาพดีราคาถูกมีหลายสีให้เลือก-i.273151533.6589470356","เสื้อกันฝน ใหม่ เสื้อกันฝน สีกรมท่า มีแถบสะท้อนแสง รุ่น หมวกติดเสื้อ Waterproof Rain Suitคุณภาพดีราคาถูกมีหลายสีให้เลือก","98.00",,,"239.00",59,"-59%",,273151533,"Hape_shop","จังหวัดกรุงเทพมหานคร",4.746359955199448,11614,152,92,400,1285,9685,,"ขายได้ 40พัน+ ชิ้น","ขายได้ 41 ชิ้น/เดือน",4316,"","","https://down-sg.img.susercontent.com/file/cbf160fdb4182353189ff2ad0bd6af32","https://down-sg.img.susercontent.com/file/cbf160fdb4182353189ff2ad0bd6af32
+https://down-sg.img.susercontent.com/file/3974706bc5044113ab59c42fd9d62efd
+https://down-sg.img.susercontent.com/file/7db2aedb43fb3c91e963b7425a7d0b08
+https://down-sg.img.susercontent.com/file/a44034a1237287423999ac85ec7cec82
+https://down-sg.img.susercontent.com/file/78d8b3ade828615db2a947a25b0efd28
+https://down-sg.img.susercontent.com/file/7e3998f4ea625d0024f5696ae299d2eb
+https://down-sg.img.susercontent.com/file/f418f2e082debd4e882c634363e4099b
+https://down-sg.img.susercontent.com/file/fead67bb3001e146eb8f257f41b95ff7
+https://down-sg.img.susercontent.com/file/f8da17c1f370ef8bf8869f05ecc0629d","สี: Pink ชมพู, Sky blue ฟ้า, Blue น้ำเงิน, Navy blue กรมท่า, สีดำ, สีแดง, สีน้ำเงินเข้ม
+ขนาด: L, XL, XXL, XXXL","https://down-sg.img.susercontent.com/file/7e3998f4ea625d0024f5696ae299d2eb
+https://down-sg.img.susercontent.com/file/fead67bb3001e146eb8f257f41b95ff7
+https://down-sg.img.susercontent.com/file/f418f2e082debd4e882c634363e4099b
+https://down-sg.img.susercontent.com/file/78d8b3ade828615db2a947a25b0efd28
+https://down-sg.img.susercontent.com/file/th-11134207-7r990-lzu7vu4sfquh8c
+https://down-sg.img.susercontent.com/file/th-11134207-7r98s-lzu7w14q72blac
+https://down-sg.img.susercontent.com/file/th-11134207-7r992-lzu7w2o7xuw993",100637,false,,,,,,,,,,,,,"2021-05-21T08:02:45.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+1693308975,"https://shopee.co.th/หมวกว่ายน้ำ-New-พร้อมส่ง-ส่งจากไทย-รหัส-901-i.7326363.1693308975","หมวกว่ายน้ำ New พร้อมส่ง ส่งจากไทย รหัส 901","16.00",,,"79.00",80,"-80%",,7326363,"ชุดว่ายน้ำ","จังหวัดกรุงเทพมหานคร",4.796732673267327,10101,50,48,313,1086,8604,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 680 ชิ้น/เดือน",1762,"","","https://down-sg.img.susercontent.com/file/16f5257b7c8e9fda8bbfd56ebfaaca53","https://down-sg.img.susercontent.com/file/16f5257b7c8e9fda8bbfd56ebfaaca53
+https://down-sg.img.susercontent.com/file/5b36be75b363d274fb09f28d165dcdfa
+https://down-sg.img.susercontent.com/file/4c2cf9597b43f23e434695dd87841cdf
+https://down-sg.img.susercontent.com/file/77ba7596a2ce2e6f1ed473b5f4688ea6
+https://down-sg.img.susercontent.com/file/129462c9be6d8e1e562f59369fd55064
+https://down-sg.img.susercontent.com/file/93cc40f7f5787e09805075f8342fb3c2","สีพื้น: สีดำ, สีกรม, น้ำเงิน, ฟ้า, ชมพู, ชมพูนมเย็น, แดง, ฟ้าอมเขียว, ส้ม, ส้มสด, เหลือง, หลากลาย, ขาว, บานเย็นอมม่วง, ฟ้าคราม, เทาอ่อน, เทาเข้ม, เหลืองไข่","https://down-sg.img.susercontent.com/file/sg-11134201-22110-vmy0yg606tjv1a
+https://down-sg.img.susercontent.com/file/sg-11134201-22110-prf8ib3a7tjv06
+https://down-sg.img.susercontent.com/file/sg-11134201-22110-0qgfszae7tjv1c
+https://down-sg.img.susercontent.com/file/th-11134207-7qul3-lk9621ctyg6zb4
+https://down-sg.img.susercontent.com/file/th-11134201-7qul6-lk98dmaojibff0
+https://down-sg.img.susercontent.com/file/th-11134201-7qukz-lk98dyvs4gaj38
+https://down-sg.img.susercontent.com/file/sg-11134201-22110-cudyw5zf7tjv70
+https://down-sg.img.susercontent.com/file/th-11134207-7qul8-lk9621ctzurfcb
+https://down-sg.img.susercontent.com/file/th-11134201-7qul2-lk98h0kdm5q30c
+https://down-sg.img.susercontent.com/file/th-11134207-7r98y-lsz0a1i85g3h7b
+https://down-sg.img.susercontent.com/file/th-11134201-7qul4-lk98i05fjhm126
+https://down-sg.img.susercontent.com/file/th-11134201-7qukx-lk98iwtlqay15f
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lvh3liu8pt6xac
+https://down-sg.img.susercontent.com/file/th-11134207-7r98p-lsumxmyfv4vife
+https://down-sg.img.susercontent.com/file/th-11134201-7qul6-lk98kgbmifzv36
+https://down-sg.img.susercontent.com/file/th-11134207-7r991-lyukqu4jh0vd8d
+https://down-sg.img.susercontent.com/file/th-11134207-7r98u-lyukr480p47524
+https://down-sg.img.susercontent.com/file/th-11134207-23010-8i9cwnifulmv5c",100637,false,,,,,,,,,,,,,"2018-11-27T07:17:36.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+14791559391,"https://shopee.co.th/ยางแบนสำหรับหนังสติ๊ก​-ต่อเส้น-ขายส่ง-ยางแบนทุกขนาด-ความยาวรวม-50-ซม.-0.45,-0.50,-0.55,-0.60,-0.65,-0.70,-0.75,-0.80-มม.-i.163326452.14791559391","ยางแบนสำหรับหนังสติ๊ก​ ต่อเส้น ขายส่ง ยางแบนทุกขนาด ความยาวรวม 50 ซม. 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80 มม.","7.00",,,"8.00",13,"-13%",,163326452,"หนังสติ๊ก​ The hunter 001","จังหวัดอำนาจเจริญ",4.738524590163935,2440,32,33,101,209,2065,,"ขายได้ 30พัน+ ชิ้น","ขายได้ 2พัน+ ชิ้น/เดือน",390,"","","https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lezakv45acbx3b","https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lezakv45acbx3b
+https://down-sg.img.susercontent.com/file/fe0fd020d4f4d8b53399240128a03fed
+https://down-sg.img.susercontent.com/file/8c31a06904bb93afc019708bb6f7e4a2
+https://down-sg.img.susercontent.com/file/0f61e8ac4d6d6468abaec233c56cad4d
+https://down-sg.img.susercontent.com/file/736b5f73968cb0dc617c547dd7452651
+https://down-sg.img.susercontent.com/file/2d7b856d6e1ef7cf11e5dfb89e1bf13c
+https://down-sg.img.susercontent.com/file/687d5ebf897c8553768de3d6d35141d6
+https://down-sg.img.susercontent.com/file/b54eb68f64356bc2620ec8dcaf9d06d8
+https://down-sg.img.susercontent.com/file/c933da50d82bdbe3c61b0e9edbd02c76","ขนาด: 0.45 มม. สีเทา, 0.50 มม. สีส้ม, 0.55 มม. เหลืองเข้ม, 0.60 มม. สีเขียว, 0.65 มม. สีนมข้น, 0.70 มม. สีแดง, 0.75 มม. สีเหลือง, 0.80 มม. สีฟ้า","https://down-sg.img.susercontent.com/file/th-11134207-7quky-lezakv44z3sdff
+https://down-sg.img.susercontent.com/file/th-11134207-7qul3-lezakv450ict01
+https://down-sg.img.susercontent.com/file/th-11134207-7qukz-lezakv451wx924
+https://down-sg.img.susercontent.com/file/th-11134207-7qul9-lezakv453bhpd5
+https://down-sg.img.susercontent.com/file/th-11134207-7qul8-lezakv454q2525
+https://down-sg.img.susercontent.com/file/th-11134207-7qul4-lezakv4564mlb8
+https://down-sg.img.susercontent.com/file/th-11134207-7qul8-lezakv457j7160
+https://down-sg.img.susercontent.com/file/th-11134207-7qul2-lezakv458xrh85",100637,false,,,,,,,,,,,,,"2022-08-21T04:25:09.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+2315141399,"https://shopee.co.th/Lee-Bicycle-มี11สี-รองเท้าเดินชายหาด-ดำน้ำ-SOLID-ใส่ได้ทั้งหญิงและชาย-i.19684910.2315141399","Lee Bicycle มี11สี รองเท้าเดินชายหาด ดำน้ำ SOLID ใส่ได้ทั้งหญิงและชาย","26.00",,,"32.00",19,"-19%",,19684910,"LEEBICYCLE","จังหวัดกรุงเทพมหานคร",4.5601722827463895,11841,217,212,888,1928,8596,,"ขายได้ 50พัน+ ชิ้น","ขายได้ 107 ชิ้น/เดือน",5422,"","","https://down-sg.img.susercontent.com/file/sg-11134201-7rd45-lwzelndk7m1484","https://down-sg.img.susercontent.com/file/sg-11134201-7rd45-lwzelndk7m1484
+https://down-sg.img.susercontent.com/file/ccd6827e52be69636da14a4cd6f2bf05
+https://down-sg.img.susercontent.com/file/0c9b6a7c9540cb499983f4e4b7ca04ea
+https://down-sg.img.susercontent.com/file/a8b1b148d63de286c55b38d7fa4e965b
+https://down-sg.img.susercontent.com/file/dcec6ff118dde4bb1c4dfabc2d381f53
+https://down-sg.img.susercontent.com/file/45d9a5b52585a9a2c16a671f496789cc
+https://down-sg.img.susercontent.com/file/d3e33c8175ee30e1fefe281c59478b7d
+https://down-sg.img.susercontent.com/file/544d94174d18b16610de16e26a3fb7dd","รองเท้า: 23A07-BLACK, 23A07-Rose red, 23A07-Green, 23A07-Lake blue, 23A07-Orange, 23A07-Puple Line, 23A07-Blue camo, 23A07-Green line, 23A07-Blue line, 23A07-RED Camouflage, 23A07-Navy
+เลือกไชร์: M, L, XL, XXL","https://down-sg.img.susercontent.com/file/0b4914dc9b37eea4192d3936010c0e39
+https://down-sg.img.susercontent.com/file/276b0daeb776db4c82e9549a0894aee1
+https://down-sg.img.susercontent.com/file/510976544790b6e215ebfc2deee355bd
+https://down-sg.img.susercontent.com/file/9567ac6d99b02188471907607668beea
+https://down-sg.img.susercontent.com/file/e2aeae11017b2ea882f5c7a31a41583b
+https://down-sg.img.susercontent.com/file/3cf80ce0e0cb9d61d45290889167947b
+https://down-sg.img.susercontent.com/file/269cd8ee447a2c53a8b3bde4f5110050
+https://down-sg.img.susercontent.com/file/2b8b94397c15019bf8a74b36584b4f98
+https://down-sg.img.susercontent.com/file/3af5cf223c0a4cdf4f9e961a57e17ba3
+https://down-sg.img.susercontent.com/file/d4d0ca6b46890bfa81bfa6e476ac0968
+https://down-sg.img.susercontent.com/file/6c9afaf07e13c1ed5796b16e228dd3b5",100637,false,,,,,,,,,,,,,"2019-06-14T10:20:10.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
+17641494805,"https://shopee.co.th/Ice-Silk-Sunscreen-Sleeves-Korean-Sports-Arm-Coverปลอกแขน-ปลอกแขนกันแดด-แขนเสื้อ-กันแดด-กันแสง-UV-แบบสวมนิ้ว-i.448606036.17641494805","Ice Silk Sunscreen Sleeves Korean Sports Arm Coverปลอกแขน ปลอกแขนกันแดด แขนเสื้อ กันแดด กันแสง UV แบบสวมนิ้ว","6.00",,,"18.00",67,"-67%",,448606036,"TWOcatty_mall","จังหวัดกรุงเทพมหานคร",4.527162977867203,2539,79,60,180,320,1900,,"ขายได้ 100พัน+ ชิ้น","ขายได้ 1พัน+ ชิ้น/เดือน",1061,"สีขาว, สีน้ำเงิน, สีดำ, ชมพู, สี, สีเทา","","https://down-sg.img.susercontent.com/file/sg-11134201-7qvcv-lgq158cwrbay23","https://down-sg.img.susercontent.com/file/sg-11134201-7qvcv-lgq158cwrbay23
+https://down-sg.img.susercontent.com/file/f0a4791eeaf9c356c83c7e0ed5b5e0d3
+https://down-sg.img.susercontent.com/file/3dc474c361c99e3293cee105f654de45
+https://down-sg.img.susercontent.com/file/57ceacf9da8f91426ade9e7040005e1e
+https://down-sg.img.susercontent.com/file/feb4e35bfd33fb60009299e4c5f221b6
+https://down-sg.img.susercontent.com/file/c6edf6e48accb47d4c5793e1291c7a05
+https://down-sg.img.susercontent.com/file/d55e2618b69be96ed73d3f57ea5b41a6
+https://down-sg.img.susercontent.com/file/ad5b29056134895744b0d6fd59b14287
+https://down-sg.img.susercontent.com/file/ba5e228023b2130d6c2fdc25a8eb354e","Color: สีขาว, สีน้ำเงิน, สีดำ, ชมพู, สี, สีเทา","https://down-sg.img.susercontent.com/file/b505541f1c313c6c4efbb81f34b82b98
+https://down-sg.img.susercontent.com/file/e997a2d779d5b10e3d45a8992d5bd706
+https://down-sg.img.susercontent.com/file/f6b41baeae4185cd61c2ea0c91355416
+https://down-sg.img.susercontent.com/file/e2592e24d35d9722330f53e501b805e7
+https://down-sg.img.susercontent.com/file/2e33d746d59e94b7679c9fc1513ca1fe
+https://down-sg.img.susercontent.com/file/9eaa6b619d41b99f73a73d501c2cdab1",100637,false,,,,,,,,,,,,,"2022-04-06T10:13:16.000Z","https://shopee.co.th/%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87-cat.11044962","2026-02-20T02:12:57.617Z"
