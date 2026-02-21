@@ -57,7 +57,7 @@ function get_all_products($keyword = '', $category_name = '') {
     $cache_key = md5($keyword . $category_name . serialize($config['categories']));
     $cache_file = CACHE_DIR . $cache_key . '.json';
 
-    if (file_exists($cache_file) && (time() - file_mtime($cache_file) < 3600)) {
+    if (file_exists($cache_file) && (time() - filemtime($cache_file) < 3600)) {
         return json_decode(file_get_contents($cache_file), true);
     }
 
@@ -66,17 +66,22 @@ function get_all_products($keyword = '', $category_name = '') {
 
     if ($category_name) {
         foreach ($config['categories'] as $cat) {
-            if ($cat['name'] === $category_name && !empty($cat['csvFile'])) {
-                $path = DATA_DIR . '/' . $cat['csvFile'];
-                if (file_exists($path)) $csv_files_to_read[] = $path;
+            $cat_name = is_array($cat) ? ($cat['name'] ?? '') : $cat;
+            if ($cat_name === $category_name) {
+                $csv_file = is_array($cat) ? ($cat['csvFile'] ?? '') : '';
+                if (!empty($csv_file)) {
+                    $path = DATA_DIR . '/' . $csv_file;
+                    if (file_exists($path)) $csv_files_to_read[] = $path;
+                }
             }
         }
     } else {
         $main_csv_path = DATA_DIR . '/main.csv';
         if (file_exists($main_csv_path)) $csv_files_to_read[] = $main_csv_path;
         foreach ($config['categories'] as $cat) {
-            if (!empty($cat['csvFile'])) {
-                $path = DATA_DIR . '/' . $cat['csvFile'];
+            $csv_file = is_array($cat) ? ($cat['csvFile'] ?? '') : '';
+            if (!empty($csv_file)) {
+                $path = DATA_DIR . '/' . $csv_file;
                 if (file_exists($path) && !in_array($path, $csv_files_to_read)) $csv_files_to_read[] = $path;
             }
         }

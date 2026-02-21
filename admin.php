@@ -265,17 +265,22 @@ $themes = [
                             </button>
                         </div>
                         <?php foreach ($config['categories'] as $cat): ?>
+                            <?php 
+                                $cat_id = is_array($cat) ? ($cat['id'] ?? uniqid()) : $cat;
+                                $cat_name = is_array($cat) ? ($cat['name'] ?? $cat) : $cat;
+                                $cat_csv = is_array($cat) ? ($cat['csvFile'] ?? '') : '';
+                            ?>
                             <div class="flex items-center justify-between p-4 bg-white rounded-2xl border border-gray-100">
                                 <div class="flex items-center gap-3">
                                     <i class="fas fa-folder text-gray-400"></i>
-                                    <span class="font-bold text-gray-700"><?php echo htmlspecialchars($cat['name']); ?></span>
-                                    <span class="text-xs text-gray-400"><?php echo $cat['csvFile'] ?: 'ยังไม่มีไฟล์'; ?></span>
+                                    <span class="font-bold text-gray-700"><?php echo htmlspecialchars($cat_name); ?></span>
+                                    <span class="text-xs text-gray-400"><?php echo $cat_csv ?: 'ยังไม่มีไฟล์'; ?></span>
                                 </div>
                                 <div class="flex items-center gap-6">
-                                    <button type="button" onclick="openUploadModal('<?php echo $cat['id']; ?>')" class="text-sm font-bold text-indigo-600 hover:underline flex items-center gap-2">
+                                    <button type="button" onclick="openUploadModal('<?php echo htmlspecialchars($cat_id); ?>')" class="text-sm font-bold text-indigo-600 hover:underline flex items-center gap-2">
                                         <i class="fas fa-upload"></i> อัปโหลด CSV
                                     </button>
-                                    <a href="admin.php?delete_cat=<?php echo $cat['id']; ?>" class="text-red-400 hover:text-red-600 transition-colors"><i class="fas fa-times"></i></a>
+                                    <a href="admin.php?delete_cat=<?php echo htmlspecialchars($cat_id); ?>" class="text-red-400 hover:text-red-600 transition-colors"><i class="fas fa-times"></i></a>
                                 </div>
                             </div>
                         <?php endforeach; ?>
