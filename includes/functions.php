@@ -16,11 +16,18 @@ if (!is_dir(CACHE_DIR)) mkdir(CACHE_DIR, 0755, true);
  */
 function get_config() {
     $default_config = [
-        'siteName' => 'Deals2026',
-        'themeColor' => '#ef4444',
+        'siteName' => 'ThaiDeals',
+        'favicon' => '/favicon.ico',
+        'themeColor' => '#4f46e5', // Default Indigo
         'categories' => [],
         'keywords' => [],
-        'categoryCsvFileNames' => []
+        'categoryCsvFileNames' => [],
+        'cloakingBaseUrl' => 'https://goeco.mobi/?token=QlpXZyCqMylKUjZiYchwB',
+        'cloakingToken' => 'QlpXZyCqMylKUjZiYchwB',
+        'flashSaleEnabled' => true,
+        'aiReviewsEnabled' => false,
+        'prefixWordsEnabled' => true,
+        'prefixWords' => ['ถูกที่สุด', 'ลดราคา', 'ส่วนลดพิเศษ', 'ขายดี', 'แนะนำ', 'คุ้มสุดๆ', 'ราคาดี', 'โปรโมชั่น', 'สุดคุ้ม', 'ห้ามพลาด', 'ราคาถูก', 'ดีลเด็ด', 'ลดแรง', 'ยอดนิยม', 'ราคาพิเศษ']
     ];
 
     if (!file_exists(CONFIG_FILE)) {
@@ -37,6 +44,7 @@ function get_config() {
  * Save site configuration
  */
 function save_config($config) {
+    clear_cache();
     return file_put_contents(CONFIG_FILE, json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
 
@@ -91,6 +99,26 @@ function get_all_products($keyword = '', $category = '') {
         }
         // Save to cache
         file_put_contents($cache_file, json_encode($products));
+    }
+
+    // Apply Prefix Words and URL Cloaking
+    $config = get_config();
+    foreach ($products as &$p) {
+        // Prefix Words
+        if ($config['prefixWordsEnabled'] && !empty($config['prefixWords'])) {
+            $random_prefix = $config['prefixWords'][array_rand($config['prefixWords'])];
+            $p['product_name_display'] = "{$random_prefix} {$p['product_name']}";
+        } else {
+            $p['product_name_display'] = $p['product_name'];
+        }
+
+        // URL Cloaking
+        if (!empty($config['cloakingBaseUrl']) && !empty($config['cloakingToken'])) {
+            $encoded_url = urlencode($p['tracking_link']);
+            $p['cloaked_url'] = "{$config['cloakingBaseUrl']}&url={$encoded_url}&source=api_product";
+        } else {
+            $p['cloaked_url'] = $p['tracking_link'];
+        }
     }
 
     // Filter by keyword and category (if not already filtered by file)

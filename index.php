@@ -2,7 +2,15 @@
 include_once 'includes/functions.php';
 $config = get_config();
 $keyword = $_GET['q'] ?? '';
-$products = get_all_products($keyword);
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$per_page = 20;
+
+$all_products = get_all_products($keyword);
+$total_products = count($all_products);
+$total_pages = ceil($total_products / $per_page);
+$page = max(1, min($page, $total_pages ?: 1));
+$offset = ($page - 1) * $per_page;
+$products = array_slice($all_products, $offset, $per_page);
 
 include_once 'includes/header.php';
 ?>
@@ -78,7 +86,7 @@ include_once 'includes/header.php';
                 <span class="h-8 w-2 rounded-full bg-primary" style="background-color: <?php echo $config['themeColor']; ?>;"></span>
                 <?php echo $keyword ? 'ผลการค้นหา: ' . htmlspecialchars($keyword) : 'สินค้าแนะนำสำหรับคุณ'; ?>
             </h2>
-            <span class="text-sm font-bold text-gray-400"><?php echo count($products); ?> รายการ</span>
+            <span class="text-sm font-bold text-gray-400"><?php echo $total_products; ?> รายการ</span>
         </div>
 
         <?php if (empty($products)): ?>
@@ -94,7 +102,7 @@ include_once 'includes/header.php';
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 <?php foreach ($products as $index => $p): ?>
                     <div class="group bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all overflow-hidden flex flex-col">
-                        <a href="product.php?id=<?php echo $index; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" class="relative aspect-square overflow-hidden bg-gray-50">
+                        <a href="product.php?id=<?php echo $offset + $index; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" class="relative aspect-square overflow-hidden bg-gray-50">
                             <img src="<?php echo htmlspecialchars($p['product_image']); ?>" 
                                  alt="<?php echo htmlspecialchars($p['product_name']); ?>"
                                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -106,8 +114,8 @@ include_once 'includes/header.php';
                             <?php endif; ?>
                         </a>
                         <div class="p-5 flex flex-col flex-grow">
-                            <a href="product.php?id=<?php echo $index; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" class="text-sm font-bold text-gray-800 line-clamp-2 mb-3 group-hover:text-primary transition-colors">
-                                <?php echo htmlspecialchars($p['product_name']); ?>
+                            <a href="product.php?id=<?php echo $offset + $index; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" class="text-sm font-bold text-gray-800 line-clamp-2 mb-3 group-hover:text-primary transition-colors">
+                                <?php echo htmlspecialchars($p['product_name_display']); ?>
                             </a>
                             <div class="mt-auto">
                                 <div class="flex items-baseline gap-2 mb-3">
@@ -120,7 +128,7 @@ include_once 'includes/header.php';
                                         </span>
                                     <?php endif; ?>
                                 </div>
-                                <a href="<?php echo htmlspecialchars($p['tracking_link']); ?>" target="_blank" 
+                                <a href="<?php echo htmlspecialchars($p['cloaked_url']); ?>" target="_blank" 
                                    class="block w-full py-3 rounded-xl bg-gray-900 text-white text-center text-xs font-bold hover:bg-black transition-all shadow-lg shadow-gray-100">
                                     สั่งซื้อสินค้า
                                 </a>
@@ -129,6 +137,35 @@ include_once 'includes/header.php';
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            <!-- Pagination -->
+            <?php if ($total_pages > 1): ?>
+                <div class="mt-16 flex justify-center items-center gap-2">
+                    <?php if ($page > 1): ?>
+                        <a href="index.php?page=<?php echo $page - 1; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" class="h-12 w-12 flex items-center justify-center rounded-xl bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 transition-all">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php 
+                    $start_page = max(1, $page - 2);
+                    $end_page = min($total_pages, $page + 2);
+                    for ($i = $start_page; $i <= $end_page; $i++): 
+                    ?>
+                        <a href="index.php?page=<?php echo $i; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" 
+                           class="h-12 w-12 flex items-center justify-center rounded-xl font-bold transition-all <?php echo $i === $page ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100' : 'bg-white border border-gray-100 text-gray-600 hover:bg-gray-50'; ?>"
+                           style="<?php echo $i === $page ? 'background-color: '.$config['themeColor'].';' : ''; ?>">
+                            <?php echo $i; ?>
+                        </a>
+                    <?php endfor; ?>
+
+                    <?php if ($page < $total_pages): ?>
+                        <a href="index.php?page=<?php echo $page + 1; ?><?php echo $keyword ? '&q='.urlencode($keyword) : ''; ?>" class="h-12 w-12 flex items-center justify-center rounded-xl bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 transition-all">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 </main>
