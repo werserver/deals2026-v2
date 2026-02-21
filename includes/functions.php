@@ -58,7 +58,8 @@ function get_all_products($keyword = '', $category_name = '') {
     // FIX: Added "/" separator between CACHE_DIR and cache_key
     $cache_file = CACHE_DIR . '/' . $cache_key . '.json';
 
-    if (file_exists($cache_file) && (time() - filemtime($cache_file) < 3600)) {
+    // Cache for 24 hours (86400 seconds) for better performance
+    if (file_exists($cache_file) && (time() - filemtime($cache_file) < 86400)) {
         return json_decode(file_get_contents($cache_file), true);
     }
 
@@ -309,3 +310,13 @@ function clear_cache() {
     }
 }
 ?>
+
+/**
+ * Clear all JSON cache files
+ */
+function clear_cache() {
+    $files = glob(CACHE_DIR . '/*.json');
+    foreach ($files as $file) {
+        if (is_file($file)) unlink($file);
+    }
+}

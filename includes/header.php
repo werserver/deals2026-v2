@@ -17,6 +17,17 @@ $theme_color = $config['themeColor'] ?? '#ff6b00';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * { font-family: 'Prompt', sans-serif !important; }
+        body { line-height: 1.6; letter-spacing: 0.3px; }
+        h1, h2, h3, h4, h5, h6 { letter-spacing: 0.5px; line-height: 1.3; }
+        p, a, span, div { font-size: 14px; }
+        .text-sm { font-size: 13px; }
+        .text-base { font-size: 15px; }
+        .text-lg { font-size: 17px; }
+        .text-xl { font-size: 19px; }
+        .text-2xl { font-size: 22px; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-black { font-weight: 900; }
         :root {
             --primary: <?php echo $theme_color; ?>;
             --primary-dark: <?php echo $theme_color; ?>dd;
@@ -103,9 +114,6 @@ $theme_color = $config['themeColor'] ?? '#ff6b00';
 
             <!-- Right Actions -->
             <div class="flex items-center gap-3">
-                <a href="admin.php" class="h-9 w-9 rounded-xl bg-gray-100 text-gray-500 hover:bg-gray-200 transition-all flex items-center justify-center" title="Admin">
-                    <i class="fas fa-user-cog text-sm"></i>
-                </a>
                 <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn" class="md:hidden h-9 w-9 rounded-xl bg-gray-100 text-gray-500 hover:bg-gray-200 transition-all flex items-center justify-center">
                     <i class="fas fa-bars text-sm"></i>

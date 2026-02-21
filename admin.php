@@ -76,6 +76,21 @@ if (!is_logged_in()) {
 $config = get_config();
 $theme_color = $config['themeColor'] ?? '#ff6b00';
 
+// Handle Import Config
+if (isset($_POST['import_config']) && isset($_FILES['config_file']) && $_FILES['config_file']['error'] === UPLOAD_ERR_OK) {
+    $file_content = file_get_contents($_FILES['config_file']['tmp_name']);
+    $imported = json_decode($file_content, true);
+    if (is_array($imported)) {
+        $config = array_merge($config, $imported);
+        save_config($config);
+        $success = "นำเข้าการตั้งค่าเรียบร้อยแล้ว";
+        $config = get_config();
+        $theme_color = $config['themeColor'] ?? '#ff6b00';
+    } else {
+        $error = "ไฟล์ JSON ไม่ถูกต้อง";
+    }
+}
+
 // Handle Export Config
 if (isset($_GET['export'])) {
     header('Content-Type: application/json');
@@ -207,6 +222,7 @@ $themes = [
         .cat-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #f3f4f6; }
         .upload-btn { font-size: 0.8125rem; font-weight: 600; color: var(--primary); display: flex; align-items: center; gap: 0.375rem; padding: 0.375rem 0.75rem; border-radius: 0.5rem; transition: all 0.2s; }
         .upload-btn:hover { background-color: color-mix(in srgb, var(--primary) 10%, white); }
+        @media (max-width: 768px) { .upload-btn { font-size: 0.75rem; padding: 0.25rem 0.5rem; } }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen pb-24">
@@ -225,6 +241,10 @@ $themes = [
                 <span class="text-sm font-bold text-gray-500">🛠 Admin Panel</span>
             </div>
             <div class="flex items-center gap-2">
+                <button type="button" onclick="document.getElementById('importConfigInput').click()" class="text-sm font-semibold text-gray-500 hover:text-gray-700 px-3 py-2 rounded-xl hover:bg-gray-100 transition-all flex items-center gap-1.5">
+                    <i class="fas fa-file-import text-xs"></i> Import Config
+                </button>
+                <input type="file" id="importConfigInput" accept=".json" style="display:none" onchange="submitImportForm(this)">
                 <a href="admin.php?export=1" class="text-sm font-semibold text-gray-500 hover:text-gray-700 px-3 py-2 rounded-xl hover:bg-gray-100 transition-all flex items-center gap-1.5">
                     <i class="fas fa-file-export text-xs"></i> Export Config
                 </a>
@@ -232,6 +252,10 @@ $themes = [
                     <i class="fas fa-sign-out-alt text-xs"></i> ออกจากระบบ
                 </a>
             </div>
+            <form id="importForm" method="POST" enctype="multipart/form-data" style="display:none;">
+                <input type="file" id="importConfigFile" name="config_file" accept=".json">
+                <input type="hidden" name="import_config" value="1">
+            </form>
         </div>
     </header>
 
@@ -494,6 +518,18 @@ $themes = [
     </div>
 
     <script>
+        // Import config function
+        function submitImportForm(input) {
+            if (input.files && input.files[0]) {
+                const formData = new FormData();
+                formData.append('config_file', input.files[0]);
+                formData.append('import_config', '1');
+                const form = document.getElementById('importForm');
+                form.appendChild(input);
+                form.submit();
+            }
+        }
+
         // Theme selection
         function selectTheme(name, color) {
             document.getElementById('themeColorInput').value = color;

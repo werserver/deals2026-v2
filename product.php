@@ -97,6 +97,17 @@ $flash_seconds = rand(0, 59);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         * { font-family: 'Prompt', sans-serif !important; }
+        body { line-height: 1.6; letter-spacing: 0.3px; }
+        h1, h2, h3, h4, h5, h6 { letter-spacing: 0.5px; line-height: 1.3; }
+        p, a, span, div { font-size: 14px; }
+        .text-sm { font-size: 13px; }
+        .text-base { font-size: 15px; }
+        .text-lg { font-size: 17px; }
+        .text-xl { font-size: 19px; }
+        .text-2xl { font-size: 22px; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+        .font-black { font-weight: 900; }
         :root { --primary: <?php echo $theme_color; ?>; }
         .text-primary { color: var(--primary) !important; }
         .bg-primary { background-color: var(--primary) !important; }
@@ -117,9 +128,19 @@ $flash_seconds = rand(0, 59);
         .cheapest-badge { background-color: #10b981; color: white; font-size: 0.65rem; font-weight: 700; padding: 2px 6px; border-radius: 999px; }
         @keyframes fadeOut { to { opacity: 0; transform: translateY(10px); } }
         @keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
         .slide-in { animation: slideIn 0.4s ease-out; }
+        .fade-in { animation: fadeIn 0.5s ease-out; }
+        .pulse-animation { animation: pulse 2s infinite; }
+        .bounce-animation { animation: bounce 1s infinite; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .glow-effect { box-shadow: 0 0 20px rgba(0,0,0,0.08); }
+        .smooth-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
@@ -223,7 +244,7 @@ $flash_seconds = rand(0, 59);
                     <div class="flash-sale-bar text-white rounded-2xl p-4">
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-bolt text-yellow-300"></i>
-                            <span class="font-black text-sm">⚡ Flash Sale — เวลาจำกัด!</span>
+                            <span class="font-black text-sm"><i class="fas fa-zap text-yellow-300 mr-1"></i>Flash Sale — เวลาจำกัด!</span>
                         </div>
                         <div class="flex items-center gap-2 mb-2">
                             <div class="bg-white/20 rounded-lg px-3 py-1.5 text-center min-w-[52px]">
