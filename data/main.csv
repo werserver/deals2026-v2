@@ -1,0 +1,6 @@
+product_id,product_name,product_price,product_discounted,product_discounted_percentage,product_image,tracking_link,category_name
+1,iPhone 15 Pro Max 256GB Natural Titanium,48900,44900,8,https://images.unsplash.com/photo-1696446701796-da61225697cc?q=80&w=500,https://example.com/iphone15,Electronics
+2,Samsung Galaxy S24 Ultra 512GB Titanium Gray,46900,42900,9,https://images.unsplash.com/photo-1707148703444-63307270387d?q=80&w=500,https://example.com/s24ultra,Electronics
+3,Sony WH-1000XM5 Wireless Noise Canceling Headphones,14900,11900,20,https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=500,https://example.com/sony-wh1000xm5,Electronics
+4,Nike Air Jordan 1 Low G Wolf Grey,5200,4680,10,https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=500,https://example.com/nike-aj1,Fashion
+5,Adidas Ultraboost Light Running Shoes,7000,4900,30,https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?q=80&w=500,https://example.com/adidas-ub,Fashion

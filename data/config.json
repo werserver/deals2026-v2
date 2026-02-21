@@ -1,1 +1,6 @@
-{"siteName": "ThaiDeals", "categories": [], "keywords": []}
+{
+    "siteName": "ThaiDeals 2026",
+    "categories": ["Electronics", "Fashion", "Home & Living", "Beauty"],
+    "keywords": ["iPhone 15", "Samsung S24", "Nike", "Adidas", "Sony"],
+    "categoryCsvMap": {}
+}

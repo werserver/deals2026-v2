@@ -5,16 +5,23 @@ define('DATA_DIR', __DIR__ . '/../data/');
 
 // Load configuration
 function get_config() {
+    $default_config = [
+        'siteName' => 'ThaiDeals',
+        'categories' => [],
+        'keywords' => [],
+        'categoryCsvMap' => [],
+        'categoryCsvFileNames' => [],
+        'themeColor' => '#ef4444',
+        'dataSource' => 'csv',
+        'csvFileName' => 'main.csv'
+    ];
+
     if (!file_exists(CONFIG_FILE)) {
-        return [
-            'siteName' => 'ThaiDeals',
-            'categories' => [],
-            'keywords' => [],
-            'categoryCsvMap' => []
-        ];
+        return $default_config;
     }
     $json = file_get_contents(CONFIG_FILE);
-    return json_decode($json, true) ?: [];
+    $config = json_decode($json, true) ?: [];
+    return array_merge($default_config, $config);
 }
 
 // Save configuration
@@ -33,6 +40,10 @@ function parse_csv($filename) {
     $rows = [];
     if (($handle = fopen($filepath, "r")) !== FALSE) {
         $header = fgetcsv($handle, 1000, ",");
+        if (!$header) {
+            fclose($handle);
+            return [];
+        }
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
             if (count($header) == count($data)) {
                 $rows[] = array_combine($header, $data);
@@ -48,24 +59,21 @@ function get_all_products($keyword = '', $category = '') {
     $config = get_config();
     $products = [];
     
-    // Load main CSV
-    $main_products = parse_csv('main.csv');
-    $products = array_merge($products, $main_products);
-    
-    // Load category CSVs if needed
-    if ($category && isset($config['categoryCsvMap'][$category])) {
-        $cat_products = parse_csv($config['categoryCsvMap'][$category]);
-        $products = array_merge($products, $cat_products);
-    } elseif (!$category) {
-        // If no specific category, maybe load some from all categories? 
-        // For simplicity, let's just use main.csv as the primary source for index
-    }
-    
-    // Filter by category
     if ($category) {
-        $products = array_filter($products, function($p) use ($category) {
-            return isset($p['category_name']) && $p['category_name'] == $category;
-        });
+        // Load category specific CSV if exists
+        $cat_filename = $category . '.csv';
+        if (file_exists(DATA_DIR . $cat_filename)) {
+            $products = parse_csv($cat_filename);
+        } else {
+            // Fallback to main.csv and filter by category name
+            $main_products = parse_csv('main.csv');
+            $products = array_filter($main_products, function($p) use ($category) {
+                return isset($p['category_name']) && $p['category_name'] == $category;
+            });
+        }
+    } else {
+        // Load main CSV for index
+        $products = parse_csv('main.csv');
     }
     
     // Filter by keyword
@@ -80,6 +88,7 @@ function get_all_products($keyword = '', $category = '') {
 }
 
 function format_price($price, $currency = '฿') {
+    if (!is_numeric($price)) return $currency . $price;
     return $currency . number_format((float)$price, 0);
 }
 
