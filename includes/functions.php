@@ -55,7 +55,6 @@ function save_config($config) {
 function get_all_products($keyword = '', $category_name = '') {
     $config = get_config();
     $cache_key = md5($keyword . $category_name . serialize($config['categories']));
-    // FIX: Added "/" separator between CACHE_DIR and cache_key
     $cache_file = CACHE_DIR . '/' . $cache_key . '.json';
 
     // Cache for 24 hours (86400 seconds) for better performance
@@ -77,7 +76,6 @@ function get_all_products($keyword = '', $category_name = '') {
                 }
             }
         }
-        // If no specific CSV for category, fall back to main.csv
         if (empty($csv_files_to_read)) {
             $main_csv_path = DATA_DIR . '/main.csv';
             if (file_exists($main_csv_path)) $csv_files_to_read[] = $main_csv_path;
@@ -136,7 +134,6 @@ function get_all_products($keyword = '', $category_name = '') {
         } else {
             $p['cloaked_url'] = $p['tracking_link'];
         }
-        // Generate SEO-friendly slug for product URL
         $p['product_slug'] = $p['product_id'] . '-' . generate_slug($p['product_name']);
     }
 
@@ -152,7 +149,6 @@ function get_all_products($keyword = '', $category_name = '') {
  * Generate URL slug from Thai text
  */
 function generate_slug($text) {
-    // Convert to lowercase and replace spaces with hyphens
     $text = mb_strtolower(trim($text), 'UTF-8');
     $text = preg_replace('/\s+/', '-', $text);
     $text = preg_replace('/[^\p{Thai}\p{L}\p{N}\-]/u', '', $text);
@@ -170,11 +166,7 @@ function format_price($price) {
  * Generate Random Reviews
  */
 function get_random_reviews($count = 6) {
-    $names = [
-        'วิชัย ค.', 'สมหญิง ข.', 'สมชาย ก.', 'ประเสริฐ พ.', 'มาลี ส.',
-        'กิตติพงษ์ จ.', 'นงลักษณ์ ม.', 'ธนพล ด.', 'ศิริพร ล.', 'อภิชาติ ต.',
-        'ปิยะ ง.', 'มานี ส.', 'สุดา ว.', 'ชัยวัฒน์ บ.', 'อรุณี ร.'
-    ];
+    $names = ['วิชัย ค.', 'สมหญิง ข.', 'สมชาย ก.', 'ประเสริฐ พ.', 'มาลี ส.', 'กิตติพงษ์ จ.', 'นงลักษณ์ ม.', 'ธนพล ด.', 'ศิริพร ล.', 'อภิชาติ ต.', 'ปิยะ ง.', 'มานี ส.', 'สุดา ว.', 'ชัยวัฒน์ บ.', 'อรุณี ร.'];
     $comments = [
         'สินค้าคุณภาพดีมากครับ คุ้มค่ากับราคาที่จ่ายไป การจัดส่งก็รวดเร็วทันใจ แนะนำเลยครับ',
         'ได้รับสินค้าแล้วค่ะ แพ็คมาอย่างดี สินค้าตรงปกมาก สีสวยถูกใจ ใช้งานได้ดีไม่มีปัญหาอะไรเลยค่ะ',
@@ -194,11 +186,9 @@ function get_random_reviews($count = 6) {
         'ได้รับสินค้าเร็ว บรรจุภัณฑ์ดี',
     ];
     
-    // Generate random dates in the past 2 years
     $reviews = [];
     $used_names = [];
     for ($i = 0; $i < $count; $i++) {
-        // Ensure unique names
         do {
             $name = $names[array_rand($names)];
         } while (in_array($name, $used_names) && count($used_names) < count($names));
@@ -208,46 +198,40 @@ function get_random_reviews($count = 6) {
         $date = date('Y-m-d', strtotime("-{$days_ago} days"));
         
         $reviews[] = [
-            'name'    => $name,
-            'rating'  => rand(3, 5),
-            'comment' => $comments[array_rand($comments)],
-            'date'    => $date
+            'name' => $name,
+            'rating' => rand(4, 5),
+            'date' => $date,
+            'comment' => $comments[array_rand($comments)]
         ];
     }
     return $reviews;
 }
 
 /**
- * Generate Random Price Comparison
+ * Get Price Comparison
  */
-function get_price_comparison($base_price, $cloaked_url = '#') {
+function get_price_comparison($current_price, $current_url) {
     $shops = [
-        ['name' => 'ShopA Official',   'badge' => 'ร้านแนะนำ', 'badge_icon' => '🏆', 'mall' => true],
-        ['name' => 'BestPrice Store',  'badge' => '',           'badge_icon' => '',   'mall' => false],
-        ['name' => 'MegaDeal Shop',    'badge' => 'ขายดี',      'badge_icon' => '🔥', 'mall' => false],
-        ['name' => 'ValuePlus Mall',   'badge' => '',           'badge_icon' => '',   'mall' => true],
-        ['name' => 'SuperSave Outlet', 'badge' => 'ส่งไว',      'badge_icon' => '⚡', 'mall' => false],
+        ['name' => 'ShopA Official', 'badge' => '🏆 ร้านแนะนำ ถูกสุด'],
+        ['name' => 'SuperSave Outlet', 'badge' => '⚡ ส่งไว'],
+        ['name' => 'MegaDeal Shop', 'badge' => '🔥 ขายดี'],
+        ['name' => 'BestPrice Store', 'badge' => ''],
+        ['name' => 'ValuePlus Mall', 'badge' => '']
     ];
     
-    $base_val = (float)preg_replace('/[^0-9.]/', '', $base_price);
     $comparison = [];
-    
     foreach ($shops as $shop) {
-        $diff = rand(-10, 10);
+        $diff = rand(-15, 15);
+        $price = round($current_price * (1 + $diff / 100));
         $comparison[] = [
-            'shop_name'  => $shop['name'],
-            'badge'      => $shop['badge'],
-            'badge_icon' => $shop['badge_icon'],
-            'mall'       => $shop['mall'],
-            'rating'     => number_format(3.5 + (rand(0, 15) / 10), 1),
-            'price'      => max(1, $base_val + $diff),
-            'url'        => $cloaked_url,
+            'shop_name' => $shop['name'],
+            'badge' => $shop['badge'],
+            'price' => $price,
+            'rating' => number_format(rand(35, 50) / 10, 1),
+            'url' => $current_url
         ];
     }
-    
     usort($comparison, fn($a, $b) => $a['price'] <=> $b['price']);
-    // Mark cheapest
-    $comparison[0]['cheapest'] = true;
     return $comparison;
 }
 
@@ -299,10 +283,10 @@ function logout() {
 }
 
 /**
- * Clear cache
+ * Clear all JSON cache files
  */
 function clear_cache() {
-    $files = glob(CACHE_DIR . '/*');
+    $files = glob(CACHE_DIR . '/*.json');
     if ($files) {
         foreach ($files as $file) {
             if (is_file($file)) unlink($file);
@@ -310,13 +294,3 @@ function clear_cache() {
     }
 }
 ?>
-
-/**
- * Clear all JSON cache files
- */
-function clear_cache() {
-    $files = glob(CACHE_DIR . '/*.json');
-    foreach ($files as $file) {
-        if (is_file($file)) unlink($file);
-    }
-}

@@ -57,13 +57,6 @@ if (!empty($product['images'])) {
 if (empty($images) && !empty($image)) {
     $images = [$image];
 }
-// Fallback to random images if only one image exists to demonstrate the gallery
-if (count($images) <= 1) {
-    $placeholder_id = (int)preg_replace('/[^0-9]/', '', $product_id) % 1000;
-    $images[] = "https://picsum.photos/seed/" . ($placeholder_id + 1) . "/600/600";
-    $images[] = "https://picsum.photos/seed/" . ($placeholder_id + 2) . "/600/600";
-    $images[] = "https://picsum.photos/seed/" . ($placeholder_id + 3) . "/600/600";
-}
 
 $colors = [];
 $sizes  = [];
@@ -186,17 +179,16 @@ $flash_seconds = rand(0, 59);
 
         <!-- Product Detail Grid -->
         <div class="grid md:grid-cols-2 gap-8 mb-8">
-            <!-- Images Gallery -->
-            <div class="flex flex-col gap-4">
-                <!-- Main Image -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm relative fade-in" style="aspect-ratio: 1;">
+            <!-- Images -->
+            <div>
+                <div class="bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-3 aspect-square relative">
                     <?php if ($discount_pct > 0): ?>
                         <div class="absolute top-4 left-4 z-10 bg-red-500 text-white text-sm font-black px-3 py-1 rounded-full shadow-lg">-<?php echo $discount_pct; ?>%</div>
                     <?php endif; ?>
                     <?php if (!empty($images[0])): ?>
                         <img id="mainImage" src="<?php echo htmlspecialchars($images[0]); ?>"
                              alt="<?php echo htmlspecialchars($product_name); ?>"
-                             class="w-full h-full object-contain p-6 smooth-transition"
+                             class="w-full h-full object-contain p-4"
                              onerror="this.src='https://via.placeholder.com/500x500?text=No+Image'">
                     <?php else: ?>
                         <div class="w-full h-full flex items-center justify-center bg-gray-50">
@@ -204,18 +196,13 @@ $flash_seconds = rand(0, 59);
                         </div>
                     <?php endif; ?>
                 </div>
-                
-                <!-- Thumbnail Gallery -->
                 <?php if (count($images) > 1): ?>
-                    <div class="grid grid-cols-5 gap-2">
+                    <div class="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
                         <?php foreach ($images as $idx => $img): ?>
-                            <div class="relative overflow-hidden rounded-2xl border-2 transition-all cursor-pointer hover:shadow-md" 
+                            <img src="<?php echo htmlspecialchars($img); ?>" alt="thumb <?php echo $idx+1; ?>"
+                                 class="thumb-img w-16 h-16 object-cover flex-shrink-0 <?php echo $idx === 0 ? 'active' : ''; ?>"
                                  onclick="setMainImage('<?php echo htmlspecialchars($img); ?>', this)"
-                                 style="aspect-ratio: 1; border-color: <?php echo $idx === 0 ? $theme_color : '#e5e7eb'; ?>">
-                                <img src="<?php echo htmlspecialchars($img); ?>" alt="thumb <?php echo $idx+1; ?>"
-                                     class="w-full h-full object-cover smooth-transition hover:scale-110"
-                                     onerror="this.parentElement.style.display='none'">
-                            </div>
+                                 onerror="this.style.display='none'">
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -517,13 +504,8 @@ $flash_seconds = rand(0, 59);
     <script>
         function setMainImage(src, el) {
             document.getElementById('mainImage').src = src;
-            // Update border color for all thumbnails
-            const themeColor = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
-            document.querySelectorAll('[onclick*="setMainImage"]').forEach(thumb => {
-                thumb.style.borderColor = '#e5e7eb';
-            });
-            // Highlight selected thumbnail
-            el.style.borderColor = themeColor || '#ff6b00';
+            document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
         }
         function toggleVariation(btn) { btn.classList.toggle('active'); }
         function copyLink() {
